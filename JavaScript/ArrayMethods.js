@@ -74,7 +74,7 @@ const arrObjectWithoutDupli = (arr, key) =>
  * @param arr2
  * @returns {T[]}
  */
-const arrDifference = (arr1,arr2) => arr1.concat(arr2).filter(v,i,arr) => arr.indexOf(v) === arr.lastIndexOf(v);
+const arrDifference = (arr1,arr2) => arr1.concat(arr2).filter((v,i,arr) => arr.indexOf(v) === arr.lastIndexOf(v));
 
 
 /**
