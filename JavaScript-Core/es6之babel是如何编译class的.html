@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // es6
+    class Person {
+        constructor(name) {
+          this.name = name;
+        }
+        sayHello() {
+            return 'hello ,I am ' + this.name;
+        }
+    }
+
+    var lizi = new Person('zili');
+    lizi.sayHello();
+
+    // 对应的es5就是
+    function Person(name) {
+        this.name = name;
+    }
+
+    Person.prototype.sayHello = function () {
+        return 'hello,I am' + this.name;
+    };
+
+    var lizi = new Person('lizi');
+    lizi.sayHello();
+
+    class person {
+        constructor() {
+            this.state = {
+                count: 1
+            }
+        }
+    }
+
+    class Person {
+        state = {
+            count:1
+        }
+    }
+
+    function Person() {
+        this.state = {
+            count:0
+        }
+    }
+
+    class Person {
+        static sayHello() {
+            return 'hello';
+        }
+    }
+
+    /**
+     *
+     */
+
+    function Person() {
+
+    }
+
+    Person.sayHello = function () {
+        return 'hello';
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * plainObject：纯粹的对象 通过"{}" or "new Object" 创建的，该对象含有零个或者多个键值对
+     * 之所以要判断是不是plainObject 是为了跟其他的js对象如null，数组，宿主对象（document）
+     * 等作区分，因为这些typeof 都会返回object，JQuery 提供了isPlainObject方法进行判断
+     */
+    function Template(name) {
+        this.name = name;
+    }
+
+    console.log($.isPlainObject({})) // true
+    console.log($.isPlainObject(new Object))  //true
+    console.log($.isPlainObject(Object.create(null))) // true
+    console.log($.isPlainObject(Object.assign({a:1},{b:2}))) // true
+    console.log($.isPlainObject(new Template('dfd'))); // false
+    console.log($.isPlainObject(Object.create({})))  // false
+
+    /**
+     * # EmptyObject：判断是否是空对象
+     * @param obj
+     * @returns {boolean}
+     */
+
+    function isEmptyObject(obj) {
+        var name;
+        for (name in obj) {
+            return false;
+        }
+
+        return true;
+    }
+
+
+    /**
+     * 判断是否是Window 对象
+     * @param obj
+     * @returns {boolean}
+     */
+    function isWindow(obj) {
+        return obj != null && obj === obj.window;
+    }
+
+    /**
+     * 判断是不是DOM元素
+     * @param obj
+     * @returns {boolean}
+     */
+    isElement = function (obj) {
+        return !!(obj && obj.nodeType ===1);
+    };
+
+    /**
+     * 防火规范规范
+     */
+
+
+
+
+</script>
+
+</body>
+</html>

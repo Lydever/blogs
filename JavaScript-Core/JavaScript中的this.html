@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 在绝大多数情况下，函数的调用方式决定了this的值（运行时绑定）
+     * this不能在执行期间被赋值，并且在每次函数被调用是this的值也会不同
+     * ES5 因入了bind方法来设置this的值，而不用考虑函数如何被调用的,
+     * ES6 因入了箭头函数，箭头函数不提供自身的this绑定（this的值将保持闭合语法上下文的值）
+     */
+/*    const temp = {
+        prop: 24,
+        func: function () {
+            return this.prop;
+        }
+    }
+
+    console.log(temp.func());  // 24*/
+
+
+    // 全局上下文
+    /**
+     * 无论是否在严格模式下，在全局执行环境中(在任何函数体外部)this都执行全局对象
+     */
+    console.log(this === window); // true
+
+    a = 23;
+    console.log(window.a); //23
+
+    this.b = 'lii';
+    console.log(window.b); // lii
+    console.log(b);  // lii
+
+    // 函数上下文
+    /**
+     * 在函数内部，this的值取决于函数被调用的方式
+     * 因为下面的代码在严格模式下，且this的值不是由该调用设置的，所依this的值默认指向全局对象，而在浏览器中，这个
+     * 全局对象就是window。
+     */
+
+    function f1() {
+        return this;
+    }
+    // 在浏览器中；
+    f1() === window; //在浏览器中，全局对象是window
+
+    // 在Node中
+    f1() === globalThis;
+
+    /**
+     * 然而在严格模式下，入过进入执行环境时没有设置this的值，this会保持为undefined
+     */
+     function f2(){
+         "use strict"
+        return this;
+    }
+
+    f2() === undefined; // true
+
+    // 类上下文
+
+class Ex {
+    constructor() {
+        const protp = Object.getPrototypeOf(this);
+        console.log(Object.getOwnPropertyNames(proto))
+    }
+}
+
+    /**
+     * 对象可以作为bind或apply的第一个·参数传递，并且改参数绑定到该对象
+     */
+
+    var obj = {a: 'Custom'};
+    var a = 'Global';
+    // 声明一个变量，并该变量作为全局对象window得属性
+    var a = 'global';
+    function whatsThis() {
+        return this.a
+    }
+
+
+    /**
+     * 如果将this传递给call、bind
+     */
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     * 闭包
+     * 一个函数和对其周围状态的引用捆绑在一起，这样的组合为闭包
+     * 简单地说：闭包让我们可以在一个内函数中访问到其外层函数的作用域。在JavaScript 中，每当创建一个函数，
+     * 闭包就会在函数创建的同时被创建出来
+     */
+   /* function init(){
+        var name = 'lizi'; // name是一个被init创建的局部变量
+        function displayName(){ // displayName()是内部函数，一个闭包
+            alert(name);  // 使用了父函数中声明的变量
+        }
+        displayName();
+    }
+
+    init(); // 运行结果：弹出alert*/
+    /**
+     * init()创建了一个局部变量name和一个名为displayName()的函数。displayName()是定义在init()
+     * 里的内部函数，并且仅在init()函数体内可用。请注意：displayName()没有自己的局部变量。然而，因为它可以访问到外部函数的
+     * 变量，所依displayName()可以适用父函数init()中声明的变量name。
+     */
+
+/*    function makeFunc(){
+        var name = 'lizi';
+        function displayName(){
+            alert(name);
+        }
+    }
+
+    var myFunc = makeFunc();
+    myFunc();*/
+
+    function makeAdder(x) {
+        return function (y) {
+            return x +y;
+        };
+    }
+
+    var add5 = makeAdder(5);
+    var add10 = makeAdder(10);
+
+    console.log(add5(2)); // 7
+    console.log(add10(2));  // 12
+
+
+    /**
+     * 实用的闭包
+     * 闭包很有用，因为，它允许将函数与其操作的某数据（环境）关联起来，这显然类似于面向对象编程
+     * 在面向对象编程中，对象允许我们将某些数据（对象的属性）与一个或者多个方法关联起来。
+     */
+
+    function makeSize(size) {
+        return function () {
+            document.body.style.fontSize = size + 'px';
+        };
+    }
+
+    var size12 = makeSize(12);
+    var size14 = makeSize(14);
+    var size16 = makeSize(116;
+
+    /**
+     * 闭包模拟私有方法
+     */
+
+
+
+    /**
+     * 在循环中创建闭包:一个常见的错误
+     */
+
+
+
+    function showHelp(help) {
+        document.getElementById('help').innerHTML = help;
+    }
+
+    function setupHelp() {
+        var text = [
+            {'id':'email','help':'your email'},
+            {'id':'name','help':'your email'},
+            {'id':'age','help':'your email'},
+        ];
+
+        for (var i = 0;i<text.length;i++) {
+            var item = text[i];
+            document.getElementById(item.id).onfocus = function () {
+                showHelp(item.help)
+            }
+        }
+
+    }
+
+    setupHelp();
+
+
+
+    function MyObject(name,message) {
+
+        this.name = name.toString();
+        this.message  =message.toString();
+
+        this.getName = function () {
+            return this.name;
+        }
+
+        this.getMessage = function () {
+            return this.message;
+        };
+
+    }
+
+    function mObject (name,mesg) {
+        this.name = name.toString();
+        this.mesg  =mesg.toString();
+    }
+
+    mObject.prototype = {
+        getName: function () {
+            return this.name;
+        },
+        getMessage: function () {
+            return this.mesg;
+        }
+    }
+
+    function myObject(name,message) {
+        this.name = name.toString();
+        this.message = message.toString();
+
+    }
+
+    myObject.prototype.getName = function (){
+        return this.name;
+    }
+
+    myObject.prototype.getMessage = function () {
+        return this.message;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

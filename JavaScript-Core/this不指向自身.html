@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*    function foo(num) {
+        console.log("foo: " + num);
+
+        // 记录foo被调用的次数
+        this.count++;
+    }
+
+    foo.count = 0;
+    var i;
+    for (i = 0; i < 10; i++) {
+        if (i>5) {
+            foo(i);
+        }
+    }
+    /!**
+     * foo:6
+     * foo:7
+     * foo:8
+     * foo:9
+     *!/
+
+
+    // foo被调用了多少次
+    console.log("foo被调用了多少次:" + foo.count); // 0
+
+ */
+/*    function foo(){
+        console.log(this.a);
+    }
+    var a = 2;
+    foo();*/
+/*
+    function foo(){
+        "use strict";
+        console.log(this.a);
+    }
+
+    var a = 2;
+    foo();
+*/
+function foo(){
+    console.log(this.a);
+}
+var obj = {
+    a: 10,
+    foo: foo
+}
+foo(); //undefined window.a
+obj.foo(); // 10
+
+
+</script>
+</body>
+</html>

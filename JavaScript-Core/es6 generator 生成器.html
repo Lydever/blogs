@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*
+    function * generator() {}
+
+    function* generator() {}
+
+    function *generator() {}
+
+    let generator = function * () {}
+    let generator = function* () {}
+    let generator = function *(){}
+
+    let generator = *() => {} // x
+
+    class MyClass {
+        *generator() {}
+        * generator() {}
+
+    }
+
+    const obj = {
+        *generator() {},
+        * generator() {}
+    }
+*/
+
+
+    /**
+     * yield 关键词，类似return，但是与return的工作方式完全不同
+     * 用yeild返回的值只会返回一次，当你在再次调用提昂一个函数时，它会执行
+     * 至下一个yeild语句处，（注意：前面的yeild不在返回东西了。）
+     */
+
+    /**
+     * 在生成器中，我们通常会在输出时得到一个对象。这个对象有两个属性：value和done。
+     * 如你所想，value为返回值，done则会显示生成器是否完成了它的工作票
+     */
+
+
+    function * generator() {
+        yield 5;
+    }
+
+    const gen = generator();
+
+    gen.next(); // {value: 5, done: false}
+    gen.next(); // {value: undefined, done: true}
+    gen.next(); // {value: undefined, done: true} - 之后的任何调用都会返回相同的结果
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

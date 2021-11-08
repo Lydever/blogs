@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 柯里化是一种函数的转换，它是指将一个函数从调用的f(a,b,c)转换为可调用的f(a)(b)(c).
+     */
+
+    function curry(f) {
+        return function (a) {
+            return function (b) {
+                return f(a,b);
+            }
+        }
+    }
+
+    function sum(a,b) {
+        return a + b;
+    }
+
+    let curriedSum = curry(sum);
+
+    alert(curriedSum(1)(2)); //
+
+
+</script>
+</body>
+</html>

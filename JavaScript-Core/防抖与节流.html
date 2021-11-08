@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 防抖：在第一次触发事件时，不立即执行函数，而是给出一个限定值，比如200ms，然后：
+     *  - 如果在200ms内没有再次触发事件，那么执行函数
+     *  - 如果在200ms内再次触发函数，那么当前的计时取消，重新开始计时
+     *
+     *  效果：如果短时间内大量触发同一件事，只会执行一次函数
+     */
+
+    function debounce(fn,delay) {
+        let timer = null;
+        return function () {
+            if (timer){
+                clearTimeout(timer);
+            }
+            timer = setTimeout(fn,delay)
+        }
+    }
+
+
+    /**
+     * 节流：
+     * 如果短时间内大量触发同一事件，那么在函数执行一次之后，该函数在指定的时间期限内不在工作
+     * 直至过了这段时间才重新生效
+     */
+
+    // 搜索框input事件，要支持实时搜索可以使用节流方案
+    // 页面resize事件，使用防抖
+
+</script>
+</body>
+</html>

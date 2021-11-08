@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 在js中，函数可以有属性，每一个函数都有一个特殊的属性叫做原型(protorype)
+     *
+     */
+
+/*    function doSomething() {}
+    console.log(doSomething.prototype);
+
+    var doSomething = function() {};
+    console.log(doSomething.prototype);
+
+    function doSomething(){}
+    doSomething.prototype.foo = "bar"; // add a property onto the prototype
+    var doSomeInstancing = new doSomething();
+    doSomeInstancing.prop = "some value"; // add a property onto the object
+    console.log( doSomeInstancing );*/
+
+    var obj = {
+        a:1,
+        b: 2
+    }
+    console.log(obj);
+
+    /**
+     * 1. 谈谈对JS原型和原型链的理解
+     * 答：JS原型是指为其他对象提供共享属性访问的对象。在创建对象时，
+     * 每个对象包含一个隐士引用指向它的原型对象或者null。
+     * 而原型也是对象，因此也有自己的原型，这样构成一个原型链
+     *
+     * 2. 原型链有什么作用？
+     * 答：在访问一个对象的属性时，实际上实在查询原型链。这个对象是原型链的第一个元素，
+     * 先检查它是否包含属性名，如果包含则返回属性值，否则检查原型链上的第二个元素，以此类推
+     *
+     * 3. 如何实现原型继承？
+     * 答：有两种方式。
+     * 一种是通过Object.create或者Object.setPrototypeOf显示继承另一个对象，将它设置为原型
+     * 两一种是通过constructor构造函数，在使用new关键字1实例化时，会自动继承constructor
+     * 的prototype对象，作为实例的原型。
+     */
+
+</script>
+</body>
+</html>

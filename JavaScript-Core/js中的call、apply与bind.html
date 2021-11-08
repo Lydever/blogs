@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * call() 方法使用一个指定的this值和单独给出的一个或者多个参数来调用一个函数
+     */
+
+/*
+    function Product(name,price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    function Food(name,price) {
+        Product.call(this,name,price);
+        this.category = 'food';
+    }
+
+    console.log(new Food('change',5).name); // change
+*/
+
+
+    /**
+     * 在JavaSccript中，call和apply都是为了改变某个函数运行时的上下文而存在的
+     * 换句话说，就是为了改变函数内部this的指向。
+     */
+/*    function fruits() {}
+
+    fruits.prototype = {
+            color: 'red',
+            say: function () {
+                console.log('My color is ' + this.color);
+            }
+        }
+
+        var apple = new fruits;
+        apple.say();  // My color is red
+
+        banana = {
+            color: 'yellow'
+        };
+
+        apple.say.call(banana); //My color is yellow
+        apple.say.apply(banana); // My color is yellow*/
+    /**
+     * call和apply是为了动态改变this而出现的
+     */
+
+    /**
+     * apply和call的区别
+     * 对于二者而言，作用完全一样，只是接受参数的方式不太一样
+     * 例如，有一个函数定义如下：
+     *
+     */
+/*    var func = function (arg1,arg2) {
+
+    };
+    // 就可以通过下面的方式来调用
+    func.call(this,arg1,arg2);
+    func.apply(this,[arg1,arg2]);*/
+    /**
+     * 其中 this 是你想指定的上下文，他可以是任何一个 JavaScript 对象(JavaScript 中一切皆对象)，call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。　　
+     */
+
+    /**
+     * apply、call实例
+     *
+     */
+
+    // # apply与call 运用实践
+
+    // 数组之间追加
+/*
+    var arr1 = [12,'foo',{ name:"dsd" },-232];
+    var arr2 = ['ddd',333,1009];
+    Array.prototype.push.apply(arr1,arr2);
+
+    console.log(arr1);  // [12,'foo',{ name:"dsd" },-232,'ddd',333,1009];
+*/
+
+
+    // 获取数组中的最大值和最小值
+/*    var numbers = [1,2,35,-5845];
+    var max1 = Math.max.apply(Math,numbers);
+    var max2 = Math.max.call(Math,1,2,35,-5845);
+    console.log(max1);  // 35
+    console.log(max2);  // 35
+
+    // 验证是否是数组
+    functionisArray(obj){
+        return Object.prototype.toString.call(obj) === '[object Array]';
+    }
+
+//    类数组使用数组方法
+    var domNodes = Array.prototype.slice.call(document.getElementsByClassName('*'));
+
+
+    function log(msg) {
+        console.log(msg);
+    }
+
+    log(1); // 1;
+    log(1,2); // 1
+
+
+
+    */
+/*
+    function log() {
+        console.log.apply(console,arguments)
+    }
+
+    log(1,2,3);
+*/
+
+
+/*   function log(){
+       var args = Array.prototype.slice.call(arguments);
+       args.unshift('(app)');
+
+       console.log.apply(console,args);
+   }
+
+
+   log(2,3,4);*/
+
+    // unshift() 会将元素添加到数组的前面
+/*
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.unshift("Lemon","Pineapple");
+    console.log(fruits);
+*/
+
+    var w = document.write;
+    w('fgfgf');
+    w.bind(document)('fdgd');
+
+
+    /**
+     * apply、call、bind 三者都是用来改变函数的this对象的指向的
+     * apply、call、bind 三者第一个参数都是this指向的对象，也就是想要指定的上下文
+     * apply、call、bind 三者都可以利用后续参数传参
+     * bind 返回对应函数，便于稍后套用；apply、call则是立即调用。
+     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

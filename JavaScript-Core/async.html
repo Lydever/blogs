@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * async函数是使用asyn关键字声明的函数，async和await关键字让我们可以用一种更简洁的方式写出Promise
+     * 的异步行为
+     */
+    function resolveAfter2sSeconds() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve('resolve');
+            },2000)
+        });
+    }
+
+    async function asyncCall(){
+        console.log('calling');
+        const result = await resolveAfter2sSeconds();
+        console.log(result);
+    }
+
+    asyncCall();
+    /**
+     * async函数可能包含0个或者多个awwit表达式。
+     * await表达式会暂停整个async函数的执行进程并出让其控制权，只有当其等待的基于promise的异步
+     * 得异步操作被兑现或者被拒绝之后才会恢复进程。promise的解决值会被当做await表达式的返回值，使用async、
+     * await 关键字就可以在异步代码中使用普通的try、catch代码快。
+     *
+     */
+    //注意：await关键字只在async函数内有效，如果在async函数外使用它，就会爆出语法错误
+
+    /**
+     * async/await的目的是为简化使用基于promise的API所需大语法，
+     * async/await的行为就好像搭配使用了生成器个promise。
+     */
+
+    /**
+     * async函数一定会返回一个primise对象，如果一个async函数的返回值看起来不是promise，那么它将会被隐士的包装在一个primise
+     */
+
+    async function foo(){
+        return 1
+    }
+    function foo(){
+        return Promise.resolve(1)
+    }
+
+    async function foo(){
+        await 1
+    }
+    function foo(){
+        return Promise.resolve(1).then(() => undefined)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
