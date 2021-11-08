@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"></string>
+    <string name="title_name">身高测试系统</string>
+    <string name="tv_birthday">出生日期:</string>
+    <string name="father_height">父亲身高:</string>
+    <string name="mother_height">母亲身高:</string>
+    <string name="sex">你的性别:</string>
+    <string name="btn_date">选择日期</string>
+    <string name="hint_text">单位/CM</string>
+    <string name="gener_man">男</string>
+    <string name="gener_wom">女</string>
+    <string name="growth">你的生活习惯:</string>
+    <string name="checkBox1">爱运动</string>
+    <string name="checkBox2">喝牛奶</string>
+    <string name="checkBox3">爱睡觉</string>
+    <string name="checkBox4">营养好</string>
+    <string name="btn_foreget">立即测试</string>
+    <string name="from">出生地区:</string>
+    <string name="btn_reset">重置</string>
+    <string name="page"><a href="www.baidu.com">身高测试常识了解</a></string>
+    <string name="tv_message">身高预测参考详情:</string>
+</resources>

@@ -1,0 +1,2 @@
+include ':app', ':adapterbase', ':service', ':broadcastreceiver', ':draw', ':animation', ':mediaplayer', ':sqlite', ':sqlite3'
+rootProject.name='MyAPP2'

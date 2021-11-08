@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="array">
+         <item>java</item>
+         <item>php</item>
+         <item>C语言</item>
+         <item>Python</item>
+         <item>MySQL</item>
+         <item>Javascript</item>
+    </string>
+</resources>

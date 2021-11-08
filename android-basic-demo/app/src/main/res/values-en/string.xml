@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"></string>
+    <string name="title_name">Height testing system</string>
+    <string name="tv_birthday">your birthday:</string>
+    <string name="father_height">father height:</string>
+    <string name="mother_height">mother height:</string>
+    <string name="sex">your gender:</string>
+    <string name="btn_date">option date</string>
+    <string name="hint_text">use centimeter</string>
+    <string name="gener_man">male</string>
+    <string name="gener_wom">woman</string>
+    <string name="growth">your lifestyle hobits:</string>
+    <string name="checkBox1">sports</string>
+    <string name="checkBox2">milk</string>
+    <string name="checkBox3">sleep</string>
+    <string name="from">from:</string>
+    <string name="checkBox4">nutrition</string>
+    <string name="btn_foreget">now foreget</string>
+    <string name="btn_reset">reset</string>
+    <string name="page"><a href="www.baidu.com">Height forecast commonsenen</a></string>
+    <string name="tv_message">Height forecast message:</string>
+<!--    <string-array name="date">-->
+<!--        <item name="spin_title">guangdong</item>-->
+<!--        <item>beijing</item>-->
+<!--        <item>shanghai</item>-->
+<!--        <item>zhejiang</item>-->
+<!--        <item>hunan</item>-->
+<!--        <item>shandong</item>-->
+<!--        <item>jiangsu</item>-->
+<!--        <item>jiangxi</item>-->
+<!--    </string-array>-->
+</resources>

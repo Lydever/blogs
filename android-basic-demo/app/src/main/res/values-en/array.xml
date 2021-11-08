@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date">
+        <item name="spin_title">guangdong</item>
+        <item>beijing</item>
+        <item>shanghai</item>
+        <item>zhejiang</item>
+        <item>hunan</item>
+        <item>shandong</item>
+        <item>jiangsu</item>
+        <item>jiangxi</item>
+    </string-array>
+</resources>

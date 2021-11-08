@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date">
+        <item name="spin_title">广东</item>
+        <item>北京</item>
+        <item>上海</item>
+        <item>浙江</item>
+        <item>湖南</item>
+        <item>山东</item>
+        <item>江苏</item>
+        <item>江西</item>
+    </string-array>
+</resources>

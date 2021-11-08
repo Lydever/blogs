@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CheckBoxActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择自己的兴趣爱好"
+        android:textSize="16dp"
+        android:textColor="#000000"
+        android:paddingTop="100dp"/>
+    <CheckBox
+        android:id="@+id/ckeck1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打豆豆"/>
+    <CheckBox
+        android:id="@+id/ckeck2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="睡觉觉"/>
+    <CheckBox
+        android:id="@+id/ckeck3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="听音乐"/>
+    <CheckBox
+        android:id="@+id/ckeck4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="吃东西"/>
+    <CheckBox
+        android:id="@+id/ckeck5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打代码"/>
+    <CheckBox
+        android:id="@+id/ckeck6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="改屎bug"/>
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"/>
+
+
+</LinearLayout>
