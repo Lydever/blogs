@@ -15,6 +15,18 @@
   - ES6+
   - Flutter
   - ...
+- 后端
+  - Java
+  - Node
+  - Python
+  - PHP
+  - Spring Boot
+  - ...
+- 数据库
+  - MySQL
+  - SQL Server
+  - MongoDB
+  - ...  
 - Android
   - Java基础
   - Android 基础
@@ -27,19 +39,6 @@
   - Gradle
   - Groovy
   - Android JEetpack
-  - ...
-- 后端
-  - Java
-  - Node
-  - Python
-  - PHP
-  - Spring Boot
-  - MyBatis
-  - ...
-- 数据库
-  - MySQL
-  - SQL Server
-  - MongoDB
   - ...
 - 数据结构与算法
   
