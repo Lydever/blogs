@@ -10,10 +10,13 @@
   - Vue
   - React
   - TypeScript
-  - 小程序
+    - [【TypeScript】TypeScript之Record的基本用法](https://github.com/Lydever/blogs/issues/4)
+    - [【TypeScript】TypeScript之Partial](https://github.com/Lydever/blogs/issues/5)
   - JavaScript
+    - [【JavaScript】详解Object.prototype.hasOwnProperty](https://github.com/Lydever/blogs/issues/3)
   - ES6+
   - Flutter
+  -   - 小程序
   - ...
 - 后端
   - Java
