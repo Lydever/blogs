@@ -17,7 +17,7 @@
   - React
   - ES6+
   - Flutter
-  -   - 小程序
+  - 小程序
   - ...
 - 后端
   - Java
