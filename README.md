@@ -7,13 +7,14 @@
 
 # 学习 & 技术方向
 - 前端
-  - Vue
-  - React
   - TypeScript
     - [【TypeScript】TypeScript之Record的基本用法](https://github.com/Lydever/blogs/issues/4)
     - [【TypeScript】TypeScript之Partial](https://github.com/Lydever/blogs/issues/5)
   - JavaScript
+    - [【JavaScript权威指南(第七版)】之阅读学习总结](https://github.com/Lydever/blogs/issues/6)
     - [【JavaScript】详解Object.prototype.hasOwnProperty](https://github.com/Lydever/blogs/issues/3)
+  - Vue
+  - React
   - ES6+
   - Flutter
   -   - 小程序
