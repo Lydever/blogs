@@ -7,12 +7,13 @@
 
 # 学习 & 技术方向
 - 前端
+  - JavaScript
+    - [【JavaScript权威指南(第七版)】之阅读学习总结](https://github.com/Lydever/blogs/issues/6)
+    - [【JavaScript进阶】详解Object.prototype.hasOwnProperty](https://github.com/Lydever/blogs/issues/3)
+    - [【JavaScript进阶】高阶函数之Reduce的解析&使用](https://github.com/Lydever/blogs/issues/7)
   - TypeScript
     - [【TypeScript】TypeScript之Record的基本用法](https://github.com/Lydever/blogs/issues/4)
     - [【TypeScript】TypeScript之Partial](https://github.com/Lydever/blogs/issues/5)
-  - JavaScript
-    - [【JavaScript权威指南(第七版)】之阅读学习总结](https://github.com/Lydever/blogs/issues/6)
-    - [【JavaScript】详解Object.prototype.hasOwnProperty](https://github.com/Lydever/blogs/issues/3)
   - Vue
   - React
   - ES6+
