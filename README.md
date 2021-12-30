@@ -29,6 +29,7 @@
   - ...
 - 数据库
   - MySQL
+    - [【MySQL】深入浅出MySQL基础知识(一) ](https://github.com/Lydever/blogs/issues/9)
   - SQL Server
   - MongoDB
   - ...  
