@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>导航和轮播</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<!--top bar-->
+		<div class="top-bar">
+			<div class="wrap">
+				<div class="top-left">
+					<a href="#">商城首页</a>
+					<a href="#">网站首页</a>
+				</div>
+				<div class="top-right">
+					购买热线(0:00-24:00)：<b>400-888-8888</b>
+				</div>
+			</div>
+		</div>
+		<!--nav-->
+		<div class="nav">
+			<div class="wrap">
+				<a href="#" class="logo">
+					<img src="images/logo.jpg">
+				</a>
+				<ul class="menu">
+					<li>
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<a href="#">软件下载</a>
+					</li>
+					<li>
+						<a href="#">商业授权</a>
+					</li>
+					<li>
+						<a href="#">模板插件</a>
+					</li>
+					<li>
+						<a href="#">配套服务</a>
+					</li>
+					<li>
+						<a href="#">互动论坛</a>
+					</li>
+					<li>
+						<a href="#">伙伴招募</a>
+					</li>
+				</ul>
+				<div class="search-box">
+					<form action="">
+						<input name="url" class="search-url" value="http://" type="text">&nbsp;
+						<input name="" class="search-btn" value="查询" type="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--banner-->
+		<div class="banner">
+			<div class="swiper-container gallery-top">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="#"></a>
+					<a class="swiper-slide" href="#"></a>
+					<a class="swiper-slide" href="#"></a>
+					<a class="swiper-slide" href="#"></a>
+					<a class="swiper-slide" href="#"></a>
+					<a class="swiper-slide" href="#"></a>
+				</div>
+				<!-- Add Pagination -->
+				<div class="wrap pr">
+					<div class="gallery-left pa">
+						<h3>产品服务</h3>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next swiper-button-white"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>
+			</div>
+
+		</div>
+		<!--banner end-->
+		<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var galleryTop = new Swiper('.gallery-top', {
+				pagination: '.swiper-pagination',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				paginationClickable: true,
+				autoplay: 5000,
+				paginationBulletRender: function(index, className) {
+					switch(index) {
+						case 0:
+							name = '网店系统';
+							break;
+						case 1:
+							name = 'APP商城';
+							break;
+						case 2:
+							name = 'H5微商城';
+							break;
+						case 3:
+							name = '微信小程序';
+							break;
+						case 4:
+							name = '配套服务';
+							break;
+						case 5:
+							name = '商业授权';
+							break;
+						default:
+							name = '';
+					}
+					return '<span class="' + className + '">' + name + '</span>';
+				}
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear_fix:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+body{
+	min-width: 1280px;
+	background-image: url(../image/login.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition: background-image 0.7s linear;
+    position: relative;
+}
+.container{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+.container>.smallDiv{
+	width: 1080px;
+	height:380px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto; 
+	border: 1px solid #ccc;
+	border-radius:1%;
+	/*background: #fff;*/
+}
+.container>.smallDiv>div{
+	float: left;
+}
+.container>.smallDiv>div:first-child{
+	width: 650px;
+	height: 379px;
+}
+.container>.smallDiv>div:first-child>img{
+	width: 650px;
+	height: 379px;
+	display: block;
+	border-radius:1%;
+}
+.container>.smallDiv>div:last-child{
+	width: 428px;
+	height: 378px;
+}
+.log>form>div{
+	width: 100%;
+}
+.log>form>div:first-child{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+.log>form>div>input{
+	width: 300px;
+	height: 35px;
+	border: none;
+	margin-left: 64px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-radius: 2%;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+}
+.log>form>div:nth-child(5){
+	text-align: center;
+	font-size: 12px;
+	color: red;
+
+}
+.message{
+	margin-left: 64px;
+	font-size: 12px;
+	color: red;
+}
+.log>form>div>button{
+	width: 300px;
+	height: 35px;
+	border: none;
+	margin-left: 64px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-radius: 2%;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+	background: #EF4300;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}

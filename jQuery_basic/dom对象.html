@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.2.js"></script>
+    <script>
+         window.onload = function(){
+            var btnObj = document.getElementById('btn');
+            btnObj.onclick = function(){
+                this.style.backgroundColor = "red";
+            };
+
+
+        $(btnObj).click(function(){
+            $(this).css("backgroundColor","green")
+        });
+
+        var btnObj = document.getElementById('btn');
+        var obj = $(btnObj).get(0);
+        obj.onclick = function(){
+
+        };
+
+        $(function(){
+            $("#btn").click(function(){
+                $(this).css("backgroundColor","orages");
+            });
+        });
+
+       };
+
+
+
+
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="显示效果" />
+</body>
+</html>

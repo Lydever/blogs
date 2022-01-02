@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title></title>
+<style  type="text/css">
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	}
+
+h2 {
+clear:both;
+}
+div#turner {
+float:left;
+padding-top:11px;
+width:302px;
+height:210px;
+position:relative;
+background: transparent url(images/frame.jpg) 0px 6px  no-repeat; /* this graphic gives us the book edges and the shadows around the edges */
+}
+
+#leftpage, #rightpage {
+float:left;
+position:relative;
+background-image:url(images/10page.jpg);
+overflow:hidden;
+width:146px;
+height:189px;
+left:5px; 
+cursor:pointer
+}
+#leftpage{
+background-position:0 0;
+}
+#rightpage{
+background-position:146px 0 
+}
+div#flip {
+background: transparent url(images/3d.png) top center;
+height:210px;
+width:118px;
+position:absolute;
+top:0;
+left:90px;
+z-index:99;
+margin-bottom:0;
+padding-bottom:0
+}
+#js {
+font-family:"Courier New", Courier, monospace;
+font-size:small;
+padding:2em;
+clear:both
+}
+#js strong{
+color:#003399
+}
+#js em{
+color:#aaa
+}
+#js p.sc{
+color:#c00;
+font-weight:700;
+margin:0;
+padding:0
+}
+#js .function{
+color:#090;
+font-weight:700;
+}
+#js .css{
+color:#900;
+font-weight:700;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script  type="text/javascript">
+var $pageheight = 189; 
+var $pagewidth = 146;
+var $pageYpos = 0;
+$(document).ready(function(){
+	//点击左边页面翻书事件
+	$("#leftpage").click( function() { 
+		$pageYpos = $pageYpos + $pageheight;
+		$("#leftpage").css("background-position", "0px "+$pageYpos+"px");	
+		$("#flip").css("background-position", "top right");	
+		setTimeout ('$("#flip").css("background-position", "top center");', 200);
+		setTimeout ('$("#rightpage").css("background-position", "146px "+$pageYpos+"px");', 200);		
+		  
+	}); 			   
+	
+	//点击右边页面翻书事件
+	$("#rightpage").click( function() { 
+		$pageYpos = $pageYpos - $pageheight; 
+		$("#rightpage").css("background-position", "0px "+$pageYpos+"px");	
+		$("#flip").css("background-position", "top left");	
+		setTimeout ('$("#flip").css("background-position", "top center");', 200);
+		setTimeout ('$("#leftpage").css("background-position", "146px "+$pageYpos+"px");', 200);
+	});	
+});	
+</script>
+</head>
+<body>
+<div style="width:400px; height:auto; margin:50px auto;">
+  <h1>Jquery翻书特效</h1>
+  <div id="turner">
+    <div id="flip"></div>
+    <div id="leftpage"></div>
+    <div id="rightpage"></div>
+  </div>
+</div>
+</body>
+</html>

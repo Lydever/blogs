@@ -1,0 +1,55 @@
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif!important;
+}
+
+
+/*�������div����ʽ */
+#home_teacher {
+    padding-top: 75px;
+    padding-bottom: 100px;
+	color:#FF0;
+}
+
+
+/*2000+ȫ��ʦ�� 100%ŷ����� */
+h2.btitle {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 38px;
+    color: #00a080;
+    font-weight: 100;
+}
+
+
+/*TESOL֤�� / 5�����Ͻ��� / ����ֵ����� */
+h4.subtitle {
+    position: relative;
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+    line-height: 30px;
+}
+
+.row h2,h5{
+    text-align: right;
+    color: white;
+}
+.row{
+    border-bottom: #FF0 solid 4px;
+}
+
+.t-text{
+    background-color: hotpink;
+    text-align: center;
+    height: 200px;
+    margin-top: 20px;
+}
+.t-text img{ 
+   margin: auto;
+}
+
+@media all and(max-width:519px){
+    
+}

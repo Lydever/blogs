@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height:200px;
+            background-color: pink;
+            color:white;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+
+
+        $(function () {
+            $(document).keydown(function (e) {
+               //switch-case判断一个变量有多个值
+               console.log(e);
+                switch (e.keyCode){
+                    case 65:$("div").css("backgroundColor","red");break;
+                    case 66:$("div").css("backgroundColor","yellow");break;
+                    case 67:$("div").css("backgroundColor","blue");break;
+                    case 68:$("div").css("backgroundColor","black");break;
+                    case 69:$("div").css("backgroundColor","green");break;
+                }
+
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div>
+    如果有一天.............
+</div>
+
+
+</body>
+</html>

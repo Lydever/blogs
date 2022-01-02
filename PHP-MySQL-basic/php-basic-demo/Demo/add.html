@@ -1,0 +1,48 @@
+<?php
+if(!isset($_POST['cName'])){
+	die('请输入课程号');
+}
+$cName = $_POST['cName'];
+$cNum = $_POST['cNum'];
+$xFen = $_POST['xFen'];
+$xNum = $_POST['xNum'];
+
+if(empty($cName)){
+	echo '请输入课程号';
+}
+if(empty($cNum)){
+	echo '请输入课程名';
+}
+if(empty($xFen)){
+	echo '学分';
+}
+if(empty($xNum)){
+	echo '请输入学时数';
+}
+
+$connection = mysqli_connect('localhost','root','') or die('mysql连接服务器失败!');
+$db_selected = mysqli_select_db($connection,'management') or die('mysql数据库连接失败');
+
+mysqli_set_charset($connection,'utf8');
+
+$sql = 'insert into course('课程号','课程名','学分','学时数') values('cName','cNum','xFen','xNum')';
+<!-- $res = mysqli_query($connection,$sql); -->
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>add页面</title>
+</head>
+<body>
+	<h3>请输入课程信息:</h3>
+	<label>课程号:</label><input type="text" name="cName">
+	<label>课程名:</label><input type="text" name="cNum">
+	<label>学分:</label><input type="text" name="xFen">
+	<label>学时数:</label><input type="text" name="xNum">
+	<button>添加</button>
+</body>
+</html>

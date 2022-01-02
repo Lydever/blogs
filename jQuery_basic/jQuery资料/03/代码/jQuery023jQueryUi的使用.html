@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dialog-link {
+            padding: .4em 1em .4em 20px;
+            text-decoration: none;
+            position: relative;
+        }
+        #dialog-link span.ui-icon {
+            margin: 0 5px 0 0;
+            position: absolute;
+            left: .2em;
+            top: 50%;
+            margin-top: -8px;
+        }
+    </style>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css"/>
+    <script src="jquery-1.12.2.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script>
+
+        $(function () {
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                width: 400,
+                buttons: [
+                    {
+                        text: "确定",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                            //alert("您已经登录成功了");
+                            if($("#userName").val()=="admin"){
+                                alert("恭喜您登录成功了");
+                            }else{
+                                alert("帐号错误了");
+                            }
+                        }
+                    },
+                    {
+                        text: "取消",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                            alert("哎呀,不想登录");
+                        }
+                    }
+                ]
+            });
+
+// Link to open the dialog
+            $( "#dialog-link" ).click(function( event ) {
+                $( "#dialog" ).dialog( "open" );
+                event.preventDefault();
+            });
+
+
+
+            $( "#dialog-link, #icons li" ).hover(
+                    function() {
+                        $( this ).addClass( "ui-state-hover" );
+                    },
+                    function() {
+                        $( this ).removeClass( "ui-state-hover" );
+                    }
+            );
+        });
+    </script>
+</head>
+<body>
+<h2 class="demoHeaders">请您登录一下</h2>
+<p>
+    <button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+        <span class="ui-icon ui-icon-newwin"></span>登录
+    </button>
+</p>
+
+<!-- ui-dialog -->
+<div id="dialog" title="欢迎大帅哥登录">
+    <p>
+        帐号:<input type="text" value="" id="userName"/><br/>
+        密码:<input type="text" value="" id="userPwd"/><br/>
+    </p>
+</div>
+</body>
+</html>

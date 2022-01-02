@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        ul {
+            list-style: none
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 1150px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        div li {
+            width: 240px;
+            height: 400px;
+            float: left;
+        }
+        div ul {
+            width: 1300px;
+        }
+
+
+
+        .com{
+            height: 300px;
+            width: 300px;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        .com li{
+            width: 220px;
+            height: 300px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+<!--    <ul>-->
+<!--        <li><img src="img/04手风琴案例/images/1.jpg" alt=""></li>-->
+<!--        <li><img src="img/04手风琴案例/images/2.jpg" alt=""></li>-->
+<!--        <li><img src="img/04手风琴案例/images/3.jpg" alt=""></li>-->
+<!--        <li><img src="img/04手风琴案例/images/4.jpg" alt=""></li>-->
+<!--        <li><img src="img/04手风琴案例/images/5.jpg" alt=""></li>-->
+<!--    </ul>-->
+
+
+
+    <div class="com col-md-4">
+        <ul>
+            <li><img src="img/04手风琴案例/images/1.jpg" alt=""></li>
+            <li><img src="img/04手风琴案例/images/2.jpg" alt=""></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $(function(){
+        $('.container-fluid>ul>li').mouseover(function(){
+            $(this).siblings('li').css("width","100px");
+            $(this).css("width","800px");
+        });
+        $('.container-fluid>ul>li').mouseout(function(){
+            $('.container-fluid>ul>li').css("width","240px");
+        });
+    });
+
+</script>
+
+<script>
+    $(function(){
+        $(".com>ul>li").mouseover(function(){
+            $(this).sibling("li").css("width","50px");
+            $(this).css("li").css("width","250px");
+            $(this).css("transform",'translate(-50px,-50px)');
+        });
+        $(".com>ul>li").mouseout(function(){
+            $(".com>ul>li").css("width","250px");
+        });
+    });
+</script>
+</body>
+</html>

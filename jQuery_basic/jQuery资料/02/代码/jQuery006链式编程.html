@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <script src="jquery-1.12.2.min.js"></script>
+    <script>
+        //页面中有一个按钮,还有一个div,点击按钮的时候,让div中添加一个p标签,并显示内容,点击按钮的同时修改div的背景颜色
+        //链式编程:对象.方法().方法().方法();....
+        $(function () {
+            //获取按钮调用点击事件,获取div设置p标签内容,点击按钮设置背景颜色
+            $("#btn").click(function () {
+//                $("#dv").html("<p>这是一个p</p>");
+//                $("#dv").css("backgroundColor","red");
+                //$("#dv").html("<p>这是一个p</p>").css("backgroundColor","red");
+                //var obj=$("#dv").html("<p>这是一个p</p>");
+                //var obj=$("#dv").css("backgroundColor","red").html("<p>这是一个p</p>");
+                //断链
+//                var obj=$("#dv").html().css("backgroundColor","red");
+//                console.log(obj);
+            });
+        });
+
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<div id="dv">
+    <p>这是一个p</p>
+</div>
+</body>
+</html>

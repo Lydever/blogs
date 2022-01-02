@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .btn_register,.btn_login{
+            background-color: #222222;
+            color: rgb(131, 131, 131);
+        }
+        @media (max-width:768px){
+            .list{
+                float: left;
+                position: absolute;
+                top: 0;
+                left: 50%;
+            }
+            .list li{
+                float: left;
+                top: 0;
+                left: 50%;
+            }
+        }
+        .navbar{
+            background-color:black;
+        }
+        .language{
+            font-size: 20px;
+            color: white;
+            font-weight: 500;
+        }
+        .mynav{
+            margin-bottom: 0px;
+        }
+        .navbar {
+            border-radius: 0px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.carousel').carousel({
+                interval: 2000
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="nav-brand">
+                <img src="img/logo.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-1">
+            <ul class="nav navbar-nav ">
+                <li><a href="#">首页<span class="sr-only"></span></a></li>
+                <li><a href="#">品牌故事</a></li>
+                <li><a href="#">产品展示</a></li>
+                <li><a href="#">新闻资讯</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="list nav navbar-right">
+            <a href="" class="btn  navbar-btn btn_login" data-toggle="modal" data-target="#login_modal">登录</a>
+            <a href="" class="btn  navbar-btn btn_register" data-toggle="modal" data-target="#register_modal">注册</a>
+        </div>
+    </div>
+    <!--  登录 modal start-->
+    <div class="modal fade" id="login_modal" class="bs-example-modal-sm" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">登录账号</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <form class="form-horizontal " action="header.html" method="post">
+                                <div class="form-horizontal ">
+                                    <div class="form-group">
+                                        <div class="col-md-10 col-sm-10 ">
+                                            <input type="text" class="userName form-control" name="userName" placeholder="手机/邮箱/用户名" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group  ">
+                                        <div class="col-md-10 col-sm-10 ">
+                                            <input type="password" class="passWord form-control" name="password" placeholder="密码" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-10 col-sm-6 ">
+                                            <label class="mychk">
+                                                <input type="checkbox" />下次自动登录
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group  ">
+                                        <div class="col-md-10 login col-sm-10">
+                                            <button type="submit" class="btn btn-primary form-control text-center" >登录</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--  登录 modal end-->
+    <!--  注册 modal start-->
+    <div class="modal fade" id="register_modal" class=" bs-example-modal-sm" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridModalLabel">注册账号</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <form class="form-horizontal"action="header.html" method="post">
+                                <div class="form-horizontal ">
+                                    <div class="form-group">
+                                        <div class="col-md-10 col-sm-10 ">
+                                            <label >请输入用户名:</label>
+                                            <input type="text" class="userName form-control" name="userName" placeholder="手机/邮箱/用户名" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group  ">
+                                        <div class="col-md-10 col-sm-10 ">
+                                            <label >请输入密码:</label>
+                                            <input type="password" class="password form-control" name="password" placeholder="密码" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group  ">
+                                        <div class="col-md-10 col-sm-10 ">
+                                            <label>确认密码:</label>
+                                            <input type="password" class="confirmPassword form-control" name="confirmPassword" placeholder="密码" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-10 col-sm-6 ">
+                                            <label class="mychk">
+                                                <input type="checkbox" />同意用户协议
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group  ">
+                                        <div class="col-md-10 login col-sm-10">
+                                            <button type="submit" class="btn btn-primary form-control text-center" >立即注册</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- 注册 modal end-->
+</nav>
+</body>
+</html>

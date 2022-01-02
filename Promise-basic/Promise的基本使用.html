@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+	<style>
+		body{
+			background-color: #eee;
+		}
+		*{
+			box-sizing: border-box;
+		}
+	</style>
+<body>
+
+   <div id="test">
+    <textarea name="" id="textarea"></textarea>
+    <div class="div">	
+     <label>文本：</label>	
+     <input id="text" type="text">
+     <br>
+     <br>	
+     <label>字号：</label>	
+     <input id="size" @change="changeSize" type="text">
+     <br>
+     <br>	
+     <label>颜色：</label>	
+     <input id="color" @change="changeColor" type="text">
+     <br>
+     <br>	
+     <button id="save" @click="saveData">保存</button>
+    </div>
+   </div>
+
+
+<!-- <script>
+  setTimeout(() => {
+    console.log('Hello World!');
+  },1000)
+
+  new Promise(() =>{
+    console.log('hello world')
+  })
+</script> -->
+<script src="../lib/vue.js"></script>
+<script type="text/javascript">
+		var test = new Vue({
+			//view
+			el:'#test',
+			//model
+			//text: 由textarea和input绑定，一方改变，数据联动
+			//size: 由input绑定，数据输入后，赋值给style
+			//color: 由input绑定，数据输入后，赋值给style
+			//styleObj: 修改style时，使用v-bind:style="xxname"
+			data:{
+				text:'',
+				size:'',
+				color:'',
+				styleObj:{
+				}
+			},
+			//VM
+			methods:{
+				changeSize:function(event){
+					this.styleObj.fontSize = this.size+"px";
+				},
+				changeColor:function(event){
+					this.styleObj.color = this.color;
+				},
+				saveData:function(){
+					alert("text:"+this.text+",size:"+this.size+",color:"+this.color);
+				}
+			}
+		})
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+	
+
+	

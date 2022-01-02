@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btn").mouseover(function () {
+                //获取div,产生动画效果
+                //animate方法；
+                /*
+                * 参数:
+                * 1.是键值对---对象
+                * 2.时间---1000毫秒---1秒
+                * 3.匿名函数---回调函数
+                *
+                * */
+                $("#dv").animate({"width":"300px","height":"300px","left":"300px"},1000,function () {
+                    $("#dv").animate({"width":"50px","height":"30px","left":"800px","top":"300px","opacity":0.2},2000);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<div id="dv"></div>
+</body>
+</html>

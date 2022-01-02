@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+//        $(function () {
+//            //第一个按钮通过on的方式绑定点击事件
+//            $("#btn1").on("click",function () {
+//                alert("我被点了");
+//            });
+//            //第二个按钮把第一个按钮的点击事件解绑
+//            $("#btn2").on("click",function () {
+//                //off()参数:要解绑的事件的名字
+//                $("#btn1").off("click");//解绑事件
+//            });
+//        });
+    </script>
+    <script>
+        //解绑事件
+//        $(function () {
+//            //第一个按钮bind绑定事件
+//            $("#btn1").bind("click",function () {
+//                alert("我又被点了");
+//            });
+//            //第二个按钮unbind解绑事件
+//            $("#btn2").bind("click",function () {
+//                $("#btn1").unbind("click");//解绑事件的方法
+//            });
+//        });
+
+    </script>
+    <script>
+
+        $(function () {
+            //点击第一个按钮为div中p绑定点击事件
+            $("#btn1").click(function () {
+                $("#dv").delegate("p","click",function () {
+                    alert("我被点了");
+                });
+            });
+            //点击第二个按钮为div中p解除绑定事件
+            $("#btn2").click(function () {
+                $("#dv").undelegate("p","click");//解绑
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="绑定事件" id="btn1"/>
+<input type="button" value="解绑事件" id="btn2"/>
+<div id="dv">
+    <p>这是div中的一个p标签</p>
+</div>
+</body>
+</html>

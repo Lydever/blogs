@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .list{
+            background-color: red;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //点击按钮设置页面上应用cls类样式li标签的背景颜色
+    //页面加载的事件
+        $(function () {
+            //获取按钮,注册点击事件
+            $("#btn").click(function () {
+                //获取应用cls类样式的li标签
+                //标签+类样式的选择器
+                $("li.list").css("backgroundColor","yellow");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="设置样式" id="btn"/>
+<ul>
+    <li class="list">李子</li>
+    <li>李李</li>
+    <li>老李</li>
+    <li class="list">华园李</li>
+    <li>小李</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,137 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear_fix:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+ul>li{
+	list-style: none;
+	display: inline-block;
+}
+.container{
+	width: 100%;
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+.container>.header-menu{
+	height: 48px;
+	background:#f2f2f2;
+	/*overflow: hidden;*/
+}
+.header-menu>div{
+	width:1080px;
+	height: 48px;
+	/*background: pink;*/
+	margin-left: 420px;
+}
+.header-menu>div>div{
+	width: 540px;
+	height: 48px;
+	float: left;
+}
+.header-menu>div>div:first-child{
+	float: left;
+	line-height: 48px;
+	/*background: skyblue;*/
+}
+.header-menu>div>div:first-child>a{
+	text-decoration: none;
+	color: #337AB7;
+}
+.header-menu>div>div:last-child{
+	width: 540px;
+	
+	line-height: 48px;
+}
+.header-menu>div>div:last-child>ul{
+	float: right;
+}
+.header-menu>div>div:last-child>ul>li>a{
+	text-decoration: none;
+	color:#333; 
+}
+.header-menu>div>div:last-child>ul>li>a:hover{
+	text-decoration: underline;
+	color: #337AB7;
+}
+
+
+
+.header-search{
+	width: 1080px;
+	height: 120px;
+	/*background: pink;*/
+	margin-left: 420px;
+}
+.header-search>div:first-child{
+	float: left;
+	width: 100px;
+	height:100px;
+	margin-top: 10px;
+	background: blue;
+}
+.header-search>div:first-child>img{
+	width: 100px;
+	height:100px;
+}
+.header-search>div:nth-child(2){
+	float: left;
+	width: 780px;
+	height: 120px;
+	/*background: white;*/
+}
+.header-search>div:nth-child(2)>input{
+	width: 300px;
+	height: 35px;
+	margin-top: 42px;
+	margin-left: 220px;
+}
+.header-search>div:nth-child(2)>button{
+	width: 40px;
+	height: 39px;
+	border:none;
+	background: #333;
+	color: #fff;
+}
+.header-search>div:last-child{
+	float: left;
+	width: 200px;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+}
+.header-search>div:last-child>span{
+	cursor: pointer;
+}
+
+.header-nav{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	background: #333333;
+}
+.header-nav>ul{
+	margin-left: 420px;
+	overflow: hidden;
+}
+.header-nav>ul>li{
+	display: inline-block;
+}
+.header-nav>ul>li>a{
+	width: 150px;
+	height: 48px;
+	line-height: 48px;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+.header-nav>ul>li:hover{
+	background: #DB4E48;
+}
+.active{
+	background: #DB4E48;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //获取div中的相关元素
+            $("#btn").click(function () {
+                //获取的是div中所有的p标签元素
+                //$("#dv p").css("backgroundColor","red");
+
+                //获取的是div中直接的子元素
+                //$("#dv>p").css("backgroundColor","red");
+
+                //获取的是div后面的第一个p标签元素
+                //$("#dv+p").css("backgroundColor","red");
+
+                //获取的是div后面所有直接的兄弟元素p标签元素
+                //$("#dv~p").css("backgroundColor","red");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<div id="dv">
+    <p>这是div中的第一个p标签</p>
+    <ul>
+        <li>这是第一个li标签</li>
+        <li><p>这是第二个li中的一个p标签</p></li>
+        <li>这是第三个li标签</li>
+    </ul>
+    <p>这是div中的第二个p标签</p>
+</div>
+<p>这是div后面的第一个p标签</p>
+<p>这是div后面的第二个p标签</p>
+<p>这是div后面的第三个p标签</p>
+</body>
+</html>

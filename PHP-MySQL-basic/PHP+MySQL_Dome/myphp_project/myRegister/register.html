@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册系统</title>
+</head>
+<body>
+<h2>用户注册系统</h2>
+<hr/>
+<form action="register.php" method="post" enctype="multipart/form-data">
+    用 户 名：
+    <input type="text" name="userName" size="20" maxlength="15" value="必须填写用户名" />
+    @
+    <select name="domain">
+        　　<option value="@163.com" selected>163.com</option>
+        　　<option value="@126.com">126.com</option>
+    </select>
+    <br/> <br/>
+    登录密码：
+    <input type="password" name="password" size="20" maxlength="15" />
+    <br/> <br/>
+    确认密码：
+    <input type="password" name="confirmPassword" size="20" maxlength="15" />
+    <br/> <br/>
+    选择性别：
+    <input name="sex" type="radio" value="男" checked />男
+    <input name="sex" type="radio" value="女" />女
+    <br/> <br/>
+    个人爱好：
+    <input name="interests[]" type="checkbox" value="音乐" checked />音乐
+    <input name="interests[]" type="checkbox" value="游戏" checked />游戏
+    <input name="interests[]" type="checkbox" value="电影" />电影
+    <input name="interests[]" type="checkbox" value="篮球" />篮球
+    <br/> <br/>
+    个人相片：
+    <input type="file" name="myPicture" size="25" maxlength="100" />
+    <br/> <br/>
+    备注信息 :
+    <textarea name="remark" cols="30" rows="4">请填写备注信息</textarea>
+    <br/> <br/>
+    <input type="submit" name="submit" value="注册按钮" />
+    <input type="reset" name="cancel" value="重新填写" />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#ak").click(function () {
+                alert("超链接被点了");
+                //取消超链接的默认的点击事件
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+<a href="http://www.itcast.cn" id="ak">传智播客</a>
+</body>
+</html>

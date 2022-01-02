@@ -1,0 +1,23 @@
+body {
+  padding-top: 3.5rem;
+}
+
+main {
+  padding-top: 2rem;
+}
+
+.heading {
+  margin-bottom: 2rem;
+  /*padding-bottom: 9px;*/
+  /*border-bottom: 1px solid #eee;*/
+  font-weight: 300;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table td img {
+  height: 60px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cls{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 30px;
+            margin-right: 20px;
+            float: left;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $.fn.changeBackgrounColor=function (color) {
+            $(".cls").css("backgroundColor",color);
+        };
+        $(function () {
+            //点击每个按钮改变每个div的背景颜色
+            $("input[type=button]").click(function () {
+                $(".cls").changeBackgrounColor($(this).val());
+                //$(".cls").css("backgroundColor",$(this).val());
+               // changeBackgrounColor($(this).val());
+            });
+        });
+
+//        function changeBackgrounColor(color) {
+//            $(".cls").css("backgroundColor",color);
+//        }
+    </script>
+</head>
+<body>
+<input type="button" value="green"/>
+<input type="button" value="red"/>
+<input type="button" value="blue"/>
+<div id="dv">
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+</div>
+
+</body>
+</html>

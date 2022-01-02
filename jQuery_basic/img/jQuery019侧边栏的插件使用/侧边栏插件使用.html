@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<div class="product_sort fl">
+    <div class="hd">全部商品导航</div>
+    <div class="bd">
+        <div class="item">
+            <div class="title one"><a href="#"><i></i>出境游</a></div>
+            <div class="list">
+                <a href="#">泰国</a>
+                <a href="#">首尔</a>
+                <a href="#">曼谷</a>
+                <a href="#">大阪</a>
+                <a href="#">普吉岛</a>
+            </div>
+            <div class="arrow">></div>
+            <div class="line"></div>
+            <div class="subitem">
+                <div class="inner">
+                    <div class="tit tit1">
+                        <div class="name">泰国</div>
+                        <ul>
+                            <li><a href="#">沙巴</a></li>
+                            <li><a href="#">新加坡</a></li>
+                            <li><a href="#">菲律宾</a></li>
+                            ......
+                        </ul>
+                    </div>
+                    <div class="tit">
+                        <div class="name">印度尼西亚</div>
+                        <ul>
+                            <li><a href="#">沙巴</a></li>
+                            <li><a href="#">新加坡</a></li>
+                            ......
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="title one"><a href="#"><i></i>境内游</a></div>
+            <div class="list">
+                <a href="#">北京</a>
+                <a href="#">上海</a>
+                <a href="#">重庆</a>
+                <a href="#">深圳</a>
+                <a href="#">天津</a>
+                <a href="#">澳门</a>
+                <a href="#">香港</a>
+                <a href="#">台湾</a>
+            </div>
+            <div class="arrow">></div>
+            <div class="line"></div>
+            <div class="subitem">
+                <div class="inner">
+                    <div class="tit tit1">
+                        <div class="name">北京</div>
+                        <ul>
+                            <li><a href="#">圆明园</a></li>
+                            <li><a href="#">南锣鼓巷</a></li>
+                            <li><a href="#">三里屯</a></li>
+                            ......
+                        </ul>
+                    </div>
+                    <div class="tit">
+                        <div class="name">天津</div>
+                        <ul>
+                            <li><a href="#">大城市</a></li>
+                            <li><a href="#">小城</a></li>
+                            ......
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<script>
+    $(function(){
+        $(".product_sort .bd .item").hover(function(){
+            $(this).addClass("layer");
+        },function(){
+            $(this).removeClass("layer");
+        });
+    })
+</script>
+</body>
+</html>

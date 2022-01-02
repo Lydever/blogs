@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       div{
+           width: 200px;
+           height: 100px;
+           background-color: pink;
+       }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $(document).keydown(function (e) {
+                var keyCode=e.keyCode;//键盘按下后的键对应的键值
+                switch (keyCode){
+                    case 65:$("#dv").css("backgroundColor","red");break;
+                    case 66:$("#dv").css("backgroundColor","green");break;
+                    case 67:$("#dv").css("backgroundColor","blue");break;
+                    case 68:$("#dv").css("backgroundColor","yellow");break;
+                    case 69:$("#dv").css("backgroundColor","black");break;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="dv"></div>
+</body>
+</html>

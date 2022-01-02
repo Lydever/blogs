@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $(this).css("backgroundColor","red");
+            });
+            //点击第二个按钮调用第一个按钮的点击事件---触发第一个按钮的点击事件
+            $("#btn2").click(function () {
+                //触发事件--3三种方式
+                //$("#btn1").click();
+                //trigget()方法中需要写上触发事件的名字
+                //$("#btn1").trigger("click");//触发事件
+                $("#btn1").triggerHandler("click");//触发事件
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="第一个按钮" id="btn1"/>
+<input type="button" value="第二个按钮" id="btn2"/>
+</body>
+</html>

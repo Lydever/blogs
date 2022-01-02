@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style-type: none;
+            width: 200px;
+            position: absolute;
+            left: 500px;
+        }
+        ul li{
+            margin-top: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 20px;
+
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                //获取ul中的索引为4的li标签元素
+                //$("#myname>li:eq(4)").css("backgroundColor","red");
+
+                //获取ul中的索引大于4的所有的li标签元素
+                //$("#myname>li:gt(4)").css("backgroundColor","red");
+
+                //获取ul中的索引小于4的所有的li标签元素
+                //$("#myname>li:lt(4)").css("backgroundColor","red");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="隔行变色" id="btn"/>
+<ul id="myname">
+    <li>李子</li>
+    <li>李李</li>
+    <li>老李</li>
+    <li>华园李</li>
+    <li>小李</li>
+    <li>李子2</li>
+    <li>李李2</li>
+    <li>老李2</li>
+    <li>华园李2</li>
+    <li>小李2</li>
+</ul>
+
+
+</body>
+</html>

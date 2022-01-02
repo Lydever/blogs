@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script src="jquery-1.12.2.min.js"></script>
+    <script>
+        //获取列表中每个li,当鼠标进入后,当前的li有高亮显示,点击的时候可以让当前被点击的li的字体变大,字体的颜色改变,改变字体
+
+        //页面加载
+        $(function () {
+            $("#uu>li").mouseover(function () {
+                $(this).css("backgroundColor","red").siblings("li").css("backgroundColor","");
+            }).click(function () {
+                $(this).css("fontSize","50px").css("color","green").css("fontFamily","全新硬笔行书简");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<ul id="uu">
+    <li>第一个</li>
+    <li>第二个</li>
+    <li>第三个</li>
+    <li>第四个</li>
+    <li>第五个</li>
+</ul>
+</body>
+</html>

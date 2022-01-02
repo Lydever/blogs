@@ -1,0 +1,50 @@
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+@charset "utf-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+body{width:100%;}
+.main{width: 580px;height: 600px;margin: 0 auto;}
+#coolShow{width:575px;height:400px;}
+#coolShow b{opacity: 0;	background: url('images/1.png') no-repeat;background-position: 0 0;	width: 100%;height: 10px;display: block;}
+#handBar{margin-top:50px;position: relative;}
+#handBar span{
+	opacity: 0.6;
+	width:100px;
+	height: 100px;
+	overflow: hidden;
+	display: inline-block;
+	border: 10px solid #217fbc;
+	margin-left: 65px;
+	cursor: pointer;
+	border-radius: 100px;
+	-ms-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-o-border-radius: 100px;
+	transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out; 
+}
+#handBar span:hover{
+	opacity: 1;
+	border: 10px solid #1fcf6d;
+	transform:rotate(360deg) scale(1.1);
+	-ms-transition: all 0.5s ease-in-out;
+	-moz-transform:rotate(360deg) scale(1.1);
+	-wekit-transform:rotate(360deg) scale(1.1);
+	-o-transform:rotate(360deg) scale(1.1);
+}
+#handBar span img{
+	width:100%;
+	height: 100%;
+}
+.WaterFallBox img{
+	width:100%;
+	height:auto;
+}
+
+

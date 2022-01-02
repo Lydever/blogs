@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+
+        //点击按钮,设置多个p标签中显示内容为:我是特立独行的鱼儿(标签选择器)
+        //页面的加载事件
+        $(function () {
+            //获取按钮,调用点击事件,获取所有的p,设置内容
+            $("#btn").click(function () {
+                //获取所有的p--->标签选择器
+                $("p").text("我是特立独行的鱼儿");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="设置内容" id="btn"/>
+<p>我是特立独行的鱼儿</p>
+<p>我是特立独行的李子</p>
+<p>我是特立独行的bug</p>
+<p>bug太招人讨厌了</p>
+<p>快乐码字不秃头</p>
+</body>
+</html>

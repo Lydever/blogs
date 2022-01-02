@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	color: #666;
+}
+.clear_fix:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+ul>li{
+	list-style: none;
+	display: inline-block;
+}
+.container{
+	width: 100%;
+}
+.container>.main{
+	width: 1080px;
+	height: 830px;
+	/*background: pink;*/
+	margin-left: 420px;
+	margin-top:10px;
+}
+
+.main>.nav{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	border-bottom: 1px solid #ccc;
+	/* background: skyblue; */
+}
+
+.nav>div:first-child{
+	height: 48px;
+	float: left;
+}
+.nav>div:last-child{
+	height: 48px;
+	float: right;
+}
+.nav>div>span{
+	color: #337AB7;
+	cursor: pointer;
+}
+.nav>div:last-child{
+	color: #337AB7;
+	cursor: pointer;
+}
+
+/*表格*/
+.tab{
+	width: 1080px;
+}
+.tab>table{
+	width: 1080px;
+}
+table>thead>tr>th{
+	text-align: center;
+	height: 48px;
+	line-height: 48px;
+	background: #f2f2f2;
+	border-bottom: 2px solid #ccc;
+}
+table>tbody>tr>td{
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+table>tbody>tr>td>img{
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+}
+table>tbody>tr>td>button{
+	width: 60px;
+	height: 30px;
+}
+table>tfoot>tr>td{
+	height: 80px;
+	line-height: 80px;
+}
+table>tfoot>tr>td:last-child{
+	text-align: right;
+}
+/*分页*/
+.page{
+	width: 1080px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.page>ul{
+	text-align: center;
+}
+.page>ul>li{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+.active{
+	color: #fff;
+	background: #C9302C;
+}
+.notBook{
+
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+}

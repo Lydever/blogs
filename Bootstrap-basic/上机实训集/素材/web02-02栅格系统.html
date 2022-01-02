@@ -1,0 +1,54 @@
+   <!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>栅格系统进行页面布局</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    .row div{
+        border:red solid 1px;
+    }
+    .row-border{
+        border:blue solid 1px; 
+    }
+    </style>
+  </head>
+  <body>
+ <div class="container">
+    <div class="row">
+        <div class="col-md-1 row-border">col-md-1</div>
+        <div class="col-md-1">col-md-2</div>
+        <div class="col-md-1">col-md-3</div>
+        <div class="col-md-1">col-md-4</div>
+        <div class="col-md-1">col-md-5</div>
+        <div class="col-md-1">col-md-6</div>
+        <div class="col-md-1">col-md-7</div>
+        <div class="col-md-1">col-md-8</div>
+        <div class="col-md-1">col-md-9</div>
+        <div class="col-md-1">col-md-10</div>
+        <div class="col-md-1">col-md-11</div>
+        <div class="col-md-1">col-md-12</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-8">col-md-8</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+    </div>
+ </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

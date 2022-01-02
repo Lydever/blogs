@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航条</title>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<style type="text/css">
+
+		.btn_register,.btn_login{
+			background-color: #1b1b1b;
+			color: rgb(131, 131, 131);
+		}
+		.stu{
+			color: rgb(131, 131, 131);
+			font-size: 14px;
+		}
+		.stu_new{
+			display: block;
+			margin-left:15px;
+			line-height: 50px;
+		}
+	</style>
+</head>
+<body>
+  <div class="container">
+	  <nav class="navbar navbar-default navbar-inverse">
+		  <div class="container-fluid">
+		      <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+			      </button>
+			      <a href="#" class="nav-brand">
+				     <img src="img/logo.png">
+			      </a>
+			  </div>
+			  <div class="collapse navbar-collapse navbaar-left" id="navbar-collapse-1" >
+				  <ul class="nav navbar-nav">
+					  <li class=""><a href="#">首页</a></li>
+					  <li><a href="#">入门课</a></li>
+					  <li><a href="#">岗位课</a></li>
+					  <li><a href="#">技能库</a></li>
+					  <li><a href="#">微社区</a></li>
+					  <li class="stu_new">
+						  <span>
+					          <a href="#" class="stu">学员</a>
+				          </span>
+						  <span class="label label-danger">new</span>
+					  </li>
+				  </ul>
+			  </div>
+			  <form action="" class="navbar-form navbar-right">
+				  <div class="form-group">
+					  <button type="button" class="btn btn_login">登录</button>
+					  <button type="button" class="btn btn_register">注册</button>
+				  </div>
+			   </form> 	  
+				  <div class="nav-">
+					  <input type="text" class="form-control" placeholder="search" />
+					  <input type="submit" class="btn btn-success" value="Submit" />
+				  </div>			  
+		  </div>
+	  </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.1.1.js"></script>
+  </head>
+  <body>
+
+  <div id="box" style="width: 400px;height: 290px">
+
+  </div>
+
+  <script>
+    $(function () {
+        var myChart = echarts.init(document.getElementById('box'));
+      var option = {
+          textStyle:{
+// 			fontSize: arr.initHeight,
+              color: 'red'//字体颜色
+          },
+          tooltip: {
+              trigger: "axis",
+              textStyle:{
+                  color: 'red'//字体颜色
+              },
+          },
+          yAxis: {
+              axisLabel: {
+                  textStyle: {
+                      color: 'red',
+                  }
+              },
+              data: ['q去','qre'],
+              axisTick:{       //x轴刻度线
+                  show:false
+              },
+              splitLine: {     //网格线
+                  show: false
+              },
+              axisLine:{		//坐标轴线
+                  show:false
+              }
+
+          },
+          xAxis: {
+              max: 100,
+              min:0,
+          },
+          series: [{
+              name: '监测状态',
+              type: 'bar',
+              stack:'使用情况',
+              data:[50,80],
+              barWidth : 10,//柱图宽度
+              itemStyle:{
+                  barBorderRadius: [50, 0, 0, 50] // 统一设置四个角的圆角大小
+              },
+              markPoint : {
+                  symbol:'tir',//标记类型
+                  symbolSize: 10,//图形大小
+                  itemStyle: {
+                      normal: {
+                          borderColor: 'red',
+                          borderWidth: 1,            // 标注边线线宽，单位px，默认为1
+                          label: {
+                              show: true,
+                              fontSize: 14
+                          }
+                      }
+                  },
+                  data :[{value:10,xAxis:50,yAxis:0},{value:10,xAxis:50,yAxis:1},{value:10,xAxis:50,yAxis:2},{value:10,xAxis:50,yAxis:3}]//配置项
+              }
+          }
+          ]
+      };
+      myChart.setOption(option);
+
+
+    })
+  </script>
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

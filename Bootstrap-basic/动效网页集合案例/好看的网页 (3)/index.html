@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!--start-smoth-scrolling-->
+<!--start-count-->
+<link rel="stylesheet" href="css/jquery.countdown.css" />
+<script src="js/jquery.countdown.js"></script>
+<script src="js/script.js"></script>
+<!--end-count-->
+</head>
+<body>
+<!--start-banner-->
+	<div class="banner" id="home">
+			<div class="header">
+				<div class="container">
+					<div class="head">
+						<div class="header-left">
+							<a href="index.html"><h1>Blinds</h1></a>
+						</div>
+						<div class="header-right">
+							<p>+8 (800) 555-55-55</p>
+							<p><a href="mailto:example@email.com">contact@shtormarket.com</a></p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>	
+			<div class="banner-top">
+				<div class="banner-bottom">
+					<h2>Suspendisse rutrum commodo diam</h2>
+				</div>
+				<div class="b-btn">
+					<a href="#" class="hvr-sweep-to-right">Read more</a>
+				</div>
+			</div>
+	</div>	
+	<!--end-banner-->
+	<!--start-about-->
+	<div class="about">
+		<div class="container">
+			<div class="about-top">
+				<h3>Fusce sollicitudin condimentum?</h3>
+				<div class="about-bottom">
+					<div class="about-bottom-text">
+						<div class="col-md-4 about-bottom-grid">
+							<span class="one"> </span>
+							<h4>Vestibulum egestas libero</h4>
+							<label> </label>
+							<p>Fusce eros ante, mattis non dolor non, accumsan condimentum tellus rutrum augue et.</p>
+						</div>
+						<div class="col-md-4 about-bottom-grid">
+							<span class="two active"> </span>
+							<h4>Vestibulum egestas libero</h4>
+							<label> </label>
+							<p>Fusce eros ante, mattis non dolor non, accumsan condimentum tellus rutrum augue et.</p>
+						</div>
+						<div class="col-md-4 about-bottom-grid">
+							<span class="tre"> </span>
+							<h4>Vestibulum egestas libero</h4>
+							<label> </label>
+							<p>Fusce eros ante, mattis non dolor non, accumsan condimentum tellus rutrum augue et.</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="about-bottom-text">
+						<div class="col-md-4 about-bottom-grid">
+							<span class="fvr"> </span>
+							<h4>Vestibulum egestas libero</h4>
+							<label> </label>
+							<p>Fusce eros ante, mattis non dolor non, accumsan condimentum tellus rutrum augue et.</p>
+						</div>
+						<div class="col-md-4 about-bottom-grid">
+							<span class="fve"> </span>
+							<h4>Vestibulum egestas libero</h4>
+							<label> </label>
+							<p>Fusce eros ante, mattis non dolor non, accumsan condimentum tellus rutrum augue et.</p>
+						</div>
+						<div class="col-md-4 about-bottom-grid">
+							<span class="six"> </span>
+							<h4>Vestibulum egestas libero</h4>
+							<label> </label>
+							<p>Fusce eros ante, mattis non dolor non, accumsan condimentum tellus rutrum augue et.</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end-about-->
+	<!--start-gallery-->
+	<div class="gallery">
+		<div class="container">
+			<div class="gallery-top">
+				<h3>Class aptent taciti</h3>
+			</div>
+			<div class="gallery-bottom">
+				 <ul id="flexiselDemo3">
+						<li>						 	
+							<img src="images/g-1.jpg" alt="" />																								 
+						 </li>
+						 <li>						 	
+							<img src="images/g-2.jpg" alt="" />																								 
+						 </li>
+						 <li>						 	
+							<img src="images/g-3.jpg" alt="" />																								 
+						 </li>
+					 </ul>	 
+			</div>
+		</div>
+	</div>
+	<!--end-gallery-->
+	<!--Slider-Starts-Here-->
+				 <script type="text/javascript">
+					$(window).load(function() {
+						
+						$("#flexiselDemo3").flexisel({
+							visibleItems: 3,
+							animationSpeed: 1000,
+							autoPlay: true,
+							autoPlaySpeed: 3000,    		
+							pauseOnHover: true,
+							enableResponsiveBreakpoints: true,
+							responsiveBreakpoints: { 
+								portrait: { 
+									changePoint:480,
+									visibleItems: 1
+								}, 
+								landscape: { 
+									changePoint:640,
+									visibleItems: 2
+								},
+								tablet: { 
+									changePoint:768,
+									visibleItems: 3
+								}
+							}
+						});
+						
+					});
+				    </script>
+				    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+
+			<!--End-slider-script-->
+	<!--start-sale-->
+	<div class="sale">
+		<div class="container">
+			<div class="sale-main">
+				<div class="col-md-6 sale-left">
+					<h3>Bibendum!</h3>
+					<p>Donec consectetur massa a arcu aliquet elementum eu</p>
+					<div class="sale-btn">
+						<a href="#" class="hvr-sweep-to-right">Discount 20%!</a>
+					</div>
+					<div class="count">
+						<div id="counter"> </div>
+					</div>
+				</div>
+				<div class="col-md-6 sale-right">
+					<div class="sale-one">
+						<p>Pellentesque ultricies tincidunt felis nec auctor nulla suscipit vitae</p>
+						<div class="sale-bottom">
+							<div class="col-md-6 sale-bottom-left">
+								<input type="text" value="First Name" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'First Name';}"/>
+								<input type="text" value="Last Name" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Last Name';}"/>
+								<input type="text" value="Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Email';}"/>
+							</div>
+							<div class="col-md-6 sale-bottom-right">
+								<textarea value="Your Message" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your Message';}">Your Message</textarea>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>	
+	<!--end-sale-->	
+	<!--start-work-->	
+	<div class="work">
+		<div class="container">
+			<div class="work-top">
+				<h3>Work</h3>
+				<div class="work-bottom">
+					<div class="col-md-4 work-left">
+						<div class="work-one wrk">
+							<h4>01</h4>
+							<p>Vestibulum auctor</p>
+						</div>
+						<div class="work-one">
+							<h4>02</h4>
+							<p>Aliquam rutrum augue et risus molestie</p>
+						</div>
+						<div class="work-one">
+							<h4>03</h4>
+							<p>Nam non bibendum eros. Sed in rhoncus Praesent</p>
+						</div>
+					</div>
+					<div class="col-md-4 work-middle">
+						<img src="images/work-1.png" alt="" />
+					</div>
+					<div class="col-md-4 work-right">
+						<div class="work-one wrk">
+							<h4>04</h4>
+							<p>Etiam tincidunt ex</p>
+						</div>
+						<div class="work-one">
+							<h4>05</h4>
+							<p>Nunc porta eros non nunc vulputate in aliquam.</p>
+						</div>
+						<div class="work-one">
+							<h4>06</h4>
+							<p>Mauris bibendum eget</p>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<!--end-work-->		
+	<!--start-testimonial-->
+	<div class="testimonial">
+		<div class="container">
+			<div class="testimonial-top">
+				<h3>Testimonials</h3>
+				    <div class="testimonial-bottom">
+						<div class="col-md-4 testimonial-one">
+							<img src="images/t-1.png" alt="" />
+							<h4>John Doe</h4>
+							<p> Morbi interdum turpis leo, quis pulvinar mauris pulvinar ut. Integer quis elementum arcu, vel euismod felis Morbi ultrices!.</p>
+						</div>
+						<div class="col-md-4 testimonial-one">
+							<img src="images/t-2.png" alt="" />
+							<h4>Christine Heal</h4>
+							<p> Morbi interdum turpis leo, quis pulvinar mauris pulvinar ut. Integer quis elementum arcu, vel euismod felis Morbi ultrices!.</p>
+						</div>
+						<div class="col-md-4 testimonial-one">
+							<img src="images/t-3.png" alt="" />
+							<h4>Abraham Doe</h4>
+							<p> Morbi interdum turpis leo, quis pulvinar mauris pulvinar ut. Integer quis elementum arcu, vel euismod felis Morbi ultrices!.</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<!--end-testimonial-->			
+	<!--start-footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-6 footer-left">
+					<a href="index.html"><h3>Blinds</h3></a>
+					<p>Address:<span>756 gt globel Place,</span>
+					   <span>CD-Road,M 07 435</span></p>
+				</div>
+				<div class="col-md-6 footer-right">
+					<p>Donec consectetur?</p>
+					<div class="ftr">
+						<label>+8 (800) 555-555-55</label>
+						<ul>
+							<li><a href="#"><span class="sky"> </span></a></li>
+							<li><a href="#"><span class="twit"> </span></a></li>
+							<li><a href="#"><span class="fb"> </span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="footer-bottom">
+				<p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+	<!--end-footer-->			
+</body>
+</html>

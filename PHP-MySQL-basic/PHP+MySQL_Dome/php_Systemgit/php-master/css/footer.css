@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear_fix:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+ul>li{
+	list-style: none;
+	display: inline-block;
+}
+.footer{
+	width: 100%;
+	height: 210px;
+	background: #2F373B;
+}
+.footer>div{
+	padding-top: 40px;
+}
+.footer>div>p{
+	color: #fff;
+	line-height: 30px;
+	text-align: center;
+}

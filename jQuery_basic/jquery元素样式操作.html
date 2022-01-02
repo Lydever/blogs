@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dv{
+            background-color: aquamarine;
+            width: 200px;
+            height: 100px;
+        }
+        .cls{
+            background-color: yellow;
+        }
+    </style>
+    <script src="js/jquery-1.12.2.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                $('#dv').addClass('.cls');
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="显示效果" />
+<div id="dv"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+body{
+			margin: 0;
+			padding: 0;
+			background-size: cover ;
+			background-position: center center;
+			background-attachment: fixed;
+			background-image: url(../img/bci.png);	
+		}
+		header{
+			width: 65%;
+			height: 200px;
+			background-color: white;
+			margin: 0 auto;
+			background-image: url(../img/logo.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.p1{
+			font-size: 60px;
+			font-family: '华文行楷';
+			padding-top: 6.5%;
+			margin-left: 280px;   
+		}
+		.left{
+			width: 15%;
+			height: 700px;
+			margin-left: 17.5%;
+			background-color: lightblue;
+			overflow: hidden;
+			float: left;
+		}
+		#zhuxiao{
+			border-radius:2px 2px;
+			color:white;
+			font-family: "黑体";
+			background-color:rgba(0,0,0,0.5);
+			border:0px;
+			width:12%;
+			height:40px;
+			font-size: 18px;
+			text-shadow: 5px 5px 5px black;
+			margin-left: 88%;
+			margin-top:4.3%;
+		}
+		.cd{
+			font-size: 28px;
+			font-family: "幼圆";
+			font-weight: bolder;
+			text-align: center;
+			padding-top: 20px;
+			height: 50px;
+			width: 100%;
+			background-color: rgb(25,118,255,0.5);
+		}
+		.box{
+			margin: 0px;
+            padding: 0px;
+		}
+		.box li{
+			list-style: none;
+			width: 100%;
+			height: 60px;
+			text-align: center;
+			padding-top: 30px;
+			border-bottom: solid white 2px;
+		}
+		.box li:hover{
+			background-color: rgb(25,118,255,0.5);
+		}
+		.xx{
+			display: block;
+            font-size: 20px;
+            color: #FFF;
+            text-decoration: none;
+            font-family: "幼圆";
+		}
+		a:hover{
+            color:white;
+            font-size: 24px;
+        }
+     	.right{
+			width: 50.2%;
+			height: 700px;
+			margin-left: 32.3%;
+			border-top:solid 1px lightblue;
+			font-family: "幼圆";
+			background-color: white;
+		}
+		.rt{
+			margin-top: 40px;
+			margin-left:27%; 
+		}
+		.sb{
+			margin-left: 345px;
+			margin-top: 20px;
+		}
+		td{
+			height: 50px;
+		}
+		.admindex{
+			background: url(../img/admindex.png) 10px 30px no-repeat;
+		}
+		.stuxz{
+			background: url(../img/stuxz.png) 10px 35px no-repeat;
+		}
+		.search{
+			background: url(../img/search.png) 10px 30px no-repeat;
+		}
+		.changepw{
+			background: url(../img/changepw.png) 10px 30px no-repeat;
+		}
+		.st{
+			background: url(../img/st.png) 10px 35px no-repeat;
+		}
+		.addc{
+			background: url(../img/addc.png) 10px 30px no-repeat;
+		}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户登录</title>
+	<style type="text/css">
+		.form-head{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		.myform{
+			width: 300px;
+			margin: 10px auto;
+		}
+		#uPassword{
+			margin:15px 2px;
+		}
+		#register{
+			margin:0px 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="form-head">
+		<img src="img/1.jpg" alt="" height="45">
+		<h2>用户登录</h2>
+	</div>
+	<form method="post" class="myform">
+		<label>用户名:</label>
+		<input type="text" name="userName" id="userName"/><br>
+		<label>密&nbsp;&nbsp;&nbsp;码:</label>
+		<input type="password" name="password" id="password" /><br>
+		<input type="submit" value="登录" onclick="form.action='login.php'" id="login" />
+		<input type="submit" value="注册" onclick="form.action='register.html'" id="register" />
+	</form>
+</body>
+</html>

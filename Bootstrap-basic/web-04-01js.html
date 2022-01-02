@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background: red;
+			transition: all 1s;
+		}
+		#div1:hover{			
+			background: green;	
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="div1"></div>
+	</div>
+	<script>
+		var div=document.getElementById('div1');
+		div.addEventListener('transitionend', function(e){
+			alert('浏览器支持过渡效果');
+		})
+	</script>
+</body>
+</html>

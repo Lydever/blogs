@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function Student(name) {
+            this.name=name;
+            this.sayHi=function (name) {
+                if(name){
+                    console.log("俺是"+name);
+                    return this;
+                }else{
+                    console.log("我的名字叫"+this.name);
+                }
+//                console.log("我的名字叫"+this.name);
+//                return this;//把当前对象返回
+            };
+            this.eat=function () {
+                console.log("我就是喜欢吃大蒜+榴莲+臭豆腐");
+            };
+        }
+        var stu=new Student("小明");
+        stu.sayHi().eat();
+
+
+
+
+        //var stu=new Student("小黑");
+        //.html()
+        //stu.sayHi().eat();
+//        stu.sayHi();
+//        stu.eat();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

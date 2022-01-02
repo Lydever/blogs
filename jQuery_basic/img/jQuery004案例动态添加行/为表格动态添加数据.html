@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="checkDemo.css"/>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //点击按钮,显示遮挡层和对话框
+            //添加数据
+            $("#j_btnAddData").click(function () {
+                $("#j_mask").css("display","block");
+                $("#j_formAdd").css("display","block");
+            });
+            //关闭
+            $("#j_hideFormAdd").click(function () {
+                $("#j_mask").css("display","none");
+                $("#j_formAdd").css("display","none");
+            });
+            //真正的添加数据
+            $("#j_btnAdd").click(function () {
+                //获取课程  j_txtLesson
+                var lesson=$("#j_txtLesson").val();
+                //获取学院  j_txtBelSch
+                var belSch=$("#j_txtBelSch").val();
+                //创建行--拼接字符串,添加到tbody中
+                $("<tr><td>"+lesson+"</td><td>"+belSch+"</td><td><a href='javascrip:;' class='get'>GET</a></td></tr>").appendTo($("#j_tb"));
+                //隐藏遮挡层和对话框
+                $("#j_mask").css("display","none");
+                $("#j_formAdd").css("display","none");
+                $("#j_txtLesson").val("");//情况课程的文本框
+            });
+            //获取tbody中应用.get类样式的元素,绑定点击事件
+            //如果元素是动态添加的,那么非常推荐用on的方式为动态添加的元素绑定事件
+            $("#j_tb").on("click",".get",function () {
+                $(this).parent().parent().remove();//删除tr
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+<div class="wrap">
+    <div>
+        <input type="button" value="添加数据" id="j_btnAddData" class="btnAdd"/>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>课程名称</th>
+            <th>所属学院</th>
+            <th>已学会</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <td>JavaScript</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <td>css</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <td>html</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <td>jQuery</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="j_mask" class="mask"></div>
+<div id="j_formAdd" class="form-add">
+    <div class="form-add-title">
+        <span>添加数据</span>
+
+        <div id="j_hideFormAdd">x</div>
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtLesson">课程名称：</label>
+        <input class="txt" type="text" id="j_txtLesson" placeholder="请输入课程名称">
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtBelSch">所属学院：</label>
+        <input class="txt" type="text" id="j_txtBelSch" value="传智播客-前端与移动开发学院">
+    </div>
+    <div class="form-submit">
+        <input type="button" value="添加" id="j_btnAdd">
+    </div>
+</div>
+
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,31 @@
+<?php include_once TEMPLATE_DIR . 'header.inc.html'; ?>
+ <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <?php foreach ($previews as $preview): ?>
+                <div class="post-preview">
+                    <a href="<?php echo "index.php?c=Post&a=getPost&id={$preview['id']}"; ?>">
+                        <h2 class="post-title">
+                            <?php echo $preview['title']; ?>
+                        </h2>
+                        <p>
+                            <?php echo $preview['content']; ?>
+                        </p>
+                    </a>
+                    <p class="post-meta">Posted by <a href="index.php?c=Post&a=getPost&id=<?php echo $preview['id']; ?>"><?php echo $preview['author']; ?></a> on <?php echo $preview['updateDate']; ?></p>
+                </div>
+                <hr>
+            <?php endforeach; ?>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="index.php?c=Archive&a=display">Older Posts &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+<?php include_once TEMPLATE_DIR . 'footer.inc.html'; ?>

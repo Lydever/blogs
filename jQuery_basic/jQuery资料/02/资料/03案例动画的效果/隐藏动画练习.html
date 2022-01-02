@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            background: cornflowerblue;
+            width: 100px;
+            height: 80px;
+            margin: 2px;
+            float: left;
+        }
+        img{
+            width: 100px;
+            height: 80px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("div").click(function () {
+                $(this).hide(1000,function () {
+                    $(this).remove();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div><img src="imagess/01.jpg"></div>
+<div><img src="imagess/02.jpg"></div>
+<div><img src="imagess/03.jpg"></div>
+<div><img src="imagess/04.jpg"></div>
+<div><img src="imagess/05.jpg"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.2.js"></script>
+    <style type="text/css">
+        .cls{
+            background-color:red;
+        }
+    </style>
+    <script>
+        $(function(){
+           $('#btn').click(function(){
+               $('span.cls').css('backgroundColor','yellow');
+               $('p.cls').css('backgroundColor','yellow');
+           });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn" />
+<span class="cls">这是一个span</span>
+<p class="cls">这是一个p</p>
+</body>
+</html>

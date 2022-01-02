@@ -1,0 +1,41 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.item_content ul {
+    list-style: none;
+}
+
+.item_content ul li {
+    width: 100px;
+    height: 60px;
+    float: left;
+    margin: 5px 0px 0px 5px;
+}
+
+.item_content {
+    width: 320px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin-left: 500px;
+    margin-top: 300px;
+}
+
+.item_content .item {
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    background: #ccc;
+
+}
+
+.item_content .item img {
+    width: 100px;
+    height: 60px;
+    border-radius: 6px;
+
+}

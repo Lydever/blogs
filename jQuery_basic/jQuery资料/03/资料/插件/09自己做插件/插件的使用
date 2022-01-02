@@ -1,0 +1,30 @@
+//该插件的功能是修改元素的背景颜色
+//作者；帅小杨
+//使用方式:
+//1.引入外部的css文件:
+//<link rel="stylesheet" href="jquery-changebackgroundcolor-1.1.css">
+//2.引入外部的jquery文件:
+//<script src="jquery-1.12.2.js"></script>
+//3.引入该插件的js文件
+// <script src="jquery-changebackgroundcolor-1.1.js"></script>
+//4.请把下面的代码放在body中
+<input type="button" value="red"/>
+<input type="button" value="green"/>
+<input type="button" value="blue"/>
+<input type="button" value="yellow"/>
+<div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+</div>
+//5.请把下面的代码放在$(document).ready(function(){});或者$(function(){});中
+ $(function () {
+            $("input[type=button]").click(function () {
+                //$(".cls").css("backgroundColor",$(this).val());
+                $(".cls").changeBackgroundColor($(this).val());
+            });
+            //标准的封装方法的代码
+            //$.fn.方法的名字=匿名函数；  该方法直接会封装到$的对象中
+
+        });

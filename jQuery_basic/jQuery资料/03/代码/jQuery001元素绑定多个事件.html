@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //鼠标进入到按钮中背景颜色为红色,离开后颜色为默认,点击按钮,弹出对话框
+            //鼠标进入
+//            $("#btn").mouseover(function () {
+//                $(this).css("backgroundColor","red");
+//            });
+//            //鼠标离开
+//            $("#btn").mouseout(function () {
+//                $(this).css("backgroundColor","");
+//            });
+//            //点击事件
+//            $("#btn").click(function () {
+//                alert("哈哈,我又变帅了");
+//            });
+            //链式编程
+//            $("#btn").mouseover(function () {
+//                $(this).css("backgroundColor","red");
+//            }).mouseout(function () {
+//                $(this).css("backgroundColor","");
+//            }).click(function () {
+//                alert("哈哈,我又变帅了");
+//            });
+            //bind()方法:第一个参数是事件名字,第二个参数是事件处理函数-匿名函数
+
+//            $("#btn").bind("click",function () {
+//                alert("我被点了");
+//            });
+            //bind()方法可以为元素同时绑定多个事件
+            $("#btn").bind({"click":function(){
+                alert("我被点了");
+            },"mouseover":function(){
+                $(this).css("backgroundColor","red");
+            },"mouseout":function(){
+                $(this).css("backgroundColor","");
+            }});
+
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+
+    <script>
+
+        $(function () {
+            //为div和p都绑定点击事件
+//            $("#dv>p").click(function () {
+//                alert("p被点了");
+//            });
+            $("#dv").delegate("p","click",function () {
+                alert("p被点了");
+            });
+            $("#dv").click(function () {
+                alert("div被点了");
+            });
+            $("#btn1").click(function () {
+               // $("#dv").off("click");
+                //下面的代码是把子级元素的点击事件解绑了,父级元素的点击事件还存在
+                //$("#dv").off("click","**");
+                $("#dv").off();//移除父级元素和子级元素的所有的事件
+            });
+            //如果说父级元素和子级元素都是通过正常的方式绑定事件,如果通过off解绑的时候,父级元素的事件解绑了,子级元素的事件没有解绑
+            //但是:如果子级元素是通过父级元素调用delegate的方式绑定的事件,父级元素使用off方式解绑事件,这个时候父级元素和子级元素的相同的事件都会被解绑
+        });
+
+        /*
+        *
+        * bind
+        * unbind
+        *
+        * on
+        * off
+        *
+        * delegate
+        * undelegate
+        *
+        *
+        * */
+    </script>
+</head>
+<body>
+<input type="button" value="绑定事件" id="btn1"/>
+<input type="button" value="解绑事件" id="btn2"/>
+<div id="dv">
+    <p>这是div中的一个p标签</p>
+</div>
+</body>
+</html>

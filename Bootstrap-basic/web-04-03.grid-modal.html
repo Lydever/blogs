@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid-modal</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+
+        .form-horizontal{
+            margin-left: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form  class="form-horizontal">
+                <div class="form-horizontal">
+                    <div class="form-group col-md-1 col-md-push-8">
+                        <button type="button" class="btn btn-primary col-md-push-8 form-control text-center" data-toggle="modal" data-target="#mymodal">登录</button>
+                    </div>
+                    <div class="form-group search">
+                        <span class="input-form row ">
+                            <input type="text" class="col-md-6 intext" id="" />
+                            <button type="button" class="btn btn-primary btn_bdu">百度一下</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<div class="modal fade" id="mymodal" class=" bs-example-modal-sm" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">登录百度账号</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <form class="form-horizontal ">
+                            <div class="form-horizontal ">
+                                <div class="form-group">
+                                    <div class="col-md-10 col-sm-10 ">
+                                        <input type="text" class="userName form-control" placeholder="手机/邮箱/用户名" />
+                                    </div>
+                                </div>
+                                <div class="form-group  ">
+                                    <div class="col-md-10 col-sm-10 ">
+                                        <input type="password" class="passWord form-control" placeholder="密码" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-sm-6 ">
+                                        <label class="mychk">
+                                            <input type="checkbox" />下次自动登录
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group  ">
+                                    <div class="col-md-10 login col-sm-10">
+                                        <button type="submit" class="btn btn-primary form-control text-center" >登录</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

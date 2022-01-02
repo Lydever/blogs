@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height:100px;
+            background-color: yellow;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //需求:点击按钮把一个p标签添加到一个div中
+        $(function () {
+            $("#btn").click(function () {
+                //创建p标签
+                var pObj= $("<p></p>");
+                pObj.text("哈哈哈,我又变帅了");
+                //$("#dv").append(pObj);
+                //把pObj对象主动的加到div中
+                pObj.appendTo($("#dv"));
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="创建元素" id="btn"/>
+<div id="dv"></div>
+</body>
+</html>

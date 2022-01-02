@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>课工场导航条</title>
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .btn_register,
+    .btn_login {
+      background-color: #0da86d;
+      color: #fff;
+    }
+
+
+    .btn_login a:hover {
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    .btn_register a:hover {
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    .stu {
+      color: rgb(131, 131, 131);
+      font-size: 14px;
+    }
+
+    .stu_new {
+      display: block;
+      margin-left: 15px;
+      line-height: 50px;
+    }
+
+    .glyphicon {
+      color: white;
+    }
+
+    .navbar-right .form-group a {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        <a href="#" class="nav-brand">
+          <img src="img/logo.png">
+        </a>
+      </div>
+
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <button type="button" class="btn  navbar-btn btn_login">登录</button>
+          <button type="button" class="btn  navbar-btn btn_register">注册</button>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+
+      <div class="collapse navbar-collapse " id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">入门课</a></li>
+          <li><a href="#">岗位课</a></li>
+          <li><a href="#">技能库</a></li>
+          <li><a href="#">微社区</a></li>
+          <li class="stu_new">
+            <span>
+              <a href="#" class="stu">学员</a>
+            </span>
+            <span class="label label-danger">new</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</body>
+
+</html>

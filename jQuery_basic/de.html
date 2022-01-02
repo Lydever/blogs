@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>富文本编辑器</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<script src="js/jquery-3.1.0.js"></script>
+
+<body>
+  <style>
+    .con1 {
+      width: 100%;
+      height: 300px;
+      border: 1px solid red;
+      font-family: '微软雅黑';
+    }
+  </style>
+  <div class="div con1" contenteditable="true"></div>
+  <button class="but" id="backColor" type="#ff0000">backColor</button>
+  <button class="but" id="but">Bold</button>
+  <button class="but">copy</button>
+  <button class="but" type="http://www.baidu.com">createLink</button>
+  <button class="but">cut</button>
+  <button class="but">delete</button>
+  <button class="but" type="Arial">fontName</button>
+  <button class="but" type="6">fontSize</button>
+  <button class="but" type="#ff00ff">foreColor</button>
+  <button class="but" type="<H1>">formatBlock</button>
+  <button class="but">forwardDelete</button>
+  <button class="but" type="H6">heading</button>
+  <button class="but" type="#dddddd">hiliteColor</button>
+  <button class="but">indent</button>
+  <button class="but">insertHorizontalRule</button>
+  <button class="but" type="<p>I Am A P</p>">insertHTML</button>
+  <button class="but"
+    type="https://img.alicdn.com/imgextra/i3/282199655/O1CN01r1q16q2LC2Zg6NCWL_!!282199655.png">insertImage</button>
+  <button class="but">insertOrderedList</button>
+  <button class="but">insertUnorderedList</button>
+  <button class="but">insertParagraph</button>
+  <button class="but" type="哈哈哈哈哈 text">insertText</button>
+  <button class="but">italic</button>
+  <button class="but">justifyCenter</button>
+  <button class="but">justifyFull</button>
+  <button class="but">justifyLeft</button>
+  <button class="but">justifyRight</button>
+  <button class="but">outdent</button>
+  <button class="but">paste</button>
+  <button class="but">redo</button>
+  <button class="but">removeFormat</button>
+  <button class="but">selectAll</button>
+  <button class="but">strikeThrough</button>
+  <button class="but">subscript</button>
+  <button class="but">superscript</button>
+  <button class="but">underline</button>
+  <button class="but">undo</button>
+  <button class="but">unlink</button>
+  <button class="but">contentReadOnly</button>
+  <button class="but">decreaseFontSize</button>
+  <button class="but" type="div">defaultParagraphSeparator</button>
+  <button class="but">enableInlineTableEditing</button>
+  <button class="but">enableObjectResizing</button>
+  <button class="but">increaseFontSize</button>
+  <hr />
+  <button id="getHTML">点击获取html</button>
+</body>
+<script>
+  $('.but').click(function () {
+    let name = this.innerHTML
+    let type = this.getAttribute('type')
+    console.log(name, type)
+    document.execCommand(name, false, type)
+  })
+  $('#getHTML').click(function () {
+    console.log($('.con1').html())
+  })
+</script>
+
+</html>

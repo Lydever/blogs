@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1,width=device-width,user-scalable=no"/>
+		<title>同一个导航下多种不同hover动画效果</title>
+		<link rel="stylesheet" href="css/xq_navbar.css"/>
+		<link rel="stylesheet" href="css/xq.css"/>
+	</head>
+	<body>
+		<!-- 代码部分begin -->
+		<div class="xq_bag" id="bar1">
+			<ul class="xq_navbar">
+				<li class="xq_navli"><a href="#">java</a></li>
+				<li class="xq_navli"><a href="#">php</a></li>
+				<li class="xq_navli"><a href="#">c#</a></li>
+				<li class="xq_navli"><a href="#">photoshop</a></li>
+				<li class="xq_navli"><a href="#">c++</a></li>
+				<li class="xq_navli"><a href="#">html</a></li>
+				<li class="xq_navli"><a href="#">javascript</a></li>
+			</ul>
+		</div>
+		
+		<div class="xq_bag" id="bar2">
+			<ul class="xq_navbar">
+				<li class="xq_navli"><a href="#">java</a></li>
+				<li class="xq_navli"><a href="#">php</a></li>
+				<li class="xq_navli"><a href="#">c#</a></li>
+				<li class="xq_navli"><a href="#">photoshop</a></li>
+				<li class="xq_navli"><a href="#">c++</a></li>
+				<li class="xq_navli"><a href="#">html</a></li>
+				<li class="xq_navli"><a href="#">javascript</a></li>
+			</ul>
+		</div>
+		
+		<div class="xq_bag" id="bar3">
+			<ul class="xq_navbar">
+				<li class="xq_navli"><a href="#">java</a></li>
+				<li class="xq_navli"><a href="#">php</a></li>
+				<li class="xq_navli"><a href="#">c#</a></li>
+				<li class="xq_navli"><a href="#">photoshop</a></li>
+				<li class="xq_navli"><a href="#">c++</a></li>
+				<li class="xq_navli"><a href="#">html</a></li>
+				<li class="xq_navli"><a href="#">javascript</a></li>
+			</ul>
+		</div>
+		
+		<div class="xq_bag" id="bar4">
+			<ul class="xq_navbar">
+				<li class="xq_navli"><a href="#">java</a></li>
+				<li class="xq_navli"><a href="#">php</a></li>
+				<li class="xq_navli"><a href="#">c#</a></li>
+				<li class="xq_navli"><a href="#">photoshop</a></li>
+				<li class="xq_navli"><a href="#">c++</a></li>
+				<li class="xq_navli"><a href="#">html</a></li>
+				<li class="xq_navli"><a href="#">javascript</a></li>
+			</ul>
+		</div>
+		
+		<div class="xq_bag" id="bar5">
+			<ul class="xq_navbar">
+				<li class="xq_navli"><a href="#">java</a></li>
+				<li class="xq_navli"><a href="#">php</a></li>
+				<li class="xq_navli"><a href="#">c#</a></li>
+				<li class="xq_navli"><a href="#">photoshop</a></li>
+				<li class="xq_navli"><a href="#">c++</a></li>
+				<li class="xq_navli"><a href="#">html</a></li>
+				<li class="xq_navli"><a href="#">javascript</a></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/xq_navbar.js"></script>
+	<script>
+		$(function(){
+			$("#bar1").xq_navbar({"type":"underline","liwidth":"auto","bgcolor":"#000","hcolor":"#f0f"});
+			$("#bar2").xq_navbar({"type":"beat","liwidth":"avg","bgcolor":"#000","hcolor":"#f0f"});
+			$("#bar3").xq_navbar({"type":"line","liwidth":"avg","bgcolor":"#000"});
+			$("#bar4").xq_navbar({"type":"overline","liwidth":"120","bgcolor":"#000"});
+			$("#bar5").xq_navbar({"type":"block","liwidth":"avg","bgcolor":"#000","hcolor":["blue","rgb(10,100,100)","red","pink","green","rgba(23,234,22,1)","rgb(230,230,230)"]});
+		});
+	</script>
+	<!-- 代码部分end -->
+</html>

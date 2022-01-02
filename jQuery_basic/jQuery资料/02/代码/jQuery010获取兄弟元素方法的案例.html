@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style-type: none;
+            width: 200px;
+            position: absolute;
+            left: 500px;
+        }
+
+        ul li {
+            margin-top: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //获取ul中所有的li,有鼠标进入事件,鼠标离开事件,点击事件
+        $(function () {
+            //获取ul->li
+            $("ul>li").mouseenter(function () {
+                $(this).css("backgroundColor","red").siblings().css("backgroundColor","");
+            }).mouseleave(function () {
+                $(this).css("backgroundColor","").siblings().css("backgroundColor","");
+            }).click(function () {
+                //当前元素前面的所有兄弟元素背景颜色为黄色
+                //$(this).prevAll().css("backgroundColor","yellow");
+                //当前元素后面的所有兄弟元素背景颜色为蓝色
+                //$(this).nextAll().css("backgroundColor","blue");
+
+                //链式编程代码
+                //断链:对象调用方法,返回的不是当前的对象,再调用方法,调用不了,
+                //解决断链--->恢复到断链之前的一个效果--修复断链
+                //.end()方法恢复到断链之前的效果
+                $(this).prevAll().css("backgroundColor","yellow").end().nextAll().css("backgroundColor","blue");
+            });
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>青岛啤酒（TsingTao）</li>
+    <li>瓦伦丁（Wurenbacher）</li>
+    <li>雪花（SNOW）</li>
+    <li>奥丁格教士（Franziskaner）</li>
+    <li>科罗娜喜力柏龙（Paulaner）</li>
+    <li>嘉士伯Kaiserdom</li>
+    <li>罗斯福（Rochefort）</li>
+    <li>粉象（Delirium）</li>
+    <li>爱士堡（Eichbaum）</li>
+    <li>哈尔滨牌蓝带</li>
+</ul>
+
+</body>
+</html>

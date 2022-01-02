@@ -1,0 +1,89 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear_fix:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+ul>li{
+	list-style: none;
+	display: inline-block;
+}
+.container{
+	width: 100%;
+}
+.container>.main{
+	width: 1080px;
+	margin-left: 420px;
+	margin-top:10px;
+}
+
+
+.main>.nav{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	border-bottom: 1px solid #ccc;
+}
+
+.nav>div:first-child{
+	height: 48px;
+	float: left;
+}
+.nav>div:last-child{
+	height: 48px;
+	float: right;
+}
+.nav>div>span{
+	color: #337AB7;
+	cursor: pointer;
+}
+.nav>div:last-child{
+	color: #337AB7;
+	cursor: pointer;
+}
+
+.intro{
+	width: 1080px;
+	position: relative;
+}
+.intro>div{
+	float: left;
+	width: 540px;
+	height: 540px;
+	color: #666;
+}
+
+.intro>div:first-child>img{
+	width: 520px;
+	height: 540px;
+}
+.intro>div:first-child{
+	margin-top: 20px;
+}
+.intro>div:nth-child(2){
+	margin-top: 20px;
+}
+
+
+.intro>div:last-child>img{
+	width: 520px;
+	height: 540px;
+	position: absolute;
+	right: 0;
+}
+.intro>div:nth-child(3){
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.intro>div:nth-child(4){
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.name{
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                //触发文本框的获取焦点的事件
+                //$("#txt").focus();
+                //$("#txt").trigger("focus");
+                $("#txt").triggerHandler("focus");
+                $("#sp").text("文本框获取到焦点了");
+                //第一种触发事件的方式和第二种触发事件的方式是相同的,都会触发浏览器默认的事件(光标在文本框中闪烁)
+                //第三种触发事件的方式不会触发浏览器的默认事件
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="触发事件" id="btn"/>
+<input type="text" value="" id="txt"/>
+<span id="sp"></span>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- animation-effect -->
+<link href="css/animate.min.css" rel="stylesheet"> 
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+<!--FlexSlider-->
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+		<script defer src="js/jquery.flexslider.js"></script>
+		<script type="text/javascript">
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+	  </script>
+<!--End-slider-script-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+	
+<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<div class="banner-main">
+				<div class="banner-main1">
+					<div class="logo wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+						<h1><a href="index.html">Viscerous</a></h1>
+					</div>
+					<div class="header-right wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+						<div class="shy-menu">
+							<a class="shy-menu-hamburger">
+								<span class="layer top"></span>
+								<span class="layer mid"></span>
+								<span class="layer btm"></span>
+							</a>
+							<div class="shy-menu-panel">
+								<nav class="menu menu--horatio">
+									<ul class="menu__list">
+										<li class="menu__item menu__item--current"><a href="index.html" class="menu__link"><i class="glyphicon glyphicon-home" aria-hidden="true"></i>Home</a></li>
+										<li class="menu__item"><a href="about.html" class="menu__link"><i class="glyphicon glyphicon-user"> </i>About</a></li> 
+										<li class="menu__item"><a href="services.html" class="menu__link"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i>Services</a></li>
+										<li class="menu__item"><a href="gallery.html" class="menu__link"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i>Gallery</a></li> 
+										<li class="menu__item"><a href="codes.html" class="menu__link"><i class="glyphicon glyphicon-list-alt"> </i>Short Codes</a></li> 
+										<li class="menu__item"><a href="contact.html" class="menu__link"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Contact</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="menu open">
+						  <a class="hamburger">
+							<span class="layer top"></span>
+							<span class="layer mid"></span>
+							<span class="layer btm"></span>
+						  </a>
+						</div>
+						<script>
+							$(function() {
+								
+								initDropDowns($("div.shy-menu"));
+
+							});
+
+							function initDropDowns(allMenus) {
+
+								allMenus.children(".shy-menu-hamburger").on("click", function() {
+									
+									var thisTrigger = jQuery(this),
+										thisMenu = thisTrigger.parent(),
+										thisPanel = thisTrigger.next();
+
+									if (thisMenu.hasClass("is-open")) {
+
+										thisMenu.removeClass("is-open");
+
+									} else {			
+										
+										allMenus.removeClass("is-open");	
+										thisMenu.addClass("is-open");
+										thisPanel.on("click", function(e) {
+											e.stopPropagation();
+										});
+									}
+									
+									return false;
+								});
+							}
+						</script>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="flexslider-info">
+					<section class="slider">
+						<div class="flexslider">
+							<ul class="slides">
+								<li>
+									<div class="banner-info">
+										<h4>Cillum dolore</h4>
+										<p>Voluptate velit esse cillum dolore eu fugiat nulla pariatur. cupidatat non proident</p>
+									</div>
+								</li>
+								<li>
+									<div class="banner-info">
+										<h4>Proident esse</h4>
+										<p> Excepteur sint occaecat cupidatat non proident esse cillum dolore eu fugiat nulla pariatur.</p>
+									</div>
+								</li>
+								<li>
+									<div class="banner-info">
+										<h4>Voluptate velit</h4>
+										<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore nulla pariatur.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- banner -->
+<!-- wthree -->
+	<div class="wthree-grids">
+		<div class="container">
+			<div class="col-md-7 wthree-right wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+				<h4>Features </h4>
+					<div class="wthree-right-grids">
+						<div class="wthree-right-grid right-top">
+							<div class="design-left"> <i class="glyphicon glyphicon-bullhorn"> </i></div>
+							<div class="design-right">
+								<h5>Quisque rutrum, purus</h5>
+								<p>Mauris pellentesque augue a vulputate</p>
+							</div>
+								<div class="clearfix"> </div>
+						</div>
+						<div class="wthree-right-grid right-middle-top">
+							<div class="design-left easy"><i class="glyphicon glyphicon-globe"> </i> </div>
+							<div class="design-right">
+								<h5>Sed mattis tristique</h5>
+								<p>Mauris pellentesque augue a vulputate</p>
+							</div>
+								<div class="clearfix"> </div>
+						</div>
+						<div class="wthree-right-grid right-middle">
+							<div class="design-left developer"><i class="glyphicon glyphicon-wrench"> </i> </div>
+							<div class="design-right">
+								<h5>Maecenas sodales</h5>
+								<p>Mauris pellentesque augue a vulputate</p>
+							</div>
+								<div class="clearfix"> </div>
+						</div>
+						<div class="wthree-right-grid right-bottom">
+							<div class="design-left fully"> <i class="glyphicon glyphicon-oil"> </i></div>
+							<div class="design-right">
+								<h5>Fully Responsive</h5>
+								<p>Duis bibendum diam non erat facilaisis . </p>
+							</div>
+								<div class="clearfix"> </div>
+						</div>
+					</div>
+			</div>
+			<div class="col-md-5 slid wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //wthree -->	
+<!-- agile -->
+	<div class="agile">
+		<div class="container">
+			<div class="agile_right">
+				<div class="col-md-4 list-left text-center wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					<h4>Voluptatem</h4>
+					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+					sed quia consequuntur magni dolores eos qui</p>
+				</div>
+				<div class="col-md-4 list-left text-center wow fadeInUp animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+					<span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>
+					<h4>Voluptatem</h4>
+					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+						sed quia consequuntur magni dolores eos qui</p>
+				</div>
+				<div class="col-md-4 list-left text-center wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+					<h4>Voluptatem</h4>
+					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+						sed quia consequuntur magni dolores eos qui</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+<!-- agile -->
+<!-- what-section -->
+	<div class="what-section agileits-3">
+		<div class="container">
+			<div class="what-grids">
+				<div class="col-md-6 test-list wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+					<h3 class="tittle1">What we do</h3>
+						<div class="tab1">
+							<ul>
+								<li><span> </span></li>
+								<li class="text">Olypian quarrel  gorilla congolium</li>
+							</ul>
+							<p>Lorem ipsum dolor amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, 
+									porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+						</div>
+						<div class="tab2">
+							<ul>
+								<li><span> </span></li>
+								<li class="text">Defacto lingo est igpay atinlay quee</li>
+							</ul>
+							<p>Lorem ipsum dolor amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, 
+									porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+						</div>
+						<div class="tab3">
+							<ul>
+								<li><span> </span></li>
+								<li class="text">How to install Wordpress</li>
+									
+							</ul>
+							<p>Lorem ipsum dolor amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, 
+									porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+						</div>
+						<div class="tab4">
+							<ul>
+								<li><span> </span></li>
+								<li class="text">Epsum factorial non deposit </li>
+							</ul>
+							<p>Lorem ipsum dolor amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, 
+									porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+						</div>
+						<div class="tab5">
+							<ul>
+								<li><span> </span></li>
+								<li class="text">Quid pro quo hic escorol</li>
+							</ul>
+							<p>Lorem ipsum dolor amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, 
+									porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+						</div>
+						<div class="tab6">
+							<ul>
+								<li><span> </span></li>
+								<li class="text">Can the Theme be translated?</li>
+							</ul>
+							<p>Lorem ipsum dolor amet, libero turpis non cras ligula, id commodo, aenean est in volutpat amet sodales, 
+									porttitor bibendum facilisi suspendisse, aliquam ipsum ante morbi sed ipsum mollis.</p>
+
+						</div>
+				</div>
+						<!-- script for tabs -->
+							<script>
+								$(document).ready(function(){
+									$(".tab1 p").hide();
+									$(".tab2 p").hide();
+									$(".tab3 p").hide();
+									$(".tab4 p").hide();
+									$(".tab5 p").hide();
+									$(".tab6 p").hide();
+									$(".tab1 ul").click(function(){
+										$(".tab1 p").slideToggle(300);
+										$(".tab2 p").hide();
+										$(".tab3 p").hide();
+										$(".tab4 p").hide();
+										$(".tab5 p").hide();
+										$(".tab6 p").hide();
+									})
+									$(".tab2 ul").click(function(){
+										$(".tab2 p").slideToggle(300);
+										$(".tab1 p").hide();
+										$(".tab3 p").hide();
+										$(".tab4 p").hide();
+										$(".tab5 p").hide();
+										$(".tab6 p").hide();
+									})
+									$(".tab3 ul").click(function(){
+										$(".tab3 p").slideToggle(300);
+										$(".tab4 p").hide();
+										$(".tab2 p").hide();
+										$(".tab1 p").hide();
+										$(".tab5 p").hide();
+										$(".tab6 p").hide();
+									})
+									$(".tab4 ul").click(function(){
+										$(".tab4 p").slideToggle(300);
+										$(".tab3 p").hide();
+										$(".tab2 p").hide();
+										$(".tab1 p").hide();
+										$(".tab5 p").hide();
+										$(".tab6 p").hide();									
+									})	
+									$(".tab5 ul").click(function(){
+										$(".tab5 p").slideToggle(300);
+										$(".tab3 p").hide();
+										$(".tab2 p").hide();
+										$(".tab1 p").hide();
+										$(".tab4 p").hide();
+										$(".tab6 p").hide();									
+									})
+									$(".tab6 ul").click(function(){
+										$(".tab6 p").slideToggle(300);
+										$(".tab3 p").hide();
+										$(".tab2 p").hide();
+										$(".tab1 p").hide();
+										$(".tab5 p").hide();
+										$(".tab4 p").hide();									
+									})
+								});
+							</script>
+						<!-- script for tabs -->
+				<div class="col-md-6 bar-grid wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+						<h3 class="tittle1">Our  Progress </h3>
+						<h5>Fusce interdum metus et turpis</h5>
+							<div class="progress">
+								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+									<span class="sr-only">40% Complete (success)</span>
+								</div>
+							</div>
+						<h5>Lacinia fermentum</h5>
+						<div class="progress">
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+								<span class="sr-only">20% Complete</span>
+							</div>
+						</div>
+						<h5>Aenean nec eros luctus</h5>
+						<div class="progress">
+							<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+								<span class="sr-only">60% Complete (warning)</span>
+							</div>
+						</div>
+						<h5>Vestibulum ante faucibus orci</h5>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+								<span class="sr-only">80% Complete (danger)</span>
+							</div>
+						</div>
+
+				</div>
+					<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+<!-- //what-section -->
+<!-- newsletter -->
+	<div class="newsletter w3ls-3">
+		<div class="container">
+			<div class="col-md-6 w3agile_newsletter_left wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+				<h3>Subscribe to Newsletter</h3>
+				<p>Donec porta lacus vitae urna placerat, vitae dapibus nulla eleifend. 
+					Donec aliquam neque quis felis viverra pulvinar. Aliquam erat volutpat. 
+					Nam enim metus, faucibus non porttitor id, laoreet quis sapien.</p>
+			</div>
+			<div class="col-md-6 w3agile_newsletter_right wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+				<form action="#" method="post">
+					<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+					<input type="submit" value="Subscribe">
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //newsletter -->
+	<div class="welcome wthree-3">
+		<div class="container">
+			<div class="welcome-head">
+				<h2 class="tittle">Excepteur nonummy </h2>
+					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+					officia deserunt mollit anim id est laborum.Quis autem vel eum iure </p>
+			</div>
+			<div class="welcome-grids">
+				<div class="col-md-3 welcome-grid test1 wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+					<img src="images/w1.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Excepteur</h4>
+							<p>Excepteur nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu.</p>
+						</div>
+				</div>
+				<div class="col-md-3 welcome-grid test1 wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+					<img src="images/w2.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Excepteur</h4>
+							<p>Excepteur nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu.</p>
+						</div>
+				</div>
+				<div class="col-md-3 welcome-grid test1 wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<img src="images/w3.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Excepteur</h4>
+							<p>Excepteur nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu.</p>
+						</div>
+				</div>
+				<div class="col-md-3 welcome-grid test1 wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<img src="images/w4.jpg" class="img-responsive" alt="/">
+						<div class="textbox">
+							<h4>Excepteur</h4>
+							<p>Excepteur nonummy hendrerit mau phaselntes nascetur ridic ulusm dui fusce feu.</p>
+						</div>
+					</div>
+						<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+<div class="footer agile">
+		<div class="container">
+			<ul class="social wow fadeInUp animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+				<li><a class="social-facebook" href="#">
+					<i></i>
+					<div class="tooltip"><span>Facebook</span></div>
+					</a></li>
+				<li><a class="social-twitter" href="#">
+					<i></i>
+					<div class="tooltip"><span>Twitter</span></div>
+					</a></li>
+				<li><a class="social-google" href="#">
+					<i></i>
+					<div class="tooltip"><span>Google+</span></div>
+					</a></li>
+				<li><a class="social-pinterest" href="#">
+					<i></i>
+					<div class="tooltip"><span>Pinterest</span></div>
+					</a></li>
+				<li><a class="social-instagram" href="#">
+					<i></i>
+					<div class="tooltip"><span>Instagram</span></div>
+					</a></li>
+			</ul>
+			<ul class="main-nav">
+				<li><a href="index.html">Home</a><i>|</i></li>
+				<li><a href="about.html">About</a><i>|</i></li>
+				<li><a href="gallery.html">Gallery</a><i>|</i></li>
+				<li><a href="codes.html">Short Codes</a><i>|</i></li>
+				<li><a href="services.html">Services</a><i>|</i></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="copy-right">
+				<p class="wow fadeInUp animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div>
+		</div>
+	</div>
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

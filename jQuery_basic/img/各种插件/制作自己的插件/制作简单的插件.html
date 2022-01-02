@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script src="jquery-mychangeColor-1.0.js"></script>
+    <link rel="stylesheet" href="jquery-mychangeColor-1.0.css"/>
+    <script>
+        $(function () {
+            $(":input[type=button]").on("click",function () {
+                $(".cls").changeBackgroundColor($(this).val()).text("嘎嘎");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    <input type="button" value="red" />
+    <input type="button" value="green" />
+    <input type="button" value="blue" />
+    <input type="button" value="pink" />
+</div>
+
+<div class="cls"></div>
+<div class="cls"></div>
+<div class="cls"></div>
+<div class="cls"></div>
+<div class="cls"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坚持梦想,决不放弃</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        ul li{
+            width: 100px;
+            height:100px;
+            background-color: green;
+            margin-left: 10px;
+            float: left;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+
+        $(function () {
+            //each方法的使用
+            //内部发生了隐式迭代(内部帮助我们循环遍历了每个li)
+            //不同的元素有相同的操作
+            //不同的元素有不同的操作
+            //$("ul>li").css("opacity",0.2);
+            $("ul>li").each(function (index,element) {
+                //element=======是DOM对象
+                //console.log(element.innerText);
+                $(element).css("opacity",(index+1)/10);
+            });
+            //each循环遍历jquery中的(数组)对象的
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+
+</body>
+</html>

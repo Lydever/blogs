@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dv1{
+            width: 300px;
+            height: 250px;
+            background-color: red;
+        }
+        #dv2{
+            width: 250px;
+            height: 200px;
+            background-color: green;
+        }
+        #dv3{
+            width: 200px;
+            height: 150px;
+            background-color: blue;
+        }
+    </style>
+    <script src="jquery-1.12.2.js">
+    </script>
+    <script>
+        //事件冒泡:元素中有元素,这些元素都有相同的事件,一旦最里面的元素的事件触发了,外面的所有的元素的相同的事件都会被触发
+        //元素A中有一个元素B,A和B都有点击事件,B点击事件触发,A点击事件自动触发
+        //取消事件冒泡
+        //jQuery中  return false
+        $(function () {
+            $("#dv1").click(function () {
+                alert("dv1被点了"+$(this).attr("id"));
+            });
+            $("#dv2").click(function () {
+                alert("dv2被点了"+$(this).attr("id"));
+                //$("body").css("backgroundColor","black");
+            });
+            $("#dv3").click(function () {
+                alert("dv3被点了"+$(this).attr("id"));
+                return false;//取消事件冒泡
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="dv1">
+    <div id="dv2">
+        <div id="dv3"></div>
+    </div>
+</div>
+</body>
+</html>

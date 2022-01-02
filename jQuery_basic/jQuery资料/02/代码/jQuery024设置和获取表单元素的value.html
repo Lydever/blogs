@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        
+        $(function () {
+            //点击按钮把所有的表单的value属性值全部显示出来
+           // $("#btn").click(function () {
+//                console.log($(this).val());//显示按钮的value属性值
+//                console.log($("#txt").val());//显示文本框的value属性值
+//                console.log($("#rad").val());//显示的单选框的value属性值
+//                console.log($("#ck").val());//显示的是复选框的value属性值
+//                console.log($("#sm").val());//显示的是提交按钮的value属性值
+
+                //设置表单元素的value属性值
+//                $(this).val("这是一个按钮妞");
+//                $("#txt").val("我是一个开心的按钮");
+//                $("#rad").val("这是单选");
+//                $("#ck").val("兴趣来了");
+//                $("#sm").val("这是sm按钮");
+
+                //获取文本域中的内容:1. .text()方法  2  .val()方法--推荐
+                //console.log($("#tt").text());
+
+                //点击按钮让下拉框中的 上海选中
+
+           // });
+
+            $("#btn").click(function () {
+                $("#se").val(4);//可以改变某一项选中
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<input type="text" value="文本框" id="txt"/>
+<input type="radio" value="man" name="sex" id="rad" />男
+<input type="checkbox" value="1" id="ck" />吃饭
+<input type="submit" value="提交" id="sm" />
+<!--表单元素-->
+<textarea name="" id="tt" cols="30" rows="10">
+    哈哈,我又变帅了....
+</textarea>
+<select id="se">
+    <option value="1">北京</option>
+    <option value="2">上海</option>
+    <option value="3">深圳</option>
+    <option value="4">重庆</option>
+    <option value="5">东京</option>
+</select>
+</body>
+</html>

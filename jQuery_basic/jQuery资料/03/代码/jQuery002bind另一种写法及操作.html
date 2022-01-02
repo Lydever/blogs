@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+//        $(function () {
+//            //为按钮注册鼠标进入和离开的事件--绑定--bind
+//            var i=0;
+//            $("#btn").bind("mouseover mouseout",function () {
+//                i++;
+//                console.log(i);
+//            });
+//        });
+
+        $(function () {
+            //点击按钮通过bind方式为div中添加一个元素
+            $("#btn").bind("click",function () {
+                //创建一个p标签,添加到div中
+                $("<p>这是一个p</p>").appendTo($("#dv"));
+                //方法
+                //点击p标签弹出对话框
+                //delegate--->绑定事件
+                /*
+                *
+                * delegate:
+                * 参数:3个
+                * 1.要绑定事件的元素---p
+                * 2.要绑定的事件的名字---click
+                * 3.绑定事件的处理函数---匿名函数
+                *
+                * */
+                $("#dv").delegate("p","click",function () {
+                    alert("我被点了");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<div id="dv"></div>
+</body>
+</html>

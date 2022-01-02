@@ -1,0 +1,273 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear_fix:after{
+	clear: both;
+	display: block;
+	content: '';
+}
+ul>li{
+	list-style: none;
+	display: inline-block;
+}
+.container{
+	width: 100%;
+}
+.container>.main{
+	width: 1080px;
+	margin-left: 420px;
+	margin-top:10px;
+}
+/*轮播*/
+.main>#ad{
+			width: 1080px;
+			height: 360px;
+			background: #fff;
+			position: relative;
+			overflow: hidden;
+		}
+		.main>#ad>img{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			display: block;
+			/*width: 1080px;
+			height: 454px;
+			display: none;*/
+		}
+		#ad>img:not(:first-child){
+			transform: translate(100%,0);
+		}
+		#circle{	
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			height:30px;
+			background:rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		#circle>li{
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			list-style: none;
+			display: inline-block;
+			margin-left: 5px;
+			margin-top: 7px;
+			cursor: pointer;
+		}
+		.active{
+			background: #fff;
+		}
+
+		@keyframes rightIn{
+			from{
+				transform: translate(100%,0);
+			}
+			to{
+				transform: translate(0,0);
+			}
+		}
+		@keyframes leftOut{
+			from{
+				transform: translate(0,0);
+			}
+			to{
+				transform: translate(-100%,0);
+			}
+		}
+
+		@keyframes leftIn{
+			from{
+				transform: translate(-100%,0);
+			}
+			to{
+				transform: translate(0,0);
+			}
+		}
+
+		@keyframes rightOut{
+			from{
+				transform: translate(0,0);
+			}
+			to{
+				transform: translate(100%,0);
+			}
+		}
+		.rightIn{
+			animation: rightIn 1s linear forwards;
+		}
+
+		.rightOut{
+			animation: rightOut 1s linear forwards;
+		}
+
+		.leftIn{
+			animation: leftIn 1s linear forwards;
+		}
+
+		.leftOut{
+			animation: leftOut 1s linear forwards;
+		}
+		.arrow{
+			width: 48px;
+			height: 48px;
+			position: absolute;
+			/*background: rgba(0,0,0,0.5);*/
+			top: 50%;
+			cursor: pointer;
+		}
+		#arrow-left{	
+			left: 10px;
+		}
+		#arrow-right{
+			right: 10px;
+		}
+/*小标题*/
+.bt{
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 18px;
+	position: relative;
+	color: #333;
+}
+.bt>.x{
+	width: 100%;
+	height: 2px;
+	/*margin-top: 49px;*/
+	background:  #666;
+	position: absolute;
+	top: 49px;
+}
+.bt>.mz{
+	width: 150px;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	background: #fff;
+	position: absolute;
+	left:465px;
+
+}
+
+
+/*馆长推荐*/
+.recommend{
+	width: 100%;
+	height: 270px;
+	/*background: pink;*/
+}
+.recommend>div{
+	float: left;
+	width: 198px;
+	height: 268px;
+	margin-left: 20px;
+	border: 1px solid #ccc;
+	background:#fff;
+	position: relative;
+	cursor: pointer;
+}
+.recommend>div:first-child{
+	margin-left: 0;
+}
+.recommend>div:hover{
+	transform: scale(1.1);
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+}
+.recommend>div>div:first-child{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+}
+.recommend>div>div:nth-child(2){
+	width: 100%;
+	height: 2px;
+	background: red;
+	margin-top: 10px;
+}
+.recommend>div>div:nth-child(3){
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	left: 60px;
+	top: 35px;
+	color: #666;
+	background: #fff;
+}
+.recommend>div>div:last-child{
+	width: 160px;
+	height: 160px;
+	margin-left: 20px;
+	margin-top: 30px;
+	background: pink;
+}
+.recommend>div>div:last-child>img{
+	width: 160px;
+	height: 160px;
+}
+
+/*新书推荐*/
+.newBook>div{
+	height: 200px;
+	position: relative;
+}
+.newBook>div>div:first-child{
+	width: 198px;
+	height:198px;
+	background: pink;
+}
+.newBook>div>div:first-child>img{
+	width: 198px;
+	height:198px;
+}
+.newBook>div>div:last-child{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	left:-20px;
+	bottom: 0;
+	/*background: #DB4E48;*/
+	background:rgba(0,0,0,0.5);
+	color: #fff;
+}
+
+
+/*图书排行*/
+.list>div{
+	height: 200px;
+	position: relative;
+}
+.list>div>div:first-child{
+	width: 198px;
+	height:198px;
+	background: pink;
+}
+.list>div>div:first-child>img{
+	width: 198px;
+	height:198px;
+}
+.list>div>div:last-child{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	left:-20px;
+	bottom: 0;
+	/*background: #DB4E48;*/
+	background:rgba(0,0,0,0.5);
+	color: #fff;
+}

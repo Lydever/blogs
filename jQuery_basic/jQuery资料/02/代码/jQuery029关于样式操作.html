@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //点击按钮,获取当前元素的宽和高,再次设置元素的宽和高,设置后元素的宽和高分别是原来的宽和高2倍
+        $(function () {
+            $("#btn").click(function () {
+                //获取元素的宽和高
+//                var width=parseInt($("#dv").css("width"))*2;
+//                var height=parseInt($("#dv").css("height"))*2;
+//                //设置样式
+//                $("#dv").css("width",width+"px");
+//                $("#dv").css("height",height+"px");
+                //通过元素的css()方法可以获取元素的宽和高,但是都是字符串类型
+
+
+                //获取宽和高的属性值---->数字类型
+                var width=$("#dv").width()*2;
+                var height=$("#dv").height()*2;
+                //设置元素的宽和高--->参数可以是数字也可以是字符串
+                $("#dv").width(width);
+                $("#dv").height(height);
+
+            })
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<div id="dv"></div>
+</body>
+</html>

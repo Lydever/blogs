@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //两个按钮:1按钮全选,2全不选
+        $(function () {
+            //获取第一个按钮,点击---全选
+            $("#btnAll").click(function () {
+                $("#dv :checkbox").prop("checked",true);
+            });
+            //获取第二个按钮,点击---全不选
+            $("#btnNoAll").click(function () {
+                $("#dv :checkbox").prop("checked",false);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="全选" id="btnAll"/>
+<input type="button" value="全不选" id="btnNoAll"/>
+<div id="dv">
+    <input type="checkbox" value="1"/>吃饭
+    <input type="checkbox" value="2"/>睡觉
+    <input type="checkbox" value="3"/>打豆豆
+    <input type="checkbox" value="4"/>打篮球
+    <input type="checkbox" value="5"/>打足球
+    <input type="checkbox" value="6"/>打铅球
+    <input type="checkbox" value="7"/>打桌球
+</div>
+</body>
+</html>

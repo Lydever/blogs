@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        /*
+        * dom操作按钮,修改背景颜色
+        *
+        * */
+       // window.onload=function () {
+            //btnObj就是DOM对象
+           //var btnObj= document.getElementById("btn");
+//            btnObj.onclick=function () {
+//                this.style.backgroundColor="red";
+//            };
+            //DOM对象转jQuery对象,只需要把DOM对象放在$(dom对象)--->jQuery对象
+//            $(btnObj).click(function () {
+//                $(this).css("backgroundColor","red");
+//            });
+
+            //把jQuery对象转DOM对象两种方式:
+            /*
+            * 1.$(btnObj).get(0);---->DOM对象
+            * 2.$(btnObj)[0];----->DOM对象
+            *
+            * */
+//            var btnObj=document.getElementById("btn");//DOM对象
+//           var obj= $(btnObj).get(0);//DOM对象
+//            obj.onclick=function () {
+//              this.style.backgroundColor="green";
+//            };
+//            var btnObj=document.getElementById("btn");//DOM对象
+//            var obj= $(btnObj)[0];//DOM对象
+//            obj.onclick=function () {
+//                this.style.backgroundColor="green";
+//            };
+      //  };
+
+        $(function () {
+            //$("#btn");---->jQuery对象
+//            $("#btn").click(function () {
+//                $(this).css("backgroundColor","yellow");
+//            });
+//            $("#btn").onclick=function () {
+//                this.style.backgroundColor="red";
+//            };
+            $("#btn").get(0).onclick=function () {
+                this.style.backgroundColor="red";
+            };
+        });
+        /*
+        * DOM对象和jQuery对象可以互转
+        * DOM对象转---->jQuery对象:
+        * $(DOM的对象)----->jQuery对象
+        * jQuery对象---->DOM对象:
+        * 1.
+        * $("#btn")[0]---->DOM对象
+        * 2.
+        * $("#btn").get(0)---DOM对象
+        *
+        *
+        *
+        * */
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style-type: none;
+            width: 200px;
+            position: absolute;
+            left: 500px;
+        }
+        ul li{
+            margin-top: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 20px;
+
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                //偶数的li
+                $("#myname>li:even").css("backgroundColor","yellow");//偶数的li
+                $("#myname>li:odd").css("backgroundColor","red");//奇数的li
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="隔行变色" id="btn"/>
+<ul id="myname">
+    <li>李子</li>
+    <li>李李</li>
+    <li>老李</li>
+    <li>华园李</li>
+    <li>小李</li>
+    <li>李子2</li>
+    <li>李李2</li>
+    <li>老李2</li>
+    <li>华园李2</li>
+    <li>小李2</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>懒人原生仿京东鼠标悬停图片高亮动画移动效果</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+img{ border:0;}
+
+#lanren{ width:300px; height:auto; margin:100px auto; overflow:hidden;}
+#lanren:hover{ background:#000;}
+#lanren:hover img{opacity:0.7;filter: alpha(opacity=70);}
+#lanren li{ float:left; width:150px; height:160px; overflow:hidden; position:relative;}
+#lanren li .text{ display:block; width:95%; height:25px; line-height:25px; text-align:left; padding-left:5%; position:absolute; left:0; top:0; z-index:20; font-size:12px;}
+#lanren li img{ position:absolute; left:0; top:0; z-index:10;}
+#lanren li:hover img{ opacity:1;filter: alpha(opacity=100);}
+</style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<div id="lanren">
+	<li>
+    	<span class="text">懒人之家文字说明</span>
+    	<img src="http://demo.lanrenzhijia.com/2014/pic1210/images/lanren01.jpg" alt="懒人之家" width="170" height="180" />
+    </li>
+    <li>
+    	<span class="text">懒人之家文字说明</span>
+    	<img src="http://demo.lanrenzhijia.com/2014/pic1210/images/lanren02.jpg" alt="懒人之家" width="170" height="180" />
+    </li>
+    <li>
+    	<span class="text">懒人之家文字说明</span>
+    	<img src="http://demo.lanrenzhijia.com/2014/pic1210/images/lanren03.jpg" alt="懒人之家" width="170" height="180" />
+    </li>
+    <li>
+    	<span class="text">懒人之家文字说明</span>
+    	<img src="http://demo.lanrenzhijia.com/2014/pic1210/images/lanren04.jpg" alt="懒人之家" width="170" height="180" />
+    </li>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	$('#lanren li').each(function(){
+		var $this = $(this);
+		$this.hover(function(){$this.find('img').stop().animate({top:'-20px',left:'-20px'});},function(){$this.find('img').stop().animate({top:'0',left:'0'});});
+	});
+});
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

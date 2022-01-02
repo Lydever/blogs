@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/chocolat.css" type="text/css">
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<script src="js/jquery.chocolat.js"></script>
+		<!--lightboxfiles-->
+		<script type="text/javascript">
+		$(function() {
+			$('.gallery a').Chocolat();
+		});
+		</script>
+<script src="js/modernizr.custom.97074.js"></script>
+</head>
+	
+<body>
+<!-- banner1 -->
+	<div class="banner1 w3agile">
+		<div class="container">
+			<div class="banner-main">
+				<div class="banner-main1">
+					<div class="logo">
+						<h1><a href="index.html">Viscerous</a></h1>
+					</div>
+					<div class="header-right">
+						<div class="shy-menu">
+							<a class="shy-menu-hamburger">
+								<span class="layer top"></span>
+								<span class="layer mid"></span>
+								<span class="layer btm"></span>
+							</a>
+							<div class="shy-menu-panel">
+								<nav class="menu menu--horatio">
+									<ul class="menu__list">
+										<li class="menu__item"><a href="index.html" class="menu__link"><i class="glyphicon glyphicon-home" aria-hidden="true"></i>Home</a></li>
+										<li class="menu__item"><a href="about.html" class="menu__link"><i class="glyphicon glyphicon-user"> </i>About</a></li> 
+										<li class="menu__item"><a href="services.html" class="menu__link"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i>Services</a></li>
+										<li class="menu__item menu__item--current"><a href="gallery.html" class="menu__link"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i>Gallery</a></li> 
+										<li class="menu__item"><a href="codes.html" class="menu__link"><i class="glyphicon glyphicon-list-alt"> </i>Short Codes</a></li> 
+										<li class="menu__item"><a href="contact.html" class="menu__link"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Contact</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="menu open">
+						  <a class="hamburger">
+							<span class="layer top"></span>
+							<span class="layer mid"></span>
+							<span class="layer btm"></span>
+						  </a>
+						</div>
+						<script>
+							$(function() {
+								
+								initDropDowns($("div.shy-menu"));
+
+							});
+
+							function initDropDowns(allMenus) {
+
+								allMenus.children(".shy-menu-hamburger").on("click", function() {
+									
+									var thisTrigger = jQuery(this),
+										thisMenu = thisTrigger.parent(),
+										thisPanel = thisTrigger.next();
+
+									if (thisMenu.hasClass("is-open")) {
+
+										thisMenu.removeClass("is-open");
+
+									} else {			
+										
+										allMenus.removeClass("is-open");	
+										thisMenu.addClass("is-open");
+										thisPanel.on("click", function(e) {
+											e.stopPropagation();
+										});
+									}
+									
+									return false;
+								});
+							}
+						</script>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!-- /banner1 -->
+<div class="gallery agileits-2">
+			<div class="container">
+				<h2 class="tittle">Our Gallery</h2>
+				<div class="gallery-grids">
+					<section>
+						<ul id="da-thumbs" class="da-thumbs">
+							<li>
+								<a href="images/g1.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g1.jpg" alt="">
+									<div style="display: block; left: 100%; top: 0px; transition: all 300ms ease;">
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="images/g2.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g2.jpg" alt="">
+									<div>
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="images/g3.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g3.jpg" alt="">
+									<div>
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="images/g4.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g4.jpg" alt="">
+									<div style="display: block; left: 0px; top: -100%; transition: all 300ms ease;">
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>	
+								<a href="images/g5.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g5.jpg" alt="">
+									<div>
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="images/g6.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g6.jpg" alt="">
+									<div>
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="images/g7.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g7.jpg" alt="">
+									<div>
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="images/g8.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g8.jpg" alt="">
+									<div>
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="images/g9.jpg" class="b-link-stripe b-animate-go thickbox">
+									<img src="images/g9.jpg" alt="">
+									<div>
+										<h5>Gallery</h5>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+					</section>
+				</div>
+				<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+				<script type="text/javascript">
+					$(function() {
+						$('#da-thumbs > li').each( function() { $(this).hoverdir(); } );
+					});
+				</script>
+			</div>
+		</div>
+<!-- footer -->
+<div class="footer agile">
+		<div class="container">
+			<ul class="social">
+				<li><a class="social-facebook" href="#">
+					<i></i>
+					<div class="tooltip"><span>Facebook</span></div>
+					</a></li>
+				<li><a class="social-twitter" href="#">
+					<i></i>
+					<div class="tooltip"><span>Twitter</span></div>
+					</a></li>
+				<li><a class="social-google" href="#">
+					<i></i>
+					<div class="tooltip"><span>Google+</span></div>
+					</a></li>
+				<li><a class="social-pinterest" href="#">
+					<i></i>
+					<div class="tooltip"><span>Pinterest</span></div>
+					</a></li>
+				<li><a class="social-instagram" href="#">
+					<i></i>
+					<div class="tooltip"><span>Instagram</span></div>
+					</a></li>
+			</ul>
+			<ul class="main-nav">
+				<li><a href="index.html">Home</a><i>|</i></li>
+				<li><a href="about.html">About</a><i>|</i></li>
+				<li><a href="gallery.html">Gallery</a><i>|</i></li>
+				<li><a href="codes.html">Short Codes</a><i>|</i></li>
+				<li><a href="services.html">Services</a><i>|</i></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="copy-right">
+				<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div>
+		</div>
+	</div>
+<!-- /footer -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

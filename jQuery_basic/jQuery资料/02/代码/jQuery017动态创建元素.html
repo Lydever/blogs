@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+    <script>
+
+        /*
+        *
+        * DOM中创建元素:
+        * 1.document.write("标签代码");缺陷:页面加载后创建元素,把页面中原有的内容全部的干掉
+        * 2.innerHTML
+        * 3.document.createElement("标签的名字")
+        *
+        * jQuery中创建元素的方式:
+        * 1.$("标签的代码")
+        * 2.对象.html("标签的代码");
+        *
+        * */
+    </script>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+
+        //需求:点击按钮,在div中创建一个超链接
+        $(function () {
+            var i=0;
+            $("#btn").click(function () {
+                i++;
+                //创建元素
+                var aObj=$("<a href='http://www.baidu.com'>百度"+i+"</a>");
+                //把元素添加到div中
+               // $("#dv").append(aObj);//把超链接追加到div中
+
+                //把元素插入到某个元素的前面
+                //$("#dv").prepend(aObj);
+                //把元素添加到当前元素的后面(兄弟元素来添加)
+                //$("#dv").after(aObj);
+                //把元素添加到当前元素的前面(兄弟元素来添加)
+                //$("#dv").before(aObj);
+
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="创建元素" id="btn"/>
+<div id="dv"></div>
+</body>
+</html>

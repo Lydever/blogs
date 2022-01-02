@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<style>
+		.myform{
+			width: 500px;
+			margin: 0 auto;
+		}
+	</style>
+
+</head>
+<body>
+	<form action="register.php" class="myform" method='post' style="background-color:#FFF3E7;width: 380px;height:260px;border: 1px #eee solid; padding: 20px;">
+			<div class="input-group">
+				<label class="">用户名:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>   
+				<input type="text" class="form-control" name="userName" id="userName" /><span class="">&nbsp@&nbsp</span>
+			     <select  name="status">
+                    <option >163.com</option>
+                    <option >qq.com</option>
+                    <option >126.com</option>
+                    <option >sina.com</option>
+                 </select>
+			</div>
+
+			<div class="input-group">
+				<label class="">登录密码:&nbsp&nbsp&nbsp</label>
+				<input type="password" class="form-control" name="password" id="password" />
+			</div>
+			<div class="input-group">
+				<label class="">确认密码:&nbsp&nbsp&nbsp</label>
+				<input type="password" class="form-control" name="confirm" name="confirm" />
+			</div>
+			<div class="input-group">
+				<label class="">您的性别是：</label>
+                <input type="radio" name="sex" id="radio1" 
+				value="男" checked="checked" />男
+                <input type="radio" name="sex" id="radio2" value="女" />女
+			</div>
+			<div class="input-group">
+				<label class="">个人爱好：</label>
+                <input type="checkbox" id="interests" name="interests[]" value="音乐" />音乐
+	            <input type="checkbox" name="interests[]" value="游戏" />  游戏
+                <input type="checkbox" name="interests[]" value="电影" /> 
+			</div>
+			<div class="input-group">
+				<label class="">个人相片：</label>
+                <input type="file" id="myimg" name="myimg" size="60" />
+			</div>
+			<div class="input-group">
+				<label class="">备注信息：</label>
+                <textarea name="infor" id="infor" type="text" rows="3" cols="20" >
+                </textarea>
+			</div>
+			<br>
+			<div class="input-group">
+				<input type="submit" name="sub"  id="sub" value="提交表单" />
+				<input type="submit" name="rew"  id="rew" value="重新填写" />
+			</div>		
+	</form>
+</body>
+</html>

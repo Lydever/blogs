@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Services</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- banner1 -->
+	<div class="banner1 w3agile">
+		<div class="container">
+			<div class="banner-main">
+				<div class="banner-main1">
+					<div class="logo">
+						<h1><a href="index.html">Viscerous</a></h1>
+					</div>
+					<div class="header-right">
+						<div class="shy-menu">
+							<a class="shy-menu-hamburger">
+								<span class="layer top"></span>
+								<span class="layer mid"></span>
+								<span class="layer btm"></span>
+							</a>
+							<div class="shy-menu-panel">
+								<nav class="menu menu--horatio">
+									<ul class="menu__list">
+										<li class="menu__item"><a href="index.html" class="menu__link"><i class="glyphicon glyphicon-home" aria-hidden="true"></i>Home</a></li>
+										<li class="menu__item"><a href="about.html" class="menu__link"><i class="glyphicon glyphicon-user"> </i>About</a></li> 
+										<li class="menu__item menu__item--current"><a href="services.html" class="menu__link"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i>Services</a></li>
+										<li class="menu__item"><a href="gallery.html" class="menu__link"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i>Gallery</a></li> 
+										<li class="menu__item"><a href="codes.html" class="menu__link"><i class="glyphicon glyphicon-list-alt"> </i>Short Codes</a></li> 
+										<li class="menu__item"><a href="contact.html" class="menu__link"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Contact</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="menu open">
+						  <a class="hamburger">
+							<span class="layer top"></span>
+							<span class="layer mid"></span>
+							<span class="layer btm"></span>
+						  </a>
+						</div>
+						<script>
+							$(function() {
+								
+								initDropDowns($("div.shy-menu"));
+
+							});
+
+							function initDropDowns(allMenus) {
+
+								allMenus.children(".shy-menu-hamburger").on("click", function() {
+									
+									var thisTrigger = jQuery(this),
+										thisMenu = thisTrigger.parent(),
+										thisPanel = thisTrigger.next();
+
+									if (thisMenu.hasClass("is-open")) {
+
+										thisMenu.removeClass("is-open");
+
+									} else {			
+										
+										allMenus.removeClass("is-open");	
+										thisMenu.addClass("is-open");
+										thisPanel.on("click", function(e) {
+											e.stopPropagation();
+										});
+									}
+									
+									return false;
+								});
+							}
+						</script>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!-- /banner1 -->
+			<div class="wthree-2">
+				<div class="container">
+						<div class="services-top b-head">
+							<h2 class="tittle">Our Services</h2>
+							<p>Suspendisse eu tempor tortor, quis vulputate est. Vestibulum varius dictum elit, tristique ullamcorper quam convallis ut. Vivamus non vehicula leo.</p>
+						</div>
+						<div class="services-bottom wthree-2">
+							<div class="col-md-6 services-left">
+								<div class="sr-one">
+									<div class="sr-left">
+										<h4>Pellentesque mollis malesuada</h4>
+										<p>Nulla et finibus libero. Suspendisse vitae ex facilisis, ultricies est sed, porta ante.</p>
+									</div>
+									<div class="sr-right">
+										<h3>01</h3>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="sr-one sr-two">
+									<div class="sr-left">
+										<h4>Pellentesque mollis malesuada</h4>
+										<p>Nulla et finibus libero. Suspendisse vitae ex facilisis, ultricies est sed, porta ante.</p>
+									</div>
+									<div class="sr-right">
+										<h3>03</h3>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="col-md-6 services-left">
+								<div class="sr-one">
+									<div class="s-left">
+										<h3>02</h3>
+									</div>
+									<div class="s-right">
+										<h4>Pellentesque mollis malesuada</h4>
+										<p>Nulla et finibus libero. Suspendisse vitae ex facilisis, ultricies est sed, porta ante.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="sr-one sr-two">
+									<div class="s-left">
+										<h3>04</h3>
+									</div>
+									<div class="s-right">
+										<h4>Pellentesque mollis malesuada</h4>
+										<p>Nulla et finibus libero. Suspendisse vitae ex facilisis, ultricies est sed, porta ante.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						</div>
+					</div>
+					<div class="main">
+					<div class="container">
+						<div class="col-md-4 main-left agile-2">
+							<div class="list">
+								<div class="list-top">
+									<h3>Services  List</h3>
+									<p>Vestibulum quis felis ut enim aliquam iaculis et finibus libero.</p>
+								</div>
+								<ul>
+									<li><a href="#"><span>&gt;</span> Quisque nec tellus eget</a></li>
+									<li><a href="#"><span>&gt;</span> Nam consectetur luctus nunc</a></li>
+									<li><a href="#"><span>&gt;</span> Duis accumsan risus id</a></li>
+									<li><a href="#"><span>&gt;</span> Quisque nec tellus eget</a></li>
+									<li><a href="#"><span>&gt;</span> Nam consectetur luctus nunc</a></li>
+									<li><a href="#"><span>&gt;</span> Duis accumsan risus id</a></li>
+									<li><a href="#"><span>&gt;</span> Quisque nec tellus eget</a></li>
+									<li><a href="#"><span>&gt;</span> Nam consectetur luctus nunc</a></li>
+									<li><a href="#"><span>&gt;</span> Duis accumsan risus id</a></li>
+									<li><a href="#"><span>&gt;</span> Quisque nec tellus eget</a></li>
+									<li><a href="#"><span>&gt;</span> Nam consectetur luctus nunc</a></li>
+									<li><a href="#"><span>&gt;</span> Duis accumsan risus id</a></li>
+									<li><a href="#"><span>&gt;</span> Quisque nec tellus eget</a></li>
+									<li><a href="#"><span>&gt;</span> Nam consectetur luctus nunc</a></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-8 main-right agileinfo-2">						
+								<h3>Main Services</h3>
+							<div class="main-one">
+								<h4>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</h4>
+								<div class="m-1">
+									<div class="col-md-6 m-left">
+										<img src="images/s1.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="col-md-6 m-left">
+										<p>Quisque rutrum, tellus euismod rutrum fringilla, dolor mi tempus odio, at tincidunt metus libero nec orci. Aenean scelerisque sed quam in vestibulum.Quisque rutrum, tellus euismod rutrum fringilla, dolor mi tempus odio, at tincidunt metus libero nec orci. Aenean scelerisque sed quam in vestibulum.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>								
+							</div>
+							<div class="main-one main-two">
+								<h4>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</h4>
+								<div class="m-1">
+									<div class="col-md-6 m-left">
+										<img src="images/s2.jpg" class="img-responsive" alt="">
+									</div>
+									<div class="col-md-6 m-left">
+										<p>Quisque rutrum, tellus euismod rutrum fringilla, dolor mi tempus odio, at tincidunt metus libero nec orci. Aenean scelerisque sed quam in vestibulum.Quisque rutrum, tellus euismod rutrum fringilla, dolor mi tempus odio, at tincidunt metus libero nec orci. Aenean scelerisque sed quam in vestibulum.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>								
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>						
+					</div>
+<!-- footer -->
+<div class="footer agile">
+		<div class="container">
+			<ul class="social">
+				<li><a class="social-facebook" href="#">
+					<i></i>
+					<div class="tooltip"><span>Facebook</span></div>
+					</a></li>
+				<li><a class="social-twitter" href="#">
+					<i></i>
+					<div class="tooltip"><span>Twitter</span></div>
+					</a></li>
+				<li><a class="social-google" href="#">
+					<i></i>
+					<div class="tooltip"><span>Google+</span></div>
+					</a></li>
+				<li><a class="social-pinterest" href="#">
+					<i></i>
+					<div class="tooltip"><span>Pinterest</span></div>
+					</a></li>
+				<li><a class="social-instagram" href="#">
+					<i></i>
+					<div class="tooltip"><span>Instagram</span></div>
+					</a></li>
+			</ul>
+			<ul class="main-nav">
+				<li><a href="index.html">Home</a><i>|</i></li>
+				<li><a href="about.html">About</a><i>|</i></li>
+				<li><a href="gallery.html">Gallery</a><i>|</i></li>
+				<li><a href="codes.html">Short Codes</a><i>|</i></li>
+				<li><a href="services.html">Services</a><i>|</i></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="copy-right">
+				<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div>
+		</div>
+	</div>
+<!-- /footer -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

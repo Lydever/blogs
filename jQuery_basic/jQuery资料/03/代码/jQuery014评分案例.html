@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五角星评分案例</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .comment {
+            font-size: 40px;
+            color: yellow;
+        }
+
+        .comment li {
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+
+    <script>
+//        $(function () {
+//            //获取所有的li绑定鼠标进入和鼠标离开和点击事件
+//            $(".comment>li").mouseover(function () {
+//                $(this).text("★").prevAll("li").text("★").end().nextAll("li").text("☆");
+//            }).mouseout(function () {
+//                $(this).text("☆").prevAll("li").text("☆");
+//                //获取属性index为10的这个li和这个li前面所有的li
+//                $(".comment>li[index=10]").text("★").prevAll("li").text("★");
+//
+//            }).click(function () {
+//                $(this).attr("index","10").siblings("li").removeAttr("index");
+//            });
+//        });
+    </script>
+    <script>
+
+        $(function () {
+            $(".comment>li").mouseover(function () {
+                $(this).text("★").prevAll("li").text("★").end().nextAll("li").text("☆");
+            }).mouseout(function () {
+                $(".comment").find("li").text("☆");
+                $(".comment>li[index=1]").text("★").prevAll("li").text("★")
+            }).click(function () {
+                $(this).attr("index","1").siblings("li").removeAttr("index");
+            });
+        });
+    </script>
+</head>
+
+<body>
+<ul class="comment">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+
+</html>

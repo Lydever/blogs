@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>coolShow.js插件图片旋转动画特效</title>
+<link href="css/coolShow.css" rel="stylesheet" type="text/css" />
+</head>
+<!-- 代码部分begin -->
+<body style = "background:#ecf0f1;">
+<div class = "main">
+	<div id = "coolShow"></div>
+	<div id = "handBar"></div>
+</div>
+<script src = "js/jquery-1.7.2.min.js"></script>
+<script src = "js/coolShow.js"></script>
+<script>
+/*
+定义需要展示的图片以及图片的展示时间
+*/
+$(document).ready(function() { 
+	$('#coolShow').coolShow({
+		imgSrc:['images/1.png','images/2.png','images/3.png'],
+		speed:40
+	});
+});
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

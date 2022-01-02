@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Bootstrap 之栅格系统布局实例</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .row1 {
+            padding-top: 30px;
+            height: 300px;
+        }
+        .litle {
+            color: rgb(42, 170, 236);
+        }
+        @media (max-width: 768px) {
+            img {
+                width: 50%;
+            }
+            li {
+                margin-left: 30px;
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row row1">
+            <div class="col-md-4 col-xs-12 text-center">
+                <img src="img/cont1.png" alt="" class="img">
+                <h2 class="litle">SAE</h2>
+                <p>云应用</p>
+            </div>
+            <div class="col-md-8 col-xs-12">
+                <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+                <p>国内第一家公有云计算平台，支持PHP. Java. Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台</p>
+                <div class="row">
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衢智能应对大数据处理请求</li>
+                        <li>沙箱技术隔高应用</li>
+                        <li>沙箱技术隔高应用</li>
+                        <div></div>
+                    </ul>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>防火墙防止攻击</li>
+                        <li>99.95%SLA首批可信云认证</li>
+                        <li>免费配赖，零成本创业、</li>
+                    </ul>
+                </div>
+                <a href="#">了解详情</a>
+            </div>
+        </div>
+        <div class="row row1">
+            <div class="col-md-4 col-xs-12 col-md-push-8 text-center">
+                <img src="img/cont2.png" alt="" class="img">
+                <h2 class="litle">SAE</h2>
+            </div>                <p>云应用</p>
+
+            <div class="col-md-8 col-xs-12 col-md-pull-4 ">
+                <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+                <p>国内第一家公有云计算平台，支持PHP. Java. Python语言，提供Web应用开发所需的众多服务，国内最好的PaaS云计算平台</p>
+                <div class="row">
+                    <ul class="col-md-6 col-xs-12">
+                        <li>弹性扩展，负载均衢智能应对大数据处理请求</li>
+                        <li>沙箱技术隔高应用</li>
+                        <li>沙箱技术隔高应用</li>
+                    </ul>
+                    <ul class="col-md-6 col-xs-12">
+                        <li>防火墙防止攻击</li>
+                        <li>99.95%SLA首批可信云认证</li>
+                        <li>免费配赖，零成本创业、</li>
+                    </ul>
+                </div>
+                <a href="#">了解详情</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+</body>
+
+</html>

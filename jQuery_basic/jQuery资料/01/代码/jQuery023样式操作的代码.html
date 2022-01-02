@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //页面加载
+        $(function () {
+            $("#btn").click(function () {
+                //第一种设置元素样式的代码方式:
+//                $("ul>li").css("backgroundColor","yellow");
+//                $("ul>li").css("fontSize","50px");
+//                $("ul>li").css("fontFamily","全新硬笔行书简");
+//                $("ul>li").css("color","blue");
+
+                //第二种设置元素样式的代码方式:链式编程
+                //$("ul>li").css("backgroundColor","yellow").css("fontSize","50px").css("fontFamily","全新硬笔行书简").css("color","blue");
+
+                //第三种设置元素样式的代码方式:键值对
+                //$("ul>li").css({"backgroundColor":"yellow","fontSize":"50px","fontFamily":"全新硬笔行书简","color":"blue"});
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<ul>
+    <li>李子</li>
+    <li>李李</li>
+    <li>老李</li>
+    <li>华园李</li>
+    <li>小李</li>
+</ul>
+</body>
+</html>

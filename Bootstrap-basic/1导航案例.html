@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .btn_register,.btn_login{
+            background-color: #222222;
+            color: rgb(131, 131, 131);
+        }
+        @media (max-width:768px){
+            .list{
+                float: left;
+                position: absolute;
+                top: 0;
+                left:30%;
+            }
+            .list li{
+                float: left;
+                top: 0;
+                left: 50%;
+            }
+        }
+
+         .navbar-left,.navbar-right{
+             transform:translate(120px,7px);
+         }
+        .navbar{
+            background-color:rgb(0,0,0);
+            height:70px;
+        }
+        .list img{
+            width:20px;
+            height: 20px;
+        }
+        .mynav a,.list a{
+            color: #fff;
+        }
+        .collapse {
+            height:50px;
+        }
+        .collapse ul {
+            position:relative;
+        }
+        .line {
+            position:absolute;
+            left:-390px;
+            top:57px;
+            width:60px;
+            border-top:2px solid blue;
+            height:2px;
+            transition: left .2s ease-in-out 0s;
+        }
+        li:nth-child(1):hover~ .line{
+            left:-403px;
+        }
+        li:nth-child(2):hover~ .line{
+            left: -330px;
+        }
+        li:nth-child(3):hover~ .line{
+            left:-250px;
+        }
+        li:nth-child(4):hover~ .line{
+            left:-150px;
+        }
+        li:nth-child(5):hover~ .line{
+            left: -75px;}
+        li a:hover{
+            color:blue;
+        }
+ </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="nav-brand">
+                <img src="img/logo.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-1">
+            <ul class="nav navbar-nav ">
+                <li><a href="#">首页<span class="sr-only"></span></a></li>
+                <li><a href="#">品牌故事</a></li>
+                <li><a href="#">产品展示</a></li>
+                <li><a href="#">新闻资讯</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li class="line"></li>
+            </ul>
+        </div>
+        <div class="list nav navbar-right">
+            <button type="button" class="btn  navbar-btn btn_login">登录</button>
+            <button type="button" class="btn  navbar-btn btn_register">注册</button>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

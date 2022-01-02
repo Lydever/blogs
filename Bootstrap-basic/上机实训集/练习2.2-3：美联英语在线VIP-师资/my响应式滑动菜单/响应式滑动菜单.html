@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>响应式滑动菜单</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>响应式滑动菜单</h1>
+    </header>
+    <div class="nav">
+        <nav id="menu" class="nav">
+            <a href="#"><img id="imgLogo" src="image/1.png" alt=""/></a>
+            <ul id="list" class="list">
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="image/2.png" alt=""/>
+                        </span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="image/3.png" alt=""/>
+                        </span>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="image/4.png" alt=""/>
+                        </span>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="image/5.png" alt=""/>
+                        </span>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="image/6.png" alt=""/>
+                        </span>
+                        <span>The team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="image/7.png" alt=""/>
+                        </span>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<script src="js/jquery-1.12.4.js" type="text/javascript"></script>
+<script type="text/javascript">
+var i=0;
+    $('#imgLogo').click(function () {
+        if(i==0){
+            $("#list").css("display","block");
+            i=1;
+            return false;
+        }else{
+            $("#list").css("display","none");
+            i=0;
+            return false;
+        }
+    })
+</script>
+</body>
+</html>

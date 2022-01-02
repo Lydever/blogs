@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //页面加载后获取ul标签中的所有的li标签
+        $(function () {
+            //根据层次选择器获取li
+            $("#uu>li").mouseover(function () {
+                //鼠标进入
+                $(this).css("backgroundColor","red");
+            });
+            $("#uu>li").mouseout(function () {
+                //鼠标离开
+                $(this).css("backgroundColor","");
+            });
+        });
+
+        $(function () {
+            $("#btn").click(function () {
+                //*就是所有的元素
+                $("#dv *").css("backgroundColor","yellow");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<div id="dv">
+    <p>这是一个p</p>
+    <span>这是一个span</span>
+</div>
+<ul id="uu">
+    <li>火箭</li>
+    <li>马刺</li>
+    <li>公牛</li>
+    <li>小牛</li>
+    <li>湖人</li>
+    <li>老牛</li>
+    <li>母牛</li>
+</ul>
+</body>
+</html>

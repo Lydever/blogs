@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.2.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                $('span,p,li,div').css('backgroundColor','yellow');
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="设置内容" id="btn" />
+<span>这是一个span标签</span>
+<P>我是黑马程序媛</P>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<div style="background-color: aquamarine; height=300px;width: 300px;"></div>
+</body>
+</html>

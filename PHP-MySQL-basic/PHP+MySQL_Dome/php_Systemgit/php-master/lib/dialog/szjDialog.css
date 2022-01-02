@@ -1,0 +1,43 @@
+#szjDialog{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.4);
+}
+#szjDialog>div{
+    width:256px;
+    background-color: #fff;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50% , -50%);
+}
+#szjDialog .szj-dialog-header{
+    height:42px;
+    line-height: 42px;
+    background-color: #f0f0f0;
+}
+
+#szjDialog .szj-dialog-body{
+    height:72px;
+    line-height: 72px;
+    text-align: center;
+    color: #C9302C;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#szjDialog .szj-dialog-footer{
+    height:42px;
+    line-height: 42px;
+    text-align: right;
+    padding-right:6px;
+}
+#szjDialog button{
+    width:72px;
+    height:24px;
+    line-height: 24px;
+    border:1px solid #ccc;
+}

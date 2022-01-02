@@ -1,0 +1,159 @@
+.countdownHolder {
+  	width: 900px;
+  	margin: 0 auto;
+  	font: 24px/0.8 'bebasregular;
+  	text-align: center;
+  	position: relative;
+  	padding-top: 0em;
+  	height: 89px;
+}
+.position {
+  display: inline-block;
+  height: 1.25em;
+  overflow: hidden;
+  position: relative;
+  width: 42px;
+  font-weight: 100;
+  font-size: 70px;
+}
+.digit{
+	color: #464646;
+	letter-spacing: -6px;
+	left: 3px;
+	bottom: 0;
+	top: 9px!important;
+}
+}
+.countDays{ /* display:none !important;*/ }
+.countDiv0{ /* display:none !important;*/ }
+.countHours{}
+.countDiv1{}
+.countMinutes{}
+.countDiv2{}
+.countSeconds{}
+.countDiv{
+	display:inline-block;
+	width:16px;
+	height:1.6em;
+	position:relative;
+}
+.countDiv:after{
+	top:0.9em;
+}
+/*--responsive design--*/
+
+@media (max-width: 1366px){
+}
+@media (max-width: 1280px){
+#counter {
+	width: 64% !important;
+	margin-left: 25%;
+}
+}
+@media (max-width:1280px){
+	.position {
+  		width: 40px;
+  		font-size: 60px;
+	}
+	#counter {
+		width: 81% !important;
+		margin-left:21%;
+	}	
+}
+@media (max-width:1024px){
+	#counter{
+		height:140px;
+	}
+}
+@media (max-width: 768px){
+	#counter {
+	  width: 80% !important;
+	  margin-left: 22.3%;
+	  padding-top: 0em;
+	}
+	.position {
+		width: 28px !important;
+		font-size: 48px !important;
+	}
+	.countdownHolder {
+		padding-top: 80px;
+	}
+	span.Days {
+		padding-right: 4px;
+	}
+	span.Hours {
+		margin-right: 0px;
+	}
+	span.Minutes {
+		margin-right: 4px;
+	}
+	.Seconds {
+		margin-right: 0px;
+	}
+}
+@media (max-width: 640px){
+	.position {
+		width: 29px;
+		font-size: 41px;
+	}
+	#counter {
+		width: 80% !important;
+		margin-left: 15%;
+		height: 122px;
+	}
+}
+@media (max-width: 480px){
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		margin:0;
+	}
+	.position {
+  		width: 23px !important;
+  		font-size: 33px !important;
+	}
+	#counter {
+  		margin-left: 24.5% !important;
+  		padding-top: 0em !important;
+  		height: 122px !important;
+	}
+}
+@media (max-width: 320px){
+	body {
+		min-height: 582px;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+		margin: 0 12px;
+		width: 17%;
+	}
+	.boxName {
+		font-size: 14px;
+		padding: 0px;
+	}
+	.countDiv {
+		width: 0;
+		height: 0;
+	}
+	.countdownHolder {
+		padding-top: 20px;
+	}
+	.content-form {
+		padding: 2em 0 0.5em;
+	}
+	#counter {
+		 margin-left: 10.5% !important;
+		 height: 110px !important;
+	}
+	.position {
+		width: 16px !important;
+		font-size: 24px !important;
+	}
+	.content-form input[type="submit"] {
+		padding: 8px 8px 11px 8px;
+	}
+	.digit {
+		top: 4px!important;
+	}
+	.countDays, .countHours, .countMinutes, .countSeconds {
+  		margin: -20px 15px 0;
+	}
+}
+/*--/responsive design--*/

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        
+        $(function () {
+            //点击向右的按钮
+            $("#toRight").click(function () {
+                $("#se2").append($("#se1>option:selected"));
+            });
+            $("#toLeft").click(function () {
+                $("#se1").append($("#se2>option:selected"));
+            });
+            $("#toAllRight").click(function () {
+                $("#se2").append($("#se1>option"));
+            });
+            $("#toAllLeft").click(function () {
+                $("#se1").append($("#se2>option"));
+            });
+        });
+    </script>
+</head>
+<body>
+<div style="margin-left: 500px; margin-top: 20px; background-color: #999999">
+    <select multiple="multiple" style="float: left; width: 60px; height: 100px;" id="se1">
+        <option>添加</option>
+        <option>删除</option>
+        <option>修改</option>
+        <option>查询</option>
+        <option>打印</option>
+    </select>
+    <div style="width: 50px; float: left;">
+        <input type="button" name="name" value=">" style="width: 50px;" id="toRight" />
+        <input type="button" name="name" value="<" style="width: 50px;" id="toLeft" />
+        <input type="button" name="name" value=">>" style="width: 50px;" id="toAllRight" />
+        <input type="button" name="name" value="<<" style="width: 50px;" id="toAllLeft" />
+    </div>
+    <select multiple="multiple" style="float: left; width: 60px; height: 100px;" id="se2">
+    </select>
+</div>
+
+</body>
+</html>

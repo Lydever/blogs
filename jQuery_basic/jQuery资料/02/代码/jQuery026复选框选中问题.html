@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //点击按钮显示复选框的选中状态
+        $(function () {
+            $("#btn").click(function () {
+               // console.log($("#ck").attr("checked"));
+                //prop()可以真正的获取元素是否选中的状态
+                //console.log($("#ck").prop("checked"));
+                //点击按钮让复选框选中,再点按钮让复选框不选中
+                var flag=$("#ck").prop("checked");//获取选中状态
+                if(flag){
+                    //选中了
+                    $("#ck").prop("checked",false);
+                }else{
+                    //没有选中
+                    $("#ck").prop("checked",true);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示状态" id="btn"/>
+<input type="checkbox" value="1" id="ck" />打豆豆
+</body>
+</html>

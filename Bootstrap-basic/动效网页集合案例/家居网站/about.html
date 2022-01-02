@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- banner1 -->
+	<div class="banner1 w3agile">
+		<div class="container">
+			<div class="banner-main">
+				<div class="banner-main1">
+					<div class="logo">
+						<h1><a href="index.html">Viscerous</a></h1>
+					</div>
+					<div class="header-right">
+						<div class="shy-menu">
+							<a class="shy-menu-hamburger">
+								<span class="layer top"></span>
+								<span class="layer mid"></span>
+								<span class="layer btm"></span>
+							</a>
+							<div class="shy-menu-panel">
+								<nav class="menu menu--horatio">
+									<ul class="menu__list">
+										<li class="menu__item"><a href="index.html" class="menu__link"><i class="glyphicon glyphicon-home" aria-hidden="true"></i>Home</a></li>
+										<li class="menu__item menu__item--current"><a href="about.html" class="menu__link"><i class="glyphicon glyphicon-user"> </i>About</a></li> 
+										<li class="menu__item"><a href="services.html" class="menu__link"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i>Services</a></li>
+										<li class="menu__item"><a href="gallery.html" class="menu__link"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i>Gallery</a></li> 
+										<li class="menu__item"><a href="codes.html" class="menu__link"><i class="glyphicon glyphicon-list-alt"> </i>Short Codes</a></li> 
+										<li class="menu__item"><a href="contact.html" class="menu__link"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Contact</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="menu open">
+						  <a class="hamburger">
+							<span class="layer top"></span>
+							<span class="layer mid"></span>
+							<span class="layer btm"></span>
+						  </a>
+						</div>
+						<script>
+							$(function() {
+								
+								initDropDowns($("div.shy-menu"));
+
+							});
+
+							function initDropDowns(allMenus) {
+
+								allMenus.children(".shy-menu-hamburger").on("click", function() {
+									
+									var thisTrigger = jQuery(this),
+										thisMenu = thisTrigger.parent(),
+										thisPanel = thisTrigger.next();
+
+									if (thisMenu.hasClass("is-open")) {
+
+										thisMenu.removeClass("is-open");
+
+									} else {			
+										
+										allMenus.removeClass("is-open");	
+										thisMenu.addClass("is-open");
+										thisPanel.on("click", function(e) {
+											e.stopPropagation();
+										});
+									}
+									
+									return false;
+								});
+							}
+						</script>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!-- /banner1 -->
+<div class="about w3agile-2">
+					<div class="container">
+						<h2 class="tittle">About Us</h2>
+						<div class="about-grids">
+							<div class="col-md-4 about-grid">
+								<img src="images/g3.jpg" class="img-responsive gray" alt="">
+							</div>
+							<div class="col-md-4 about-grid">
+								<img src="images/g5.jpg" class="img-responsive gray" alt="">
+							</div>
+							<div class="col-md-4 about-grid">
+								<h4>Suspendisse potenti</h4>
+								<p>Donec sagittis interdum tellus sed bibendum. Aen ean fringilla ut lacus eu vehicula. Curabitur non nibh quis nisi vestibulum aliquet non sed dolor. Ut est risus, consectetur sit amet pretium in, cursus in dui. Donec ac rhoncus libero.</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="what-w3">
+					<div class="container">
+						<h3 class="tittle1">What we do</h3>
+						<div class="what-grids">
+							<div class="col-md-6 what-grid">
+								<img src="images/a3.jpg" class="img-responsive gray" alt="">
+								<div class="what-bottom">
+									<h4>Consectetuer Adipiscing</h4>
+									<p>Donec sagittis interdum tellus sed bibendum. Aen ean fringilla ut lacus eu vehicula. Curabitur non nibh quis nisi vestibulum aliquet non sed dolor. Ut est risus, consectetur sit amet pretium in, cursus in dui. Donec ac rhoncus libero.</p>
+								</div>
+							</div>
+							<div class="col-md-6 what-grid">
+								<div class="what-bottom1">
+									<h4>Consectetuer Adipiscing</h4>
+									<p>Donec sagittis interdum tellus sed bibendum. Aen ean fringilla ut lacus eu vehicula. Curabitur non nibh quis nisi vestibulum aliquet non sed dolor. Ut est risus, consectetur sit amet pretium in, cursus in dui. Donec ac rhoncus libero.</p>
+								</div>
+								<img src="images/a4.jpg" class="img-responsive gray" alt="">
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="team agileits">
+				<div class="container">
+					<h3 class="tittle1">Our Team</h3>
+					<div class="team-grids">
+						<div class="col-md-3 team-gd">
+							<img src="images/t1.jpg" class="img-responsive" alt="">
+							
+								<h4>Patrick Pool</h4>
+									<span>Executive Director</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu euismod risus, eget.</p>
+								<div class="social-icon">
+									<a href="#"><i class="icon1"></i></a>
+									<a href="#"><i class="icon2"></i></a>
+									<a href="#"><i class="icon3"></i></a>
+									<a href="#"><i class="icon"></i></a>
+							</div>
+						</div>
+						<div class="col-md-3 team-gd">
+							<img src="images/t2.jpg" class="img-responsive" alt="">
+									<h4>Victoria</h4>
+								<span>Executive Director</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu euismod risus, eget.</p>
+								<div class="social-icon">
+									<a href="#"><i class="icon1"></i></a>
+									<a href="#"><i class="icon2"></i></a>
+									<a href="#"><i class="icon3"></i></a>
+									<a href="#"><i class="icon"></i></a>
+							</div>
+						</div>
+						<div class="col-md-3 team-gd">
+							<img src="images/t3.jpg" class="img-responsive" alt="">
+								<h4>Mary Doe</h4>
+								<span>Executive Director</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu euismod risus, eget.</p>
+								<div class="social-icon">
+									<a href="#"><i class="icon1"></i></a>
+									<a href="#"><i class="icon2"></i></a>
+									<a href="#"><i class="icon3"></i></a>
+									<a href="#"><i class="icon"></i></a>
+							</div>
+						</div>
+						<div class="col-md-3 team-gd">
+							<img src="images/t4.jpg" class="img-responsive" alt="">
+								<h4>Thomson</h4>
+								<span>Executive Director</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu euismod risus, eget.</p>
+								<div class="social-icon">
+									<a href="#"><i class="icon1"></i></a>
+									<a href="#"><i class="icon2"></i></a>
+									<a href="#"><i class="icon3"></i></a>
+									<a href="#"><i class="icon"></i></a>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+				</div>
+			</div>
+<!-- footer -->
+<div class="footer agile">
+		<div class="container">
+			<ul class="social">
+				<li><a class="social-facebook" href="#">
+					<i></i>
+					<div class="tooltip"><span>Facebook</span></div>
+					</a></li>
+				<li><a class="social-twitter" href="#">
+					<i></i>
+					<div class="tooltip"><span>Twitter</span></div>
+					</a></li>
+				<li><a class="social-google" href="#">
+					<i></i>
+					<div class="tooltip"><span>Google+</span></div>
+					</a></li>
+				<li><a class="social-pinterest" href="#">
+					<i></i>
+					<div class="tooltip"><span>Pinterest</span></div>
+					</a></li>
+				<li><a class="social-instagram" href="#">
+					<i></i>
+					<div class="tooltip"><span>Instagram</span></div>
+					</a></li>
+			</ul>
+			<ul class="main-nav">
+				<li><a href="index.html">Home</a><i>|</i></li>
+				<li><a href="about.html">About</a><i>|</i></li>
+				<li><a href="gallery.html">Gallery</a><i>|</i></li>
+				<li><a href="codes.html">Short Codes</a><i>|</i></li>
+				<li><a href="services.html">Services</a><i>|</i></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="copy-right">
+				<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div>
+		</div>
+	</div>
+<!-- /footer -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            //获取ul中所有的li,为每个li注册鼠标进入的事件,当前元素获取到,对当前元素的兄弟元素进行操作
+            $("#uu>li").mouseenter(function () {
+                //.next();获取的是当前元素的下一个兄弟元素
+                //$(this).next().css("backgroundColor","green");
+
+                //.nextAll();获取的是当前元素的后面的所有的兄弟元素
+                //$(this).nextAll().css("backgroundColor","green");
+
+                //.prev();获取的是当前元素的前一个兄弟元素
+                //$(this).prev().css("backgroundColor","green");
+
+                //.prevAll();获取的是当前元素的前面的所有的兄弟元素
+                //$(this).prevAll().css("backgroundColor","green");
+
+                //.siblings();获取的是当前元素的所有的兄弟元素(自己除外)
+                $(this).siblings().css("backgroundColor","green");
+            });
+        });
+    </script>
+</head>
+<body>
+<ul id="uu">
+    <li>李子</li>
+    <li>李李</li>
+    <li>老李</li>
+    <li>华园李</li>
+    <li>小李</li>
+</ul>
+</body>
+</html>

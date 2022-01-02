@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+        .cls{
+            background-color: green;
+        }
+        .cls2{
+            border: 3px solid yellow;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //获取按钮,点击按钮,为div添加一个类样式
+            $("#btn").click(function () {
+                //$("#dv").addClass("cls");//在addClass方法中类样式的名字前面没有点(.)
+                //$("#dv").addClass("cls").addClass("cls2");
+
+                //另一种写法,addClass添加样式的时候.多个类样式的名字中间用空格隔开
+                $("#dv").addClass("cls cls2");
+            });
+
+            $("#btn2").click(function () {
+                //移除一个元素的类样式
+                //$("#dv").removeClass("cls");
+                //移除div的所有的类样式,removeClass方法中什么也不写移除的是当前元素的所有的类样式
+                $("#dv").removeClass();
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn" />
+<input type="button" value="移除类样式" id="btn2" />
+<div id="dv"></div>
+</body>
+</html>

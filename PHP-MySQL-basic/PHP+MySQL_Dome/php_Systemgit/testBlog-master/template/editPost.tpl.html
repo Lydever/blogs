@@ -1,0 +1,32 @@
+<?php include_once TEMPLATE_DIR . 'headerManage.inc.html'; ?>
+ <!-- Main Content -->
+<div class="container">
+
+      <div class="starter-template">
+        <h2 class="sub-header">文章管理<span class='small'> >> 编辑文章</span></h2> 
+        <br> 
+        <form action="index.php?c=PostManage&a=editPost&id=<?php echo $page['id']; ?>" method="post">
+          <div class="form-group">
+            <label for="title">标题：</label>
+            <input type="text" class="form-control" id="title" name="title" value="<?php echo $page['title']; ?>">
+          </div>
+          <div class="form-group">
+            <label for="content">文章内容：</label>
+            <textarea class="form-control" rows="20" id="content" name="content"><?php echo $page['contentMD']; ?></textarea>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">保存</button>
+            <a href="index.php?c=PostManage&a=display" class="btn btn-danger" role="button">取消</a>
+          </div>
+        </form>
+      </div>
+</div><!-- /.container -->
+</body>
+<script>
+  $(document).ready(function(){
+    $("a.btn-danger").click(function(){
+      return confirm("确认不保存修改？");
+    });
+  });
+</script>
+</html>

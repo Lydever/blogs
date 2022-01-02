@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            background-color: red;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        
+        $(function () {
+            //点击按钮清空div中内容
+            $("#btn").click(function () {
+                //$("#dv").html("");//清空元素中的内容
+                //$("#dv").empty();//清空元素中的内容
+                //$("#dv").remove();//移除元素自身---自杀
+            });
+            $("#btn2").click(function () {
+                var spanObj=$("#dv>span").clone();//克隆,复制了这个元素
+                spanObj.css("fontSize","50px");
+                $("#dv2").append(spanObj);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<input type="button" value="显示效果" id="btn2"/>
+<div id="dv">
+    <span>今天天气真好啊,助教来到桃花岛看见导师在洗澡....</span>
+</div>
+<div id="dv2"></div>
+</body>
+</html>

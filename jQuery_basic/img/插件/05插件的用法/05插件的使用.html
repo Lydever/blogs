@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坚持梦想,决不放弃</title>
+    <!--1.引入外部的cs文件,2引入外部的js文件(先jquery的文件)再当前插件的js文件-->
+    <!--3.复制html代码到body中,4,复制jquery的代码放在$(function(){})中或者放在$(document).ready(function(){})-->
+    <link rel="stylesheet" href="css/coolShow.css"/>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/coolShow.js"></script>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+
+        $(document).ready(function() {
+            $('#coolShow').coolShow({
+                imgSrc:['images/1.png','images/2.png','images/3.png'],
+                speed:40
+            });
+        });
+    </script>
+</head>
+<body>
+<div class = "main">
+    <div id = "coolShow"></div>
+    <div id = "handBar"></div>
+</div>
+
+</body>
+</html>

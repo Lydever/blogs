@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet"> 
+    <title>bootstraps实训6</title>
+    <style type="text/css">
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        margin: 20px auto;
+    }
+     .container .row ul li{
+         float: left;
+         margin: 8px;
+         list-style: none;       
+     }
+     .container .row ul li a{
+             color: black;
+     }
+     .container .row ul li a:hover{
+             color:rgb(44, 118, 230);
+             text-decoration: none;
+     }
+     .banner{
+         background: url("img/adbg.png") no-repeat;
+         background-position: center center;
+         height:385px;
+         width: 1200px;
+         margin-left: -15px;
+         margin-right: -15px;
+     }
+     .container .banner .img1{
+        margin-top: 30px;
+     }
+.container .logo{
+    margin-top: 10px;
+}
+     .container .row3{
+         text-align: center;
+         padding-top:20px;
+         width:1200px;
+         background-color: rgb(230, 230, 230);
+         padding-bottom:20px;
+     }
+     .row2 .form{
+        display: block;
+         background-color: white;
+         width: 400px;
+         padding:0 20px;
+         padding-top: 20px;
+         height: 280px;
+         margin-left: 110px;
+         border-radius:6px;
+     }
+     .row .form-group .myuser{
+        margin-right:15px;
+     }
+        .row .form-group .myps{
+        margin-right:30px;
+     }
+     .reserved{
+         margin-top:20px;
+     }
+     .row .form-group input{
+        border-radius: 5px;
+        border: 1px rgb(124, 124, 124) solid;
+        width: 200px;
+        height: 30px;
+     }
+     .row2{
+       display: block;
+     }
+
+     .row2 .form{
+       line-height: 10px;
+       display: block;
+       margin-top:50px;
+     }
+     .row2 .form .ref,.regin{
+       margin:10px;
+     }
+     .row2 .form a{
+       margin:10px;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12" >
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                       <img src="img/logo.png" class="logo"/>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                         <div class="row">
+                            <div class="col-md-12 col-xs-12 col-md-push-7" >
+                                <div class="form-group reserved">
+                                    <input type="text" class="from-control" id="myser" placeholder="请输入搜索的内容"/>
+                                    <button type="button" class="btn btn-success">搜索</button>
+                                </div>                                   
+                            </div>
+                                <ul class="col-md-12 col-xs-12 col-md-push-4">
+                                    <li><a href="#">首页</a></li>
+                                    <li><a href="#">公共查询</a></li>
+                                    <li><a href="#">常见问题</a></li>
+                                    <li><a href="#">政策法规</a></li>
+                                    <li><a href="#">通知公告</a></li>
+                                    <li><a href="#">备案须知</a></li>
+                                    <li><a href="#">备案展厅</a></li>
+                                </ul>
+                         </div>
+                    </div>
+                 </div>
+            </div>
+        </div>       
+        <div class="row row2">
+            <div class="col-md-12 col-xs-12" >
+                <div class="banner">
+                    <div class="col-md-6 col-xs-12 text-center" >
+                     <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <img src="img/xcy.png" class="img1"/>
+                        </div>
+                        <div class="col-md-12 col-xs-12">
+                            <img src="img/liucheng.png" class="img2" />
+                        </div>
+                    </div>      
+                    </div>
+                    <div class="col-md-6 col-xs-12 ">
+                        <from class="form">
+                            <div class="form-group ">
+                                <h4 class="user"for="user">普通用户</h4><br>
+                                <label for="myuser"class="myuser">用户名:</label>
+                                <input type="text" class="from-control" id="myeamil" />
+                            </div>
+                            <div class="form-group">
+                                <label for="mypsd" class="myps">密码:</label>
+                                <input type="pssword" class="from-control" id="mypsd"/>
+                            </div>  
+                            <div class="col-sm-4 col-xs-4 control-label">
+                                <label for="mychk">
+                                   <input type="checkbox" class="ref" id="" />忘记密码
+                                </label>
+                            </div> 
+                            <button type="button" width="100px" class="btn btn-danger btn-block">登录</button><br>
+                            <a href="#" class="regin">没有账户?请注册</a>                                 
+                        </from> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row3">
+            <div class="col-md-12 col-xs-12" >
+                <p>Copyright2015 公安部网络安全保卫局 All Right Reserved</p>
+                <p>邮箱: support@beian.gov.cn</p>
+                <p>京公网安备 11010102002019号 建议使用1024*768以上分辨率浏览</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

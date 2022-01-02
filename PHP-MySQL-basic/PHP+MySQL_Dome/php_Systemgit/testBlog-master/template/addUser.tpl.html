@@ -1,0 +1,36 @@
+<?php include_once TEMPLATE_DIR . 'headerManage.inc.html'; ?>
+ <!-- Main Content -->
+<div class="container">
+
+      <div class="starter-template">
+        <h2 class="sub-header">用户管理<span class='small'> >> 添加用户</span></h2> 
+        <br> 
+        <form action="index.php?c=UserManage&a=addUser" method="post">
+          <div class="form-group">
+            <label for="userName">用户名：</label>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="UserName">
+            <label for="email">邮箱：</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="password">密码：</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="PassWord">
+            <label for="password">再输入一次密码：</label>
+            <input type="password" class="form-control" id="passwordAgain" name="passwordAgain" placeholder="PassWord Again">
+          </div>
+          <div class="form-group">
+            <label for="groupId">用户组：</label>
+            <select name="groupId" id="groupId" class="form-control">
+              <?php foreach ($groups as $group): ?>
+                <option value="<?php echo $group['id']; ?>"><?php echo $group['name'] ?></option>
+              <?php endforeach ?>
+            </select>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">保存</button>
+          </div>
+        </form>
+      </div>
+</div><!-- /.container -->
+</body>
+</html>

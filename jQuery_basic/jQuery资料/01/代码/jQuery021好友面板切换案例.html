@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../bootstrapDemo/css/bootstrap.css">
+    <style type="text/css">
+
+        #u1 li {
+            margin-bottom: 10px;
+            background-color: Orange;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        #u1 li ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #u1 li ul li {
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script src="../../../bootstrapDemo/js/bootstrap.js"></script>
+    <script>
+       $(function () {
+           //找到id为u1的下面的li里面的ul里面的li全部隐藏
+           $("#u1>li>ul>li").hide();
+           //找到id为ul的直接的子元素li,注册鼠标点击的事件
+           $("#u1>li").click(function () {
+               $(this).siblings("li").children("ul").find("li").hide(500);
+               //当前的li中的ul中的所有的li显示
+               $(this).children("ul").find("li").show(500);
+           });
+       });
+    </script>
+</head>
+<body>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover"
+        title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">点我弹出/隐藏弹出框</button>
+<div style=" width:200px; height:500px; border:1px solid red;">
+    <ul id="u1" style=" list-style-type:none; margin:0; padding:0; text-align:center;">
+        <li>
+            幼儿园同学
+            <ul>
+                <li>鼻涕虫</li>
+                <li>爱哭鬼</li>
+                <li>张大胆</li>
+            </ul>
+        </li>
+        <li>小学同学
+            <ul>
+                <li>张三丰</li>
+                <li>张无忌</li>
+                <li>乔布斯</li>
+            </ul>
+        </li>
+        <li>
+            初中同学
+            <ul>
+                <li>盖茨</li>
+                <li>川普</li>
+                <li>奥巴马</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="col-md-3">
+        <div class="panel-group text-center" id="accordion"  aria-multiselectable="false">
+            <div class="panel panel-default">
+                <div class="panel-heading"  id="headingOne">
+                    <h3 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"  aria-controls="collapseOne">新闻</a>
+                    </h3>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" >
+                    <div class="panel-body">
+                        <ul class="list-group" style="list-style: none;">
+                            <li><a href="#">企业公益</a></li>
+                            <li><a href="#">行业新闻</a></li>
+                            <li><a href="#">设计研发</a></li>
+                            <li><a href="#">发展愿景</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group text-center" id="accordion2"  aria-multiselectable="false">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="headingOne2">
+                    <h3 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne2"  aria-controls="collapseOne2">视频</a>
+                    </h3>
+                </div>
+                <div id="collapseOne2" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <ul class="list-group" style="list-style: none;">
+                            <li><a href="#">企业公益</a></li>
+                            <li><a href="#">行业新闻</a></li>
+                            <li><a href="#">设计研发</a></li>
+                            <li><a href="#">发展愿景</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group text-center" id="accordion3"  aria-multiselectable="false">
+            <div class="panel panel-default">
+                <div class="panel-heading"  id="headingOne3">
+                    <h3 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3"  aria-controls="collapseOne3">招聘</a>
+                    </h3>
+                </div>
+                <div id="collapseOne3" class="panel-collapse collapse in" >
+                    <div class="panel-body">
+                        <ul class="list-group" style="list-style: none;">
+                            <li><a href="#">企业公益</a></li>
+                            <li><a href="#">行业新闻</a></li>
+                            <li><a href="#">设计研发</a></li>
+                            <li><a href="#">发展愿景</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

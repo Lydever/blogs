@@ -1,0 +1,8 @@
+.cls{
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+    margin-top: 30px;
+    margin-right: 20px;
+    float: left;
+}

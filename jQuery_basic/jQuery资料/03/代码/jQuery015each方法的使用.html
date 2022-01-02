@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul li{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            list-style-type: none;
+            float: left;
+            margin-left: 10px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+       $(function () {
+           //页面加载后,让每个li的透明度发生改变
+           //不同的元素不同的设置方式--each方法
+           $("#uu>li").each(function (index,element) {
+               //第一个参数是索引,第二个参数是对象
+               //console.log(arguments[0]+"====="+arguments[1]);
+               $(element).css("opacity",(index+1)/10);
+           });
+       });
+    </script>
+
+</head>
+<body>
+<ul id="uu">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+</body>
+</html>

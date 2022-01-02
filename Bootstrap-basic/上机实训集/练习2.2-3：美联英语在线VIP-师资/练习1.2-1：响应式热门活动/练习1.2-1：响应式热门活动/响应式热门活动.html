@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>热门活动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            margin: 0 20px;
+            text-align: center;
+        }
+    
+        /*大于1024px */
+        @media all and (min-width:1023px)
+        {
+            .hot{
+                width: 1024px;
+                padding-top: 20px;
+                padding-left: 20px;
+                margin: auto ;
+                background: red;
+            }
+            .hot h2{
+                font-size: 28px;
+            }
+            h2 strong{
+                font-size: 14px;
+                color: #5b666b;
+                float: right;
+                margin-right: 30px;
+            }
+            .list{
+                margin-top: 30px;
+                display: flex;    /*弹性盒子*/
+                justify-content: space-around;  /*主轴对齐：平均分布在行内*/
+            }
+            .list li{
+                margin:10px;
+            }
+            .list li img{
+                width: 90%;
+            }
+            .list li p{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        @media all and (min-width:640px) and (max-width:1023px)
+        {
+            .hot{
+                width: 640px;
+                padding: 30px;
+                margin: 10px auto 0;
+                background: pink;
+            }
+            .hot h2{
+                font-size: 28px;
+            }
+            h2 strong{
+                font-size: 14px;
+                color: #5b666b;
+                float: right;
+                margin-right: 30px;
+            }
+            .list{
+                margin-top: 30px;
+                display: flex;  
+                flex-direction: wrap;  /*弹性盒子*/
+            }
+            .list li{
+                margin:10px;
+            }
+            .list li img{
+                width: 90%;
+            }
+            .list li p{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        @media all and (min-width:320px) and (max-width:639px)
+        { 
+            .hot{
+                width: 320px;
+                padding-top: 20px;
+                padding-left: 20px;
+                margin: auto ;
+                background: yellow;
+            }
+            .hot h2{
+                font-size: 28px;
+            }
+            h2 strong{
+                font-size: 14px;
+                color: #5b666b;
+                float: right;
+                margin-right: 30px;
+            }
+            .list{
+                margin-top: 20px;
+                display: flex;  
+                flex-direction: column;  /*弹性盒子*/
+            }
+            .list li{
+                margin:10px;
+            }
+            .list li img{
+                width: 90%;
+            }
+            .list li p{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        	  /* 大型设备 */
+	@media screen and(min-width: 1200px) {
+		.row img{
+			width: 66.66%;
+		}
+	}
+     /*中型设备 */
+	@media screen and(min-width: 992px) and (max-width:1200px) {
+		.row img{
+			width: 56.66%;
+		}
+	}
+     /* 小型设备 */
+	@media screen and(min-width:768px) and (max-width:992px) {
+		.row img{
+			width: 46%;
+		}
+	}
+      /*超小设备 */
+	@media screen and(min-width: 480px)  and (max-width:768px) {
+		.row img{
+			width:31%;
+		}
+	}
+    </style>
+</head>
+<body>
+    <div class="hot">
+        <h2>热门活动<strong>更多</strong></h2>
+        <ul class="list">
+            <li>
+                <img src="image/img1.png" alt=""/>
+                <p>推荐活动 | 原创音乐现金榜T榜</p>
+            </li>
+            <li>
+                <img src="image/img2.png" alt=""/>
+                <p>推荐节目|《TAImusic》爆笑来袭</p>
+            </li>
+            <li>
+                <img src="image/img3.png" alt=""/>
+                <p>推荐歌单 | 继续宠爱张国荣</p>
+            </li>
+            <li>
+                <img src="image/img4.png" alt=""/>
+                <p>推荐活动| 330金属音乐巡演 </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?php include_once TEMPLATE_DIR . 'header.inc.html'; ?>
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="list-group">
+                <?php foreach ($headers as $header): ?>
+                    <div class="list-group-item">
+                        <h3 class="list-group-item-heading"><a href="index.php?c=Post&a=getPost&id=<?php echo $header['id']; ?>"><?php echo $header['title']; ?></a></h4>
+                        <span class="list-group-item-text small">Posted by <?php echo $header['author']; ?> on <?php echo $header['addDate']; ?></span>
+                    </div>
+                <?php endforeach; ?>
+                </div>                             
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <br>
+                    <?php echo $pagination; ?>
+                </div>                 
+            </div>
+        </div>
+    </article>
+
+    <hr>
+<?php include_once TEMPLATE_DIR . 'footer.inc.html'; ?>

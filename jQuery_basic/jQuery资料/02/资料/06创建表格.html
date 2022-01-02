@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            margin-left: 300px;
+            margin-top: 100px;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        // 模拟从后台拿到的数据
+        var datas = [
+            {
+                name: "传智播客",
+                url: "http://www.itcast.cn",
+                type: "IT最强培训机构"
+            },
+            {
+                name: "黑马程序员",
+                url: "http://www.itheima.com",
+                type: "大学生IT培训机构"
+            },
+            {
+                name: "传智前端学院",
+                url: "http://web.itcast.cn",
+                type: "前端的黄埔军校"
+            }];
+        
+//        $(function () {
+//            $("#btnCreate").click(function () {
+//                //循环数组创建行
+//                for(var i=0;i<datas.length;i++){
+//                    //创建行的同时直接创建列
+//                    $("<tr><td><a href='"+datas[i].url+"'>"+datas[i].name+"</a></td><td>"+datas[i].type+"</td></tr>").appendTo($("#tbd"));
+//                }
+//            });
+//        });
+
+        $(function () {
+            $("#btnCreate").click(function () {
+                var arr=[];
+                //循环数组创建行
+                for(var i=0;i<datas.length;i++){
+                    //创建行的同时直接创建列
+                    arr.push("<tr><td><a href='"+datas[i].url+"'>"+datas[i].name+"</a></td><td>"+datas[i].type+"</td></tr>");
+                }
+                //第二种创建元素的方式
+                $("#tbd").html(arr);
+            });
+        });
+        
+    </script>
+</head>
+
+<body>
+<input type="button" value="获取数据" id="btnCreate"/>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>说明</th>
+        </tr>
+        </thead>
+        <tbody id="tbd">
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

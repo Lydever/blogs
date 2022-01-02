@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //让jquery对$对象进行释放控制权
+//        var xy=$.noConflict();
+//        //从此以后xy就是曾经的$---一毛一样的
+//        var $=100;//$原本是对象--->变量
+//        xy(function () {
+//            xy("#btn").click(function () {
+//                alert("哈哈,我又变帅了");
+//            });
+//        });
+
+
+
+
+        var $=100;//$原本是对象--->变量
+        jQuery(function () {
+            jQuery("#btn").click(function () {
+                alert("哈哈,我又变帅了");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+</body>
+</html>

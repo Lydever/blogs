@@ -1,0 +1,107 @@
+@media all and (min-width:800px){
+   .list{
+       margin: auto;
+
+   }
+   .list li{
+       width: 16.6%;
+       float: left;
+       height: 220px;
+       text-align: center;
+       transition: all 0.5s;
+   }
+   .list a{
+       height: 100%;
+       display: block;
+   }
+   .list li:hover{
+       height: 280px;
+   }
+   .icon{
+       width: 30px;
+       height: 30px;
+       background: rgb(255, 255, 255, 0.2);
+       border-radius: 50px;
+       margin: 22px auto 0;
+   }
+
+   .icon + span{
+       margin-top: 50px;
+       font-size: 24px;
+       transition: margin 0.5s;
+   }
+   .list a:hover .icon +span{
+       margin-top: 70px;
+       transition: margin 0.5s;
+   }
+   .icon img{
+       text-align: center;
+       border-radius: 50%;
+       box-shadow: 0 0 0 30px transparent;
+       background:rgb(255, 255, 255,0.1);
+       transition: all 0.8s ease-in-out;
+   }
+   .list a:hover img{
+     box-shadow: 0 0 0 0 rgb(255, 255, 255,0.2);
+     transition: all 0.8s ease-in-out;
+
+   }
+}
+@media all and(min-width:520px)and(max-width:799px){
+   .list{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+   .list li{
+       height: 100px;
+       width: 50%;text-align: center;
+   }
+   .list a{
+       display: flex;
+       justify-content: space-around;
+       height: 100%;
+       align-items: center;
+   }
+   .icon{
+       border: 5px solid transparent;
+       width: 50px;
+       height: 50px;
+       background: rgb(255, 255, 255,0.2);
+       line-height: 80px;
+       border-radius: 30px;
+   }
+   .list a:hover .icon{
+    border: 5px solid rgb(255, 255, 255, 0.2);
+   }
+   .icon img{
+       width: 30px;
+       height: 30px;
+       padding-bottom: 5px;
+   }
+}
+@media all and (max-width:519px){
+#list {
+    display: none;
+}
+#logo{
+    display: block;
+    margin-bottom: 20px;
+}
+.list li{
+    height: 80px;
+}
+.list li a{
+    height: 80px;
+}
+.list  li span{
+    line-height: 80px;
+    height: 100%4;
+    display: inline-block;
+    margin-left: 30px;
+}
+.list li span img{
+    text-align: center;
+    vertical-align: middle;
+}
+}

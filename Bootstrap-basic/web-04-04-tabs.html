@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .mylist li{
+            margin: 10px -15px;
+        }
+        .mylist a{
+            font-size: 16px;
+            font-family: "Source Han Sans CN Regular";
+            color: midnightblue;
+        }
+        .tab-content .list_img{
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        .mytablist a{
+            font-size: 18px;
+            font-family: "Source Han Sans CN Regular";
+            font-weight: 500;
+            color: #327AB7;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="myTabs">
+    <ul class="nav nav-tabs mytablist" role="tablist">
+        <li class="active"><a href="#news" aria-controls="news" role="tab" data-toggle="tab">新闻</a></li>
+        <li><a href="#amusement" aria-controls="amusement" role="tab" data-toggle="tab">娱乐</a></li>
+        <li><a href="#military" aria-controls="military" role="tab" data-toggle="tab">军事</a></li>
+        <li><a href="#society" aria-controls="society" role="tab" data-toggle="tab">社会</a></li>
+        <li><a href="#sports" aria-controls="sports" role="tab" data-toggle="tab">体育</a></li>
+
+    </ul>
+    <div class="tab-content" >
+        <div  class="tab-pane active fade in active" id="news">
+            <img src="img/tab (1).jpg" class="list_img" alt="">
+            <ul class="mylist">
+                <li><a href="#">村主任看风水收费一万不算违纪?</a></li>
+                <li><a href="#">女经理色诱警官卖17台伪劣安检机</a></li>
+                <li><a href="#">男子一夜情后疑染病将女子推下楼</a></li>
+                <li><a href="#">网传四川成都一女性头部被人割掉</a></li>
+                <li><a href="#">游客遭老虎咬死专家称园方无责任.</a></li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="amusement">
+            <img src="img/tab (2).jpg" class="list_img" alt="">
+            <ul class="mylist">
+                <li><a href="#">村主任看风水收费一万不算违纪?</a></li>
+                <li><a href="#">女经理色诱警官卖17台伪劣安检机</a></li>
+                <li><a href="#">男子一夜情后疑染病将女子推下楼</a></li>
+                <li><a href="#">网传四川成都一女性头部被人割掉</a></li>
+                <li><a href="#">游客遭老虎咬死专家称园方无责任.</a></li>
+            </ul>
+        </div>
+        <div  class="tab-pane fade" id="military">
+            <img src="img/tab (3).jpg" class="list_img" alt="">
+            <ul class="mylist">
+                <li><a href="#">村主任看风水收费一万不算违纪?</a></li>
+                <li><a href="#">女经理色诱警官卖17台伪劣安检机</a></li>
+                <li><a href="#">男子一夜情后疑染病将女子推下楼</a></li>
+                <li><a href="#">网传四川成都一女性头部被人割掉</a></li>
+                <li><a href="#">游客遭老虎咬死专家称园方无责任.</a></li>
+            </ul>
+        </div>
+        <div  class="tab-pane fade" id="society">
+            <img src="img/tab (4).jpg" class="list_img" alt="">
+            <ul class="mylist">
+                <li><a href="#">村主任看风水收费一万不算违纪?</a></li>
+                <li><a href="#">女经理色诱警官卖17台伪劣安检机</a></li>
+                <li><a href="#">男子一夜情后疑染病将女子推下楼</a></li>
+                <li><a href="#">网传四川成都一女性头部被人割掉</a></li>
+                <li><a href="#">游客遭老虎咬死专家称园方无责任.</a></li>
+            </ul>
+        </div>
+        <div  class="tab-pane fade" id="sports">
+            <img src="img/tab (5).jpg" class="list_img" alt="">
+            <ul class="mylist">
+                <li><a href="#">村主任看风水收费一万不算违纪?</a></li>
+                <li><a href="#">女经理色诱警官卖17台伪劣安检机</a></li>
+                <li><a href="#">男子一夜情后疑染病将女子推下楼</a></li>
+                <li><a href="#">网传四川成都一女性头部被人割掉</a></li>
+                <li><a href="#">游客遭老虎咬死专家称园方无责任.</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $(function(){
+        $('#myTabs a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
