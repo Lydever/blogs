@@ -24,6 +24,7 @@
   list.forEach(it => {
     const parent = roots.find(({ id }) => id === it.title);
     (parent.children ??= []).push({
+      // parent.children ??= [] 等同于 parent.children ?? (parent.children == [])
         ...it,
         title: it.name
     });
