@@ -83,7 +83,63 @@ const s = new Set();
 
   // let arr = [3,4,5,6,5]
   let unique = [...new Set(arr)]
+  /**
+   * Map
+   */
+  const map = new Map([
+    ['name','张三'],
+    ['title', 'Author']
+  ]);
+  map.size //2
+  map.has('name') // true
+  map.get('name') // 张三
+  map.has('title') // true
+  map.get('title') // 'Author'
 
+  const map = new Map();
+  items.forEach(([key,val]) => map.set(key,val))
+
+  const set = new Set([
+    ['info',1],
+    ['suby',2]
+  ])
+  const ml = new Map(set);
+  ml.get('info') // 1
+  const m2 = new Map([['sub',3]])
+  const m3 = new Map(m2);
+  m3.get('info')
+
+  let map = new  Map();
+  map.set('foo', true);
+  map.set('bar', false);
+  map.size // 2
+  map.clear()
+  map.size // 0
+
+  const map = new Map([
+    ['f','no'],
+    ['t','true']
+  ])
+
+  for (let key of map.keys()) {
+    console.log(key)
+  }
+
+  for (let val of map.values()) {
+    console.log(val)
+  }
+
+  for (let item of map.entries()) {
+    console.log(item[0], item[1])
+  }
+
+  for (let [key,value] of map.entries()) {
+    console.log(key, value);
+  }
+
+  // Map专为数组
+  const mMap = new Map([[true,2],[{foo:3},['acvv']]])
+  // [...mMap]
 
 </script>
 </body>
