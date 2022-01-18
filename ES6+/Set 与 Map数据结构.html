@@ -141,6 +141,29 @@ const s = new Set();
   const mMap = new Map([[true,2],[{foo:3},['acvv']]])
   // [...mMap]
 
+  // Map 转为对象
+  const mapToObj = (strMap) => {
+    let obj = Object.create(null);
+    for (let [k,v] of strMap) {
+      obj[k] = v;
+    }
+    return obj;
+  }
+
+  // 对象转为Map
+  // 2. 对象转Map 可以通过Object.entries()
+  let obj = {"a":1, "b":2};
+  let map = new Map(Object.entries(obj))
+  // 3.
+  const objToMap = (obj) => {
+    let strMap = new Map();
+    for (let k of Object.keys(obj)) {
+      strMap.set(k, obj[k])
+    }
+    return strMap
+  }
+
+
 </script>
 </body>
 </html>
