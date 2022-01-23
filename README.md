@@ -16,7 +16,7 @@
     - [TypeScript之Record的基本用法](https://github.com/Lydever/blogs/issues/4)
     - [TypeScript之Partial](https://github.com/Lydever/blogs/issues/5)
   - Vue
-     - [【Vue3.2】setup & Composition API 新特形总结](https://github.com/Lydever/blogs/issues/11)
+     - [Vue3.2 新特性之setup & Composition API 新特形总结](https://github.com/Lydever/blogs/issues/11)
   - React
   - ES6+
   - Flutter
