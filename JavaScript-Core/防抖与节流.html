@@ -7,9 +7,15 @@
 <body>
 <script>
     /**
-     * 防抖：在第一次触发事件时，不立即执行函数，而是给出一个限定值，比如200ms，然后：
-     *  - 如果在200ms内没有再次触发事件，那么执行函数
-     *  - 如果在200ms内再次触发函数，那么当前的计时取消，重新开始计时
+     *  防抖：在第一次触发事件时，不立即执行函数，而是给出一个限定值，比如200ms，然后：
+     *   - 如果在200ms内没有再次触发事件，那么执行函数
+     *   - 如果在200ms内再次触发函数，那么当前的计时取消，重新开始计时
+     *
+     *  应用场景：
+     *   - 输入框中频繁的输入内容，搜索或者提交信息
+     *   - 频繁的点击按钮，触发某个事件
+     *   - 监听浏览器滚定事件，完成某些特定操作
+     *   - 用户缩放浏览器的resize 事件
      *
      *  效果：如果短时间内大量触发同一件事，只会执行一次函数
      */
@@ -24,15 +30,108 @@
         }
     }
 
+    function debounce(fn, delay) {
+        var timer = null;
+        return function () {
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(function () {
+                fn();
+            },delay)
+        }
+    }
+
+    // 优化参数和this
+    function debounce(fn, delay) {
+        var timer = null;
+        return function() {
+            if (timer) clearTimeout(timer);
+            // 获取this和argument
+            var _this = this;
+            var _arguments = arguments;
+            timer = setTimeout(function () {
+                // 在执行时，通过apply来使用_this和_arguments
+                fn.apply(_this, _arguments)
+            }, delay)
+        }
+    }
+
+
 
     /**
      * 节流：
-     * 如果短时间内大量触发同一事件，那么在函数执行一次之后，该函数在指定的时间期限内不在工作
-     * 直至过了这段时间才重新生效
+     *  - 如果短时间内大量触发同一事件，那么在函数执行一次之后，该函数在指定的时间期限内不在工作，直至过了这段时间才重新生效
+     *  效果：
+     *   - 在某个时间内(比如500ms)，某个函数只能被触发一次
+     *   应用场景：
+     *   - 监听页面的滚定事件
+     *   - 鼠标移动事件
+     *   - 用户频繁点击按钮操作
+     *   - 游戏中的一些设计
+     *
+     *   总结：同样是密集的事件触发，但是这次密集事件触发的过程，不会等待最后一次才进行函数调用，而是会按照一定的频率进行调用
      */
 
     // 搜索框input事件，要支持实时搜索可以使用节流方案
     // 页面resize事件，使用防抖
+    function throttle(fn, interval) {
+        var last = 0;
+        return function () {
+            // this和arugments
+            var _this = this;
+            var _arguments = arguments;
+            var now = new Date().getTime();
+            if (now - last > interval) {
+                fn.apply(_this, _arguments);
+                last = now;
+            }
+        }
+    }
+
+    /**
+     *
+     * 默认情况下，我们的防抖函数最后一次是不会执行的
+
+     因为没有达到最终的时间，也就是条件now - last > interval满足不了的
+     但是，如果我们希望它最后一次是可以执行的，那么我们可以让其传入对应的参数来控制
+     我们来看一下代码如何实现：
+
+     使用timer变量来记录定时器是否已经开启
+     已经开启的情况下，不需要开启另外一个定时器了
+     else语句表示没有立即执行的情况下，就会开启定时器；
+     但是定时器不需要频繁的开启，开启一次即可
+     如果固定的频率中执行了回调函数
+     因为刚刚执行过回调函数，所以定时器到时间时不需要执行；
+     所以我们需要取消定时器，并且将timer赋值为null，这样的话可以开启下一次定时器；
+     如果定时器最后执行了，那么timer需要赋值为null
+     因为下一次重新开启时，只有定时器为null，才能进行下一次的定时操作；
+     * @param fn
+     * @param interval
+     * @returns {function(...[*]=)}
+     */
+    function throttle(fn, interval) {
+        var last = 0;
+        var timer = null; // 记录定时器是否已经开启
+        return function () {
+            // this和arguments;
+            var _this = this;
+            var _arguments = _arguments;
+            var now = new Date().getTime();
+            if (now - last > interval) {
+                if (timer) { //若已经开启，则不需要开启另外一个定时器了
+                    clearTimeout(timer);
+                    timer = null;
+                }
+                fn.apply(_this, _arguments);
+                last = now;
+            } else if (timer === null) { // 没有立即执行的情况下，就会开启定时器
+                //只是最后一次开启
+                timer = setTimeout(function () {
+                    timer = null; // 如果定时器最后执行了，那么timer需要赋值为null
+                    fn.apply(_this, _arguments);
+                },interval)
+            }
+        }
+    }
 
 </script>
 </body>
