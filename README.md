@@ -9,12 +9,14 @@
 - 前端
   - JavaScript
     - [【JavaScript权威指南(第七版)】之阅读学习总结](https://github.com/Lydever/blogs/issues/6)
-    - [【JavaScript进阶】详解Object.prototype.hasOwnProperty](https://github.com/Lydever/blogs/issues/3)
-    - [【JavaScript进阶】高阶函数之Reduce的解析&使用](https://github.com/Lydever/blogs/issues/7)
+    - [JavaScript 浅拷贝的原理与实现](https://github.com/Lydever/blogs/issues/14)
+    - [JavaScript 之Object.prototype.hasOwnProperty](https://github.com/Lydever/blogs/issues/3)
+    - [JavaScript 高阶函数之Reduce的解析&使用](https://github.com/Lydever/blogs/issues/7)
   - TypeScript
-    - [【TypeScript】TypeScript之Record的基本用法](https://github.com/Lydever/blogs/issues/4)
-    - [【TypeScript】TypeScript之Partial](https://github.com/Lydever/blogs/issues/5)
+    - [TypeScript之Record的基本用法](https://github.com/Lydever/blogs/issues/4)
+    - [TypeScript之Partial](https://github.com/Lydever/blogs/issues/5)
   - Vue
+     - [Vue3.2 之setup & Composition API 新特形总结](https://github.com/Lydever/blogs/issues/11)
   - React
   - ES6+
   - Flutter
