@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reflect</title>
+</head>
+<body>
+<script>
+  // 检测一个对象是否存在特定属性
+  const apiJson = {
+    name: 'static data',
+    type: 'static',
+    getData: function() {
+      console.log(`获取的数据类型为：${this.name}`);
+    }
+  }
+
+  console.log(Reflect.has(apiJson, 'type'));  // true
+  console.log(Reflect.has(apiJson, 'age'));   // false
+
+  // Reflect.set(apiJson, 'data', '静态数据1');
+  console.log(Reflect.set(apiJson, 'data', '静态数据1')); // true
+
+  // 返回这个对象自身的属性
+  console.log(Reflect.ownKeys(apiJson));
+</script>
+</body>
+</html>
