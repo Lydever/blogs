@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2022许愿墙</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      height: 100%;
+      /*background: linear-gradient(0deg, rgb(171, 212, 238), #2582ff);*/
+      background: url("https://img-blog.csdnimg.cn/91265e43c2504389bbcba19b22a35308.png") no-repeat;
+      background-size: 100% 100%;
+    }
+
+    body {
+      position: relative;
+    }
+
+    .container {
+      width: 100%;
+      height: 630px;
+      position: relative;
+    }
+
+    input[id="wishString"] {
+      width: 400px;
+      height: 40px;
+      position: fixed;
+      bottom: 30px;
+      left:  45%;
+      margin-left: -150px;
+      padding-left: 15px;
+      border: 1px solid #ccc;
+      outline: none;
+      border-radius: 5px;
+    }
+
+    .item {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      border-radius: 15px/5px 10px 10px 0;
+      transform: skew(-1deg);
+      cursor: move;
+    }
+
+    .item span {
+      position: absolute;
+      right: 6px;
+      bottom: 4px;
+      font-size: 12px;
+      color: #eee;
+      cursor: pointer;
+    }
+
+    .sendWish {
+      width: 100px;
+      height: 40px;
+      position: fixed;
+      bottom: 31px;
+      left: 60%;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #0d95e8;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container"></div>
+<input type="text" name="wishString" id="wishString" placeholder="说说你的2022愿望吧...点击确认按钮发布">
+<button class="sendWish">点击发布</button>
+
+<script>
+  // 获取DOM元素
+  const container = document.getElementsByClassName('container')[0];
+  const btn = document.getElementsByClassName('sendWish')[0];
+  // 默认的许愿单文字
+  const wishes = [
+    '平安喜乐，得偿所愿; 万事好意，都在未来',
+    '能找一份好工作',
+    '软考等级考证通过',
+    '坚持热爱，奔赴下一场山海',
+    '万事胜意，平安喜乐',
+    '愿新年，胜旧年',
+    '愿新的一年，仍旧阳光满路，温暖如初',
+    '不畏将来，不念过往；人间一趟，看见太阳',
+    '往事清零，万事胜意',
+    '有趣，有盼，无灾，无难',
+    '往后余生，不负流年，平安喜乐',
+    '再见2021，你好2022'
+  ];
+  // 许愿单随机背景颜色
+  const bgcColors = ['#96c2f1', '#F9BDA4','#B7E5DC','#e3e197','#E5BDF9', '#f8b3d0','#CCF96F','#ffcc00', '#FF7B7B', '#9DF698', '#FBC2B9'];
+  // 渲染函数
+  const render = (wish) => {
+    // 生成随机数据
+    let bgcColorIndex = Math.floor(Math.random() * bgcColors.length);
+    let randomTop = Math.floor(Math.random() * (630 - 150));
+    let randomLeft = Math.floor(Math.random() * (window.innerWidth - 175));
+    let content =
+      `<div class="item" style="top:${randomTop}px;left:${randomLeft}px;background-color:${bgcColors[bgcColorIndex]}">${wish}
+        <span>关闭</span>
+      </div>`;
+    container.innerHTML += content;
+  }
+
+  // 初始化愿望墙
+  window.onload = () => {
+    for (let i = 0; i < wishes.length; i++) {
+      render(wishes[i])
+    }
+  }
+
+  // 发布新内容函数
+  const newWishes = () => {
+    if (wishString.value !== '') {
+      let inputText = wishString.value;
+      render(inputText);
+      wishString.value = '';
+    } else {
+      alert('不能为空,请输入愿望内容~')
+    }
+  }
+
+  // 回车发送实现发布
+  document.onkeyup = (e) => {
+    if (e.keyCode === 13) {
+      newWishes();
+    }
+  }
+
+  // 为确认按钮添加点击事件
+  btn.onclick = newWishes;
+
+  // 事件委托
+  document.onclick = (e) => {
+    if (e.target.nodeName === 'SPAN') {
+      container.removeChild(e.target.parentNode);
+    }
+  }
+
+  // 设置许愿单拖动
+  container.onmousedown = (e) => {
+    if (e.target.className === 'item') {
+      let offsetX = parseInt(e.target.style.left);
+      let offsetY = parseInt(e.target.style.top);
+      let innerX = event.clientX - offsetX;
+      let innerY = event.clientY - offsetY;
+      let that = e.target;
+      document.onmousemove = function (e) {
+        that.style.left = event.clientX - innerX + "px";
+        that.style.top = event.clientY - innerY + "px";
+        // 边界判断
+        if (parseInt(that.style.left) <= 0) {
+          that.style.left = "0px";
+        }
+        if (parseInt(that.style.top) <= 0) {
+          that.style.top = "0px";
+        }
+        if (parseInt(that.style.left) >= window.innerWidth - 175) {
+          that.style.left = window.innerWidth - 175 + "px";
+        }
+        if (parseInt(that.style.top) >= 480) {
+          that.style.top = 480 + "px";
+        }
+      }
+
+      document.onmouseup = () => {
+        document.onmousemove = null;
+        document.onmouseup = null;
+      }
+    }
+  }
+</script>
+</body>
+
+</html>

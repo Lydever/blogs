@@ -6,6 +6,38 @@
 </head>
 <body>
 <script>
+    columns: [
+        {
+        type: 'selection',
+        width: 60,
+        align: 'center'
+        },
+        {
+            title: '产品分类',
+            key: 'categoryId',
+            render: (h, params) => {
+                return h('Select', {
+                    props: {
+                        value: params.row.categoryId, // 获取选择的下拉框的值
+                        size: 'small'
+                    },
+                    on: {
+                        'on-change': e => {
+                            params.row.categoryId = e // 改变下拉框赋值
+                        }
+                    }
+                },
+                    this.productTypeList.map((item) => { // this.productTypeList下拉框里的data
+                    return h('Option', { // 下拉框的值
+                        props: {
+                            value: item.id,
+                            label: item.name
+                        }
+                    })
+                }))
+            }
+        }
+        ]
     /**
      * async函数是使用asyn关键字声明的函数，async和await关键字让我们可以用一种更简洁的方式写出Promise
      * 的异步行为
