@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>数据类型检测的方式</title>
+</head>
+<body>
+<script>
+  // 1. typeof
+  // 其中数组、对象、null都会被判断为object，其他判断都正确
+  console.log(typeof 2) // number
+  console.log(typeof true) // boolean
+  console.log(typeof 'str') // string
+  console.log(typeof []) // object
+  console.log(typeof function () {}) // function
+  console.log(typeof {}) // object
+  console.log(typeof undefined)   // undefined
+  console.log(typeof null); // object
+
+  // 2. instanceof
+  // instanceof 可以正确判断对象的类型，其内部运行机制是判断在其原型中能否找到该类型的原型
+  console.log(2 instanceof Number)  // false
+  console.log(true instanceof Boolean) // false
+  console.log('str' instanceof String) // false
+  console.log([] instanceof Array) // true
+  console.log(function(){} instanceof Function) // true
+  console.log({} instanceof Object)  // true
+  // instanceof 只能正确判断引用数据类型，而不能判断基本数据类型。
+  // instanceof 运算符可以用来测试一个对象在其原型链中是否存在一个构造函数的prototype属性
+
+  // 3. constructor
+ /* constructor 有两个作用：
+  一是判断数据的类型，
+  二是对象实例通过constructor对象访问它的构造函数，
+  需要注意的，如果创建一个对象来改变它的原型，constructor就不能用来判断数据类型了*/
+  console.log((2).constructor === Number); // true
+  console.log((true).constructor === Boolean); // true
+  console.log(('str').constructor === String); // true
+  console.log(([]).constructor === Array); // true
+  console.log((function() {}).constructor === Function); // true
+  console.log(({}).constructor === Object); // true
+  // Object.prototype.toString.call()
+  /**
+   * Object.prototype.toString.call()使用Object对象的原型方法toStirng来
+   * 判断数据类型：
+   */
+  var a = Object.prototype.toString();
+  console.log(a.call(2))
+
+</script>
+</body>
+</html>

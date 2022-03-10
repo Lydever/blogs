@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>柯里化、偏函数、反柯里化</title>
+</head>
+<body>
+
+<script>
+  // 柯里化就是特殊的偏函数，把一个多参数函数转换为多个单参数函数
+  function add(a, b) {
+    return a+ b;
+  }
+
+  const resAdd = add(3,4)
+  console.log(resAdd)
+
+  //柯里化
+  function curriedAdd(a) {
+    return function (b) {
+      return a + b;
+    }
+  }
+
+  const resCurried = curriedAdd(3)(4)
+  console.log(resCurried)
+
+  /**
+   * @description： 通用柯里化
+   * 关键代码：
+   * - 闭包，调用柯里化函数（curried）返回另一个函数（_myFn）,通过闭包缓存真正执行运算的函数（fn） 和参数（args）
+   * - 通过返回的函数传递参数，并进行判断，如果参数已经传递够了，就执行函数（fn）并返回结果，如果，参数还没传递
+   * 则继续返回函数（_myFn）接收参数
+   */
+  function curried(fn) {
+    const args = []   // 利用闭包缓存传递进来的参数
+    return function _myFn(arg) {
+      args.push(arg)
+      if (args.length === fn.length) {  // 说明参数已经传递够了，执行fn函数并返回结果
+        return fn.apply(null, args)
+      } else {  // 如果参数没有传递完，则返回_myfn函数。继续调用
+        return _myFn
+      }
+    }
+  }
+
+  // 实例1
+  function add1(a,b) {
+    return a + b
+  }
+
+  const curriedAdd1 = curried(add1)
+  const res1 = curriedAdd1(1)(2)
+  console.log(res1) // 5
+
+  // 实例2
+  function add2(a,b,c,d,e) {
+    return a + b + c + d + e
+  }
+  const curriedAdd2 = curried(add2)
+  const res2 = curriedAdd2(1)(2)(3)(4)(5)
+  console.log(res2)  // 15
+
+</script>
+
+</body>
+</html>

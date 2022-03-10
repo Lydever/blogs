@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" v-model="msg" />
+
+// 等同于
+<input type="text"
+        v-bind:value="msg"
+        v-on:input="msg=$event.target.value">
+
+// $event: 指代当前触发的事件对象
+// $event.target 当前触发的事件对象的dom
+// $event.target.value 就是当前dom的value值
+
+</body>
+</html>
