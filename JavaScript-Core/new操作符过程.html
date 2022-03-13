@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>new操作过程</title>
+</head>
+<body>
+// new 操作符的实现步骤：
+1. 创建一个对象
+2. 将构造函数的作用域赋值给新对象(也就是将对象的__proto__属性指向构造函数的prototype属性)
+3. 指向构造函数中的代码，构造函数中的this指向该对象(也就是为这个对象添加属性和方法)
+4. 返回新的对象
+
+箭头函数是没有办法执行2,3步骤
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // 拓展运算符
+  let obj = {
+    subObj: {
+      a:1,
+      b:2
+    }
+  }
+
+  let newObj = { ...obj }
+  newObj.subObj.a = 2
+
+  console.log(obj) // subObj = Object {a: 2, b: 2}
+
+  // plppppkhpklhklhkpkhp两者都是浅拷贝
+</script>
+</body>
+</html>
