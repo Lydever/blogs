@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>常用正则表达式</title>
+</head>
+<body>
+<script>
+  // 1. 匹配16进制颜色值
+  var regex = /#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})/g
+
+  // 2. 匹配日期 如yyyy-mm-dd格式
+  var regex = /^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01]])$/
+
+  // 3. 匹配qq号
+  var regex = /^[1-9][0-9]{4,10}$/g
+
+  // 4. 匹配手机号
+  var regex = /^1[34578]\d{9}$/g
+
+  // 5. 用户名称正则
+  var regex = /^[a-zA-Z\$][a-zA-z0-9_\$]{4,16}$/
+</script>
+</body>
+</html>
