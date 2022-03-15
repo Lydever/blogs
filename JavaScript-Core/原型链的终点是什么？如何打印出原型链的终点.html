@@ -14,8 +14,20 @@
 
   console.log(Object.prototype.__proto__)
 
-
-
+// 如何获取对象非原型链上的属性？
+  /*
+  * 使用hasOwnPrototype()来判断属性是否属于原型链的属性：
+  *
+  * */
+  function iterate(obj) {
+    var res = [];
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        res.push(key + ':' + obj[key]);
+      }
+    }
+    return res;
+  }
 
 
 </script>
