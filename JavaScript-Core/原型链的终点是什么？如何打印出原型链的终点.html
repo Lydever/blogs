@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>原型链的终点是什么</title>
+</head>
+<body>
+<script>
+  /*
+  * 由于Object是构造函数，原型链终点是Object.prototype.__proto__,而Object.prototype.__proto__ === null // true
+所以原型链的终点是null。原型链上得所有原型都是对象，所有的对象最终都是有Object够早的，
+而Object.prototype的下一级是Object.prototype.__proto__.
+  * */
+
+  console.log(Object.prototype.__proto__)
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
