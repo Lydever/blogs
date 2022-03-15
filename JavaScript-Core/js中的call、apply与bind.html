@@ -10,7 +10,6 @@
      * call() 方法使用一个指定的this值和单独给出的一个或者多个参数来调用一个函数
      */
 
-/*
     function Product(name,price) {
         this.name = name;
         this.price = price;
@@ -22,14 +21,13 @@
     }
 
     console.log(new Food('change',5).name); // change
-*/
 
 
     /**
      * 在JavaSccript中，call和apply都是为了改变某个函数运行时的上下文而存在的
      * 换句话说，就是为了改变函数内部this的指向。
      */
-/*    function fruits() {}
+    function fruits() {}
 
     fruits.prototype = {
             color: 'red',
@@ -46,7 +44,7 @@
         };
 
         apple.say.call(banana); //My color is yellow
-        apple.say.apply(banana); // My color is yellow*/
+        apple.say.apply(banana); // My color is yellow
     /**
      * call和apply是为了动态改变this而出现的
      */
@@ -57,14 +55,15 @@
      * 例如，有一个函数定义如下：
      *
      */
-/*    var func = function (arg1,arg2) {
+    var func = function (arg1,arg2) {
 
     };
     // 就可以通过下面的方式来调用
     func.call(this,arg1,arg2);
-    func.apply(this,[arg1,arg2]);*/
+    func.apply(this,[arg1,arg2]);
     /**
-     * 其中 this 是你想指定的上下文，他可以是任何一个 JavaScript 对象(JavaScript 中一切皆对象)，call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。　　
+     * 其中 this 是你想指定的上下文，他可以是任何一个 JavaScript 对象(JavaScript 中一切皆对象)，
+     * call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。　　
      */
 
     /**
@@ -75,24 +74,22 @@
     // # apply与call 运用实践
 
     // 数组之间追加
-/*
     var arr1 = [12,'foo',{ name:"dsd" },-232];
     var arr2 = ['ddd',333,1009];
     Array.prototype.push.apply(arr1,arr2);
 
     console.log(arr1);  // [12,'foo',{ name:"dsd" },-232,'ddd',333,1009];
-*/
 
 
     // 获取数组中的最大值和最小值
-/*    var numbers = [1,2,35,-5845];
+    var numbers = [1,2,35,-5845];
     var max1 = Math.max.apply(Math,numbers);
     var max2 = Math.max.call(Math,1,2,35,-5845);
     console.log(max1);  // 35
     console.log(max2);  // 35
 
     // 验证是否是数组
-    functionisArray(obj){
+    function isArray(obj){
         return Object.prototype.toString.call(obj) === '[object Array]';
     }
 
@@ -109,17 +106,14 @@
 
 
 
-    */
-/*
     function log() {
         console.log.apply(console,arguments)
     }
 
     log(1,2,3);
-*/
 
 
-/*   function log(){
+   function log(){
        var args = Array.prototype.slice.call(arguments);
        args.unshift('(app)');
 
@@ -127,15 +121,13 @@
    }
 
 
-   log(2,3,4);*/
+   log(2,3,4);
 
     // unshift() 会将元素添加到数组的前面
-/*
 
     var fruits = ["Banana", "Orange", "Apple", "Mango"];
     fruits.unshift("Lemon","Pineapple");
     console.log(fruits);
-*/
 
     var w = document.write;
     w('fgfgf');

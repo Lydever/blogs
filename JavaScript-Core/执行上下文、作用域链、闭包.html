@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>执行上下文/作用域链/闭包</title>
+</head>
+<body>
+<script>
+  /*
+  * 1. 对闭包的理解
+  * 闭包就是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式
+  * 就是在一个韩束内创建另一个函数，创建的函数可以访问到当前函数的局部变量
+  *
+  * 闭包有两个常用的用途：
+  * 1. 毕宝德第一个用于是使我们在函数外部能够访问到函数内部的变量。通过使用闭包，可以通过在
+  * 外部调用闭包函数从而在外部访问到函数内部的变量，可以的使用这种方法来创建私有变量
+  * 2. 闭包的另一个用途是使已经运行结束的函数上下文中的变量对象继续留在内存中，因为闭包函数保留了这个变量对象的
+  * 引用，所以这个变量对象不会被回收
+  * */
+  for (var i = 1; i <=5; i++) {
+    setTimeout(function timer() {
+      console.log(i)
+    }, i * 1000)
+  }
+  /**
+   * 首先因为setTimeout是个异步函数，所以会先把循环全部执行完毕，这个时候i就是6
+   * 了，所以会输出一堆6，解决办法有三种：
+   *
+   */
+
+  // 1. 使用闭包的方式
+  for (var i=1; i<=5; i++) {
+    function(j) {
+      setTimeout(function timer() {
+        console.log(j)
+      }, j*1000)(i)
+    }
+  }
+  // 2.  第二种就是使用setTimeout的第三个参数，这个参数会被当成tierm的函数参数传入
+  for (var i=1;i<=5;i++) {
+    setTimeout(
+      function timer(j) {
+        console.log(j)
+      },
+      i*1000,
+      i
+    )
+  }
+
+  // 3. 使用let定义i来解决问题
+  for (let i=1;i<=5;i++) {
+    setTimeout(function timer() {
+      console.log(i);
+    },i*1000)
+  }
+
+</script>
+</body>
+</html>
