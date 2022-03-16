@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js树形结构转换</title>
+</head>
+<body>
+
+<script>
+  const list = [
+    {id: 1, title: "A节点", name: "添加A节点", desc: "", remark: ""},
+    {id: 2, title: "A节点", name: "修改A节点", desc: "", remark: ""},
+    {id: 3, title: "A节点", name: "更新A节点", desc: "", remark: ""},
+    {id: 4, title: "A节点", name: "删除A节点", desc: "", remark: ""},
+    {id: 5, title: "b节点", name: "添加节点", desc: "", remark: ""},
+    {id: 6, title: "b节点", name: "查看节点", desc: "", remark: ""}
+  ]
+
+  // 从原列表中按 title 生成树的根节点
+  const roots = [...new Set(list.map(({ title }) => title))]
+    .map(title => ({ id: title, title }));
+
+  // 遍历 list，把节点转换了加到对应的根节点下面去
+  list.forEach(it => {
+    const parent = roots.find(({ id }) => id === it.title);
+    (parent.children ??= []).push({
+      ...it,
+      title: it.name
+    });
+  });
+
+  console.dir(roots, { depth: null });
+  console.log(roots);
+  console.
+</script>
+</body>
+</html>
