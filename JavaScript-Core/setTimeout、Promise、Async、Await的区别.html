@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>setTimeout、Promise、Async、Await的区别</title>
+</head>
+<body>
+<script>
+  // 1、setTimeout
+/*  console.log('script start')  // 1.打印script start
+  setTimeout(() => {
+    console.log('setTimeout')  // 4.打印setTimeout
+  })      // 2. 调用setTimeout函数，并定义其完成后执行的回调函数
+  console.log('script end')  // 3. 打印scritp end*/
+
+  // 执行顺序为：script start =》script end =》setTimeout
+
+
+  /*
+  * 2、Promise
+  *
+  * Promise本身是同步的立即执行函数，当executor中执行resolve或者reject
+  * 的时候，此时是异步操作，会先执行then/catch等，当主栈完成后，才会调用resolve
+  * /reject中存放的方法执行，打印p的时候，是打印的返回结果，一个Promise实例。
+  * */
+  console.log('script start')
+  let promise1 = new Promise((resolve) => {
+    console.log('promise1')
+    resolve()
+    console.log('promise1 end')
+  }).then(() => {
+    console.log('promise2')
+  })
+
+  setTimeout(() => {
+    console.log('setTimeout')
+  })
+
+  console.log('script end')
+
+  /*
+  * 输出顺序：script start-》primose1-》promise1 end-》script end-》promise2 -》setTimeout
+  * */
+
+</script>
+</body>
+</html>
