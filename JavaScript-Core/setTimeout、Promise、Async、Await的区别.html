@@ -42,6 +42,18 @@
   * 输出顺序：script start-》primose1-》promise1 end-》script end-》promise2 -》setTimeout
   * */
 
+  /*
+  * 3、async/await
+  * async函数返回一个Promise对象，当函数执行的时候，一旦遇到了await就会
+  * 先返回，等到触发的异步操作完成，在执行函数体内后面的语句。可以理解为，是让出了·线程，条
+  * 跳出了async函数体。
+  *
+  * */
+  async function fn1() {
+    return 1
+  }
+  console.log(fn1())
+
 </script>
 </body>
 </html>
