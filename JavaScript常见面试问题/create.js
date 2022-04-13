@@ -170,4 +170,46 @@ function throttle(fn, delay) {
 
 // 实现每隔一秒打印1,2,3,4
 // 使用闭包实现
+for (var i = 0; i < 5; i++) {
+  (function (i) {
+    setTimeout(function () {
+      console.log(i)
+    }, 1*1000)
+  })(i)
+}
  
+for (let i = 0; i < 5; i++){
+  setTimeout(function () {
+    console.log(i)
+  }, i*1000)
+}
+
+function debounce(fn, wait) {
+  let timer = null;
+  return function () {
+    let context = this;
+    let args = arguments;
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+    timer = setTimeout(() => {
+      fn.apply(context,args)
+    },wait)
+  }
+}
+
+// 节流
+function throttle(fn, delay) {
+  let curTime = Date.now();
+  return function () {
+    let context = this;
+    let args = arguments;
+    let nowTime = Date.now();
+// 如果两次时间间隔超过了指定时间，则执行函数
+    if (nowTime - curTime >= delay) {
+      curTime = Date.now();
+      return fn.apply(context,args)
+    }
+  }
+}
