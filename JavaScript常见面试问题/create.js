@@ -184,32 +184,21 @@ for (let i = 0; i < 5; i++){
   }, i*1000)
 }
 
-function debounce(fn, wait) {
-  let timer = null;
-  return function () {
-    let context = this;
-    let args = arguments;
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
-    }
-    timer = setTimeout(() => {
-      fn.apply(context,args)
-    },wait)
+// 手写类型判断函数
+function getType(params) {
+  // 判断数据是null的情况
+  if (params === null) {
+    return params + "";
   }
-}
 
-// 节流
-function throttle(fn, delay) {
-  let curTime = Date.now();
-  return function () {
-    let context = this;
-    let args = arguments;
-    let nowTime = Date.now();
-// 如果两次时间间隔超过了指定时间，则执行函数
-    if (nowTime - curTime >= delay) {
-      curTime = Date.now();
-      return fn.apply(context,args)
-    }
+  // 判断诗句是引用类型的情况
+  if (typeof params === "object") {
+    let valClass = Object.prototype.toString.call(params),
+      type = valClass.split(" ")[1].split("");
+    type.pop();
+    return type.join("").toLowerCase();
+  } else {
+    // 判断数据是基本数据类型的情况和函数的情况
+    return typeof params
   }
 }
