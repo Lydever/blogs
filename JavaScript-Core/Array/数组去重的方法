@@ -13,3 +13,8 @@ Array.prototype.distinct = function () {
   }
   return result;
 }
+
+/* 利用splice直接在原数组进行操作
+双层循环，外层循环，内层循环时比较值，值相同时，则删除这个值，
+注意点：闪出原宿之后，需要将数组长度也减1
+*/
