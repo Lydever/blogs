@@ -202,3 +202,9 @@ function getType(params) {
     return typeof params
   }
 }
+
+let xml = new XMLHttpRequest();
+xml.open("GET", './', true);
+xml.onreadystatechange = function () {
+  if(this.readyState)
+}
