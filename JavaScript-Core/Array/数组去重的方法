@@ -28,3 +28,6 @@ function distinct1() {
     }
   }
 }
+
+/* es6数组去重 */
+console.log(new Set(array))
