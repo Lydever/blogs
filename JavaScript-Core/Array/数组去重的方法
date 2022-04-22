@@ -60,8 +60,9 @@ function unique4(arr) {
 function unique5(arr) {
   let res = [];
   for (let i = 0; i < arr.length; i++) { //includes 检测数组是否有某个值
-    if (!array.includes(arr[i])) {
+    if (!arr.includes(arr[i])) {
       res.push(arr[i])
     }
   }
+  return res;
 }
