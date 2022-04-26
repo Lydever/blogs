@@ -12,4 +12,7 @@ arr.constructor === Array; // true
 
 /* 3. 通过Object.prototype.toString.call()判断 */
 /* Object.prototype.toString.call()可以获取到对象的不同类型 */
+let arr3 = [4, 5, 6];
+Object.prototype.toString.call(arr3) === '[Object Array]'; // true
+
 
