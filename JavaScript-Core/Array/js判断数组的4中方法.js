@@ -10,3 +10,5 @@ obj instanceof Array; // false
 let arr2 = [1, 2, 3];
 arr.constructor === Array; // true
 
+/* 3. 通过Object.prototype.toString.call()判断 */
+
