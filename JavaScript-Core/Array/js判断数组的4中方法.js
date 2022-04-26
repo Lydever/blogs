@@ -15,4 +15,5 @@ arr.constructor === Array; // true
 let arr3 = [4, 5, 6];
 Object.prototype.toString.call(arr3) === '[Object Array]'; // true
 
+/* 4. 通过Array.isArray判断 */
 
