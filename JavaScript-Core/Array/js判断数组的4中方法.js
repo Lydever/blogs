@@ -4,3 +4,7 @@ let arr = [];
 arr instanceof Array; // true
 let obj = {};
 obj instanceof Array; // false
+
+/* 2. 通过constructor判断 */
+/* 实例的构造函数属性constructor指向构造函数，通过constructor属性可以判断是否为一个数组 */
+
