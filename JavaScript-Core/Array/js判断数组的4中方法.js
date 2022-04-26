@@ -7,4 +7,6 @@ obj instanceof Array; // false
 
 /* 2. 通过constructor判断 */
 /* 实例的构造函数属性constructor指向构造函数，通过constructor属性可以判断是否为一个数组 */
+let arr2 = [1, 2, 3];
+arr.constructor === Array; // true
 
