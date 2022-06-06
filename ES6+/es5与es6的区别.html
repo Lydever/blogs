@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* es5与es6的区别 */
+    区别：
+    1、es6新增了箭头函数，es5没有；
+    2、ES6中新增了块级作用域，es5没有；
+    3、ES6引入Class概念，不再像ES5一样使用原型链实现继承；
+    4、ES6中可以设置默认函数参数，es5不行；
+    5、ES6中新增了promise特性。
+    一、新增箭头函数
+
+箭头函数解决的问题
+
+简化了写法。箭头函数适用于函数体只有一行的情况；当有多行时，可用普通函数增加可读性。 少打代码，结构清晰
+
+明确了this。传统JS的this是在运行的时候确定的，而不是在定义的时候确定的；而箭头函数的this是在定义时就确定的，不能被改变，也不能被call,apply,bind这些方法修改。 明确运行时候this指向谁，不用运行时判断this指向
+
+注：箭头函数没有自己的this，他的this就是外层的this，指向上一个不是箭头函数的函数的this。因为js的机制，所以指向的是一个非箭头函数的函数的作用域。
+
+箭头函数与普通函数的区别
+
+普通function的声明在变量提升中是最高的，箭头函数没有函数提升
+
+箭头函数没有this，函数体内部的this对象就是定义的时候所在的对象而不是使用时所在的对象
+
+箭头函数没有arguments对象，该对象在函数体内不存在，如果要用，可以使用rest参数
+
+箭头函数不能作为构造函数，不能被new，没有property
+
+call和apply方法只有参数，没有作用域
+
+不可以使用yield命令，因此箭头函数不能做Generator函数
+
+二、块级作用域
+
+ES6中的let命令，声明变量，用法和var差不多，但是let是为JavaScript新增了块级作用域，ES5中是没有块级作用域的，并且var有变量提升的概念，但是在let中，使用的变量一定要进行声明；const声明常量
+
+ES6中变量的结构赋值，比如：var [a,b,c] = [0,1,2];
+
+三、类继承
+
+ES6中不再像ES5一样使用原型链实现继承，而是引入Class这个概念，听起来和Java中的面向对象编程的语法有些像，但是二者是不一样的。
+
+四、设置默认函数参数
+
+ES6中可以设置默认函数参数，如function A（x,y=9）{};
+
+五、promise
+
+promise产生背景：解决回调地狱问题，处理异步请求
+
+promise用法：链式调用，成功和失败的回调，三个状态，pending状态改变时触发。状态一旦改变就不会再变。
+
+六、模板字符串
+
+七、赋值结构
+
+  </script>
+</body>
+</html>
