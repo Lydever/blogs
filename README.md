@@ -1,5 +1,5 @@
 # Blogs
-个人学习、技术博客记录集
+Personal learning and technology blog records！
 
 <!-- # 2021-10-17 /晚
 想了很多，我的问题在于书读得太少，想的太多，想回去继续读书深造，也想提升技术。
