@@ -2,7 +2,7 @@
  * @Author: Lydever 18027118545@163.com
  * @Date: 2022-06-27 15:47:27
  * @LastEditors: Lydever 18027118545@163.com
- * @LastEditTime: 2022-06-27 17:07:31
+ * @LastEditTime: 2022-06-27 17:30:20
  * @FilePath: \LyDevProjects\LyBlogs\TypeScript-Learning\type.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -38,3 +38,12 @@ const any = (x: number, y:number): number => {
 let myNumber:(x: number, y:number) => number
 
 // 用接口定义   
+
+// 联合类型
+type Combinable = string | number;
+function add(a:Combinable, b:Combinable) {
+    if(typeof a === 'string' || typeof b === 'string') {
+        return a.toString() + b.toString();
+    }
+    return a + b;
+}
