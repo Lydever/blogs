@@ -2,7 +2,7 @@
  * @Author: Lydever 18027118545@163.com
  * @Date: 2022-06-27 15:47:27
  * @LastEditors: Lydever 18027118545@163.com
- * @LastEditTime: 2022-06-28 14:39:15
+ * @LastEditTime: 2022-06-28 14:44:09
  * @FilePath: \LyDevProjects\LyBlogs\TypeScript-Learning\type.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -21,6 +21,11 @@ let arr2:string[] = ["3", "4"];
 // 元组
 let x: [string, number]
 let x2 = ['zili', 11]
+// 元组可选
+type Point = [number, number?, number?]
+const n: Point = [10]
+const n2:Point = [10,10]
+const n3: Point = [10,191,19]
 
 // 定义联合类型数组
 let arr3: (number | string)[];
