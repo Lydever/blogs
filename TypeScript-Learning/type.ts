@@ -2,7 +2,7 @@
  * @Author: Lydever 18027118545@163.com
  * @Date: 2022-06-27 15:47:27
  * @LastEditors: Lydever 18027118545@163.com
- * @LastEditTime: 2022-06-28 14:47:07
+ * @LastEditTime: 2022-06-28 17:43:48
  * @FilePath: \LyDevProjects\LyBlogs\TypeScript-Learning\type.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -58,3 +58,18 @@ function add(a:Combinable, b:Combinable) {
     }
     return a + b;
 }
+
+// 类型断言
+function getDogName() {
+    let x: unknown;
+    return x;
+}
+const dogName = getDogName();
+// 直接使用
+const upName = dogName.toLowerCase(); // Error
+// typeof
+if(typeof dogName === 'string') {
+    const upName = dogName.toLocaleLowerCase(); //ok
+} 
+// 类型断言
+const dogName = (dogName as string).toLocaleLowerCase();
