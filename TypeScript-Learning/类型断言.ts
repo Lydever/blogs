@@ -17,3 +17,13 @@ const arrayNumber2: number = arrayNumber.find(num => num > 2)
 const arrayNumber: number[] = [1,2,3,4];
 const  arrayNumber2: number = arrayNumber.find(num => num > 2) as number;
 
+// =========语法=========
+
+// 尖括号语法
+let someVal: any = 'lizi';
+let strLength: number = (<string>someVal).length;
+
+// as语法
+let someVal: any = 'lizi';
+let strLength: number = (someVal as string).length;
+
