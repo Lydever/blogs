@@ -11,3 +11,4 @@ function myFunc(numGenerator: NumGenerator | undefined) {
     const num1 = numGenerator(); //Error
     const num2 = numGenerator!(); //ok
 }
+ 
