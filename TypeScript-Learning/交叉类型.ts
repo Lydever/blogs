@@ -11,3 +11,21 @@ const mixed: IntersectionType = {
     name: 'lizi',
     age: 2
 }
+
+interface A {
+    x: {id: number}
+}
+interface B {
+    x: {name: string}
+}
+interface C {
+    x:{age: null}
+}
+type ABC = A & B & C
+let abc: ABC = {
+    x: {
+        id: 1,
+        name: 'liz',
+        age: null
+    }
+}
