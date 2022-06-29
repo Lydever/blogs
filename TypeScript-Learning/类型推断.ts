@@ -8,4 +8,13 @@
  */
 
 // 类型推断
-
+{
+    let str: string = '李猫er'
+    let num: number = 99;
+    let bool: boolean = false;
+}
+{
+    const str: string = '李某人';
+    const num: number = 11;
+    const bool: boolean = false
+}
