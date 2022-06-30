@@ -53,3 +53,13 @@ interface Person {
 type k1 = keyof Person; // "name", "age"
 type k2 = keyof Person[]; // "length" | "toString" | "pop" | "push" | "concat" | |join
 type k3 = keyof { [x: string]: Person }; // string | number
+
+interface StringArray {
+    // 字符串索引 =》 keyof StringArray => string | number
+    [index: string]: string
+}
+
+interface StringArray1 {
+    // 数字索引 =》 keyof StringArray1 =》 number
+    [index: number]: string
+}
