@@ -48,7 +48,7 @@ type Func = typeof toAarray; // => (x:number) => number[]
 // 该操作符可以用于获取某种类型的所有键，其返回类型是联合类型。
 interface Person {
     name: string;
-    age: number
+    age: number;
 }
 type k1 = keyof Person; // "name", "age"
 type k2 = keyof Person[]; // "length" | "toString" | "pop" | "push" | "concat" | |join
@@ -62,4 +62,8 @@ interface StringArray {
 interface StringArray1 {
     // 数字索引 =》 keyof StringArray1 =》 number
     [index: number]: string
+}
+
+function prop(obj: object, key: string) {
+    return (obj as any)[key];
 }
