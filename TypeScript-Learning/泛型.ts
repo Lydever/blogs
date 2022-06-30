@@ -23,3 +23,18 @@ function f2<T extends Sizeable>(arg: T): T {
     return arg
 }
 
+//========泛型工具类型=======
+// 1. typeof
+// typeof 的作用用途是在类型上下文中获取变量或者属性的类型
+interface Person {
+    name: string;
+    age: number
+}
+
+const sum: Person = {
+    name: '李猫er',
+    age: 1
+}
+
+type sumw1 = typeof sum // type sunw1 = Person
+
