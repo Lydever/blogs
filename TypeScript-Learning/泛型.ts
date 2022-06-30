@@ -43,3 +43,13 @@ function toAarray(x: number): Array<number> {
 }
 
 type Func = typeof toAarray; // => (x:number) => number[]
+
+// keyof
+// 该操作符可以用于获取某种类型的所有键，其返回类型是联合类型。
+interface Person {
+    name: string;
+    age: number
+}
+type k1 = keyof Person; // "name", "age"
+type k2 = keyof Person[]; // "length" | "toString" | "pop" | "push" | "concat" | |join
+type k3 = keyof { [x: string]: Person }; // string | number
