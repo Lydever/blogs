@@ -38,3 +38,8 @@ const sum: Person = {
 
 type sumw1 = typeof sum // type sunw1 = Person
 
+function toAarray(x: number): Array<number> {
+    return [x]
+}
+
+type Func = typeof toAarray; // => (x:number) => number[]
