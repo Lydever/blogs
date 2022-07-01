@@ -37,3 +37,6 @@ type NonNullable<T> = T extends null | undefined ? never : T
 
 type TO = NonNullable<string | number | undefined>; // string | number
 type T1 = NonNullable<string[] | null | undefined>; // string[]
+
+// Parameters
+// Parameters的作用是用于获取函数的参数类型组成的元组类型
