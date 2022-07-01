@@ -16,4 +16,13 @@ type Partial<T> = {
 type DeepPartial<T> =  {
     // 如果是object类型，则递归类型
     [U in keyof T]?: T[U] extends object ? DeepPartial<T[U]> : [U]
+};
+
+type PartialWindow = DeepPartial<T>; // 现在T上所有的属性都变成了可选了
+
+// Required
+// Required 将类型的属性变成可选
+type Required<T> = {
+    [P in keyof T]-?: T[P]; // -?代表移除
 }
+
