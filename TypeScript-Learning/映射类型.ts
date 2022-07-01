@@ -26,3 +26,9 @@ type Required<T> = {
     [P in keyof T]-?: T[P]; // -?代表移除
 }
 
+// Readonly
+// Readonly的作用是将某个所有属性变为制度属性
+type Readonly<T> = {
+    readonly [P in keyof T]: T[P];
+}
+
