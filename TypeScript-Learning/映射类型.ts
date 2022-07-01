@@ -34,3 +34,6 @@ type Readonly<T> = {
 // NonNullable
 // NonNull<T>的作用就是用来过滤类型中的null级undefined类型
 type NonNullable<T> = T extends null | undefined ? never : T
+
+type TO = NonNullable<string | number | undefined>; // string | number
+type T1 = NonNullable<string[] | null | undefined>; // string[]
