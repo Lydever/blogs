@@ -31,4 +31,6 @@ type Required<T> = {
 type Readonly<T> = {
     readonly [P in keyof T]: T[P];
 }
-
+// NonNullable
+// NonNull<T>的作用就是用来过滤类型中的null级undefined类型
+type NonNullable<T> = T extends null | undefined ? never : T
