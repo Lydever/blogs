@@ -67,3 +67,14 @@ interface StringArray1 {
 function prop(obj: object, key: string) {
     return (obj as any)[key];
 }
+// infer
+// 在条件类型语句中，可以用inter声明一个类型变量并且对他进行使用
+type ReturnType<T>  = T extends (...args: any[]) => infer R ? R : any;
+
+interface Lengthwise {
+    length: number
+}
+function loggingIdentity<T extends Lengthwise>(arg: T):T {
+    console.log(arg.length);
+    return arg;
+}
