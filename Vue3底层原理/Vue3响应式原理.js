@@ -15,16 +15,19 @@
     }
     // Reflect 映射
     let p = new Proxy(data,{
+
     // 有人读取了data中某个属性
     get(target,propName){
     console.log(`有人读取了${propName}的属性`)
     return Reflect.get(target,propName)
     },
+
     // 有人修改和添加了data中某个属性
     set(target,propName,value){
     console.log(`有人修改了${propName}属性,我要去更新界面`)
     Reflect.set(target,propName,value)
     },
+
     // 有人删除了data中某个属性
     deleteProperty(target,propName){
     console.log(`有人删除了${propName}属性,我要去更新界面`)
