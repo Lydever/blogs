@@ -45,6 +45,7 @@ const Counter = () => {
 // 使用useEffect可以用来执行副作用，何为副作用？意思是修改了自我作用域之外的状态，或者除return外，与作用域之外的函数有数据交互
 // 在项目中应用广泛，用来初始化数据的请求，初始化事件的绑定与销毁。中间态的请求（只需要设置useEffect的依赖即可）
 // 一个class与一个hook的对比
+// 1.1 class
 class Exeaple extends React.Component {
     constructor(props) {
         super(props);
@@ -69,4 +70,21 @@ class Exeaple extends React.Component {
             </>
         )
     }
+}
+
+// 2. hooks
+import { useState,useEffect } from 'React'
+const Exeaple2 = () => {
+    const [count,setCount] = useState(0);
+
+    useEffect(() => {
+        document.title = `You clicked ${count} times`
+    });
+
+    return (
+        <>
+          <h2>You clicked ${count} times</h2>
+          <button onClick={() => setCount(count + 1)}>Click me </button>
+        </>
+    )
 }
