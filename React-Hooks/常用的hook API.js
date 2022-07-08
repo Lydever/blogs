@@ -144,3 +144,6 @@ const memoizedCallback = useCallback(
 
 // 6. useMemo
 // 返回一个memoized值，（注意不要滥用：在计算开销比较大时，建议采用）
+const memoizedVal = useMemo(
+    (() => computeExpensiveVal(a,b),[a,b])
+)
