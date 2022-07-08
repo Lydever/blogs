@@ -1,4 +1,4 @@
-// useState
+// 1、 useState
 // 和class的state一样，产生的state表示随着2时间（用户交互）发生改变，值也会发生改变
 const RenderFunctionComponent = () => {
   const [state,setState] = useState('hello useState')
@@ -8,7 +8,7 @@ const RenderFunctionComponent = () => {
   );
 }
 
-// useReducer
+// 2、 useReducer
 // 一个useState的替代方案，就像一个简易的redux
 const initialState = {
     count: 1
@@ -41,3 +41,32 @@ const Counter = () => {
     )
 }
 
+// 3、 useEffect
+// 使用useEffect可以用来执行副作用，何为副作用？意思是修改了自我作用域之外的状态，或者除return外，与作用域之外的函数有数据交互
+// 在项目中应用广泛，用来初始化数据的请求，初始化事件的绑定与销毁。中间态的请求（只需要设置useEffect的依赖即可）
+// 一个class与一个hook的对比
+class Exeaple extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            count: 0
+        };
+    }
+
+    componentDidMount(){
+        document.title = `You clicked ${this.state.count} times`;
+    }
+    componentDidUpdate() {
+        document.title = `You clicked ${this.state.count} times`;
+    }
+
+    render(){
+        return (
+            <>
+              <h2>You clicked {this.state.count} times</h2>
+              <button onClick={this.setState({ count: this.state.count+1 })}>Click Me</button>
+            </>
+        )
+    }
+}
