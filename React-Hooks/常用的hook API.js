@@ -135,3 +135,9 @@ const InputWithFocusButton = () => {
 // 5. useCallback
 // 返回一个 memoized 的函数（注意不要滥用：记住函数，以及比较是否需要生成新的函数，未必性能就比串讲一个函数性能好。
 // 向下传递回调时可以使用，也可使用useReducer的dispatch向下传递）
+const memoizedCallback = useCallback(
+    () => {
+        doSomething(a,b);
+    },
+    [a,b],
+)
