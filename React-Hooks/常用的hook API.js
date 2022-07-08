@@ -111,3 +111,5 @@ const SearchComponent = () => {
 //   2. 可根据业务的不同划分成多个useEffect，而不用像class一样只能在生命周期中书写,关注业务点分离
 //   3. 可在react内置的hook api 基础上实现自定义hook，实现逻辑复用。
 
+// 4. useContext
+const value = useContext(myContext)
