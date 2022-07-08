@@ -88,3 +88,21 @@ const Exeaple2 = () => {
         </>
     )
 }
+
+// 一个有搜索功能组件的useEffcet
+const SearchComponent = () => {
+     const [searchVal,setSearchVal] = useState();
+
+     useEffect(() => {
+        const getList = async () => {
+
+        }
+        getList();
+     }, [searchVal]);
+
+     return (
+        <>
+          <Input value={ searchVal } onChange={ e => setSearchVal(e.target.value) } />
+        </>
+     )
+}
