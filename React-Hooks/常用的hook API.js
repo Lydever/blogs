@@ -113,3 +113,20 @@ const SearchComponent = () => {
 
 // 4. useContext
 const value = useContext(myContext)
+
+// 5. useRef
+// 可存储任意变量
+const InputWithFocusButton = () => {
+    const inputEl = useRef(null);
+    const onButtonClick = () => {
+        //`current`指定已挂载到DOM上的文本输入元素
+        inputEl.current.focus();
+    };
+    return (
+        <>
+          <input ref={ inputEl } type="text" />
+          <button onClick={ onButtonClick }>focus the input</button>
+        </>
+    );
+}
+
