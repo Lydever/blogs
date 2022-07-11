@@ -83,7 +83,7 @@ const Exeaple2 = () => {
 
     return (
         <>
-          <h2>You clicked ${count} times</h2>
+          <h2>`You clicked ${count} times`</h2>
           <button onClick={() => setCount(count + 1)}>Click me </button>
         </>
     )
@@ -107,9 +107,9 @@ const SearchComponent = () => {
      )
 }
 // 需要注意的是:
-//   1. useEffect第二个参数为空的话，则执行一次（时间绑定·1是一个场景），如果没有第二个参数，则内次渲染均会执行
+//   1. useEffect第二个参数为空的话，则执行一次（时间绑定是一个场景），如果没有第二个参数，则每次渲染均会执行
 //   2. 可根据业务的不同划分成多个useEffect，而不用像class一样只能在生命周期中书写,关注业务点分离
-//   3. 可在react内置的hook api 基础上实现自定义hook，实现逻辑复用。
+//   3. 可在react内置的hook api基础上实现自定义hook，实现逻辑复用。
 
 // 4. useContext
 const value = useContext(myContext)
