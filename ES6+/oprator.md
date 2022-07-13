@@ -9,3 +9,7 @@ a?.[x]   ===> a == null ? undefiend : a[x]
 a?.b()   ===> a == null ? undefiend : a.b()
 
 a?.()    ===>  a == null ? undefiend : a()
+
+
+// 短路机制
+// 本质上， ?.相当于一种短路机制，只要不满足条件就不再往下执行
