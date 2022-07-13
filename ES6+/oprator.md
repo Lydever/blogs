@@ -5,3 +5,7 @@
 a?.b  ====》   a == null ? undefiend : a.b
 
 a?.[x]   ===> a == null ? undefiend : a[x]
+
+a?.b()   ===> a == null ? undefiend : a.b()
+
+a?.()    ===>  a == null ? undefiend : a()
