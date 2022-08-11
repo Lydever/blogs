@@ -5,6 +5,20 @@
   <title>10个常见的前端手写功能</title>
 </head>
 <body>
-
+<script>
+  // 1. 实现instanceof
+  function myInstanceof(left,right) {
+    // 基本类型直接返回false
+    if(typeof left !== 'object' || left ==null) return false;
+    let proto = Object.getPrototypeOf(left);
+    while(true) {
+      // 查找到尽头，还没找到
+      if(proto == null) return false;
+      // 找到相同的原型对象
+      if(proto == right.prototype) return true;
+      proto = Object.getPrototypeOf(proto)
+    }
+  }
+</script>
 </body>
 </html>
