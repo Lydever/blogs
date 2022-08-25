@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <script>
+            const _getUniqueNums = (start,end,n) => {
+                // 补全代码
+                let randomArr = [];
+                for(let i=0;i<n;i++){
+                    let randomNum = (end-start+1)*Math.random() + start
+                    let result = Math.floor(randomNum);
+                    randomArr.push(result)
+                }
+                let randomMap = Array.from(new Set(randomArr))
+                return randomMap
+            }
+            console.log(_getUniqueNums(2,9,4))
+        </script>
+    </body>
+</html>
