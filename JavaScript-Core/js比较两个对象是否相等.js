@@ -8,7 +8,7 @@ Object.prototype.equal = function(obj) {
     }
 
     for(let i=0;i < props1.length; i++ ) {
-        let prosName = props1[i];
+        let propName = props1[i];
         if(this[propName] !== obj[propName]) {
             return false;
         }
