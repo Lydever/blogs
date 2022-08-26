@@ -52,13 +52,13 @@ function isPalindrome(word) {
 // 使用栈模拟递归过程
 const fact = (n) => {
     let s = new Stack();
-    while(n-1) {
+    while(n-1) { // 首先将数字从 5 到 1 压入栈
         s.push(n--)
     }
     let product = 1;
-    while(s.length > 0) {
+    while(s.length > 0) { // 使用一个循环，将数字挨个弹出连乘，就得到了正确的答案
         product *= s.pop();
     }
     return product
-    
+
 }
