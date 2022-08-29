@@ -10,3 +10,10 @@ const flatten = (arr) => {
     });
     return result;
 }
+
+// 通过toString
+const flatten2 = (arr) => {
+    arr.toString.split(',').map((item) => {
+        +item
+    })
+}
