@@ -17,3 +17,10 @@ const flatten2 = (arr) => {
         +item
     })
 }
+
+// [].concat.apply + some
+const flatten3 = (arr) => {
+    while(arr.some(arr.isArray(item))) {
+        arr = [].concat.apply([],arr)
+    }
+}
