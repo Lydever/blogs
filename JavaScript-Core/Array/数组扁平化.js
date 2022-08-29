@@ -24,3 +24,10 @@ const flatten3 = (arr) => {
         arr = [].concat.apply([],arr)
     }
 }
+
+// reduce
+const flatten4 = (arr) => {
+    return arr.reduce((prev,cur) => {
+        return prev.concat(Array.isArray(cur) ? flatten4(cur) : cur) 
+    }, [])
+}
