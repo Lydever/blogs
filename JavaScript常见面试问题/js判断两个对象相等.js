@@ -1,10 +1,4 @@
-/*
- * @Author: Lydever 18027118545@163.com
- * @Date: 2022-06-24 13:43:44
- * @LastEditors: Lydever 18027118545@163.com
- * @LastEditTime: 2022-06-24 13:56:32
- * @FilePath: \LyDevProjects\LyBlogs\JavaScript常见面试问题\js判断两个对象相等.js
- */
+
 // 判断两个对象是否相等
 const isObjectEqual = (obj1, obj2) => {
     // 获取obj1和obj2的属性名
