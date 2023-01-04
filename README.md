@@ -26,7 +26,6 @@ Personal learning and technology blog records！
   - Java
   - Node
   - Python
-  - PHP
   - Spring Boot
   - ...
 - 数据库
