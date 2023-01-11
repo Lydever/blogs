@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let list = [
+    {
+      "name":"父类一",
+      "type":[
+        {
+          "no":"0201",
+          "name":"子类1"
+        },
+        {
+          "no":"0202",
+          "name":"子类2"
+        }
+      ],
+      "groupNo":"02"
+    },
+    {
+      "name":"父类二",
+      "type":[
+        {
+          "no":"0601",
+          "name":"子类1"
+        },
+        {
+          "no":"0602",
+          "name":"子类2"
+        }
+      ],
+      "groupNo":"06"
+    }
+  ]
+
+  // 目标结构
+  //         [{
+  //   value: 1,
+  //   label: '中国',
+  //   children: [
+  //     {
+  //       value: 2,
+  //       label: '广东'
+  //     },
+  //     {
+  //       value: 5,
+  //       label: '广西'
+  //     }
+  //   ]
+  // }]
+  let arr = list.map(({name: label, groupNo: value, type: children}) =>
+          ({label, value, children: children.map(({name: label, no: value}) =>
+                    ({label, value}))}))
+  console.log(arr)
+</script>
+</body>
+</html>
