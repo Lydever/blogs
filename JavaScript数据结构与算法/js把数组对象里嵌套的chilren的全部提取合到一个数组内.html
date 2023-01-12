@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 原结构样式
+    let data = [
+        {id:1,name:'a',children:[
+                {id:11,name:"aa"},
+                {id:12,name:'bb'}
+            ]},
+        {id:2,name:'b'},
+        {id:3,name:'c',children:[
+                {id:333,name:'adsdf'},
+                {id:2323,name:'sdff'}
+            ]}
+    ]
+
+    // 目标结构
+    //     [
+    //     {id:1,name:'a'},
+    //     {id:11,name:'aa'},
+    //     {id:12,name:'bb'},
+    //     {id:2,name:'b'},
+    // ...
+    // ]
+
+    // 思路一:
+    const f = (a) => a.flatMap(({ children: c = [], ...r }) => [r, ...f(c)])
+
+    console.log(12, f(data))
+
+    // 思路二: 只有两级用flat扁平化
+    var newData = data.map(item => [item, ...(item.chilred||[])]).flat()
+
+    // 思路三: 只用于children中不包含children
+    const f2 = (data) => {
+        let arr = [];
+        for (let item of data) {
+            arr.push({
+                id: item.id,
+                name: item.name
+            })
+            if (item.children) {
+                arr.push(...item.children)
+            }
+        }
+
+        return arr
+    }
+
+
+    // 思路四:
+    const flat = (data) => {
+        const flatData = []
+        const f = data => data.forEach(({ id, name, children }) => {
+            flatData.push({ id, name })
+            if (children) {
+                f(children, flatData)
+            }
+        })
+        f(data)
+
+        return flatData
+    }
+
+    // 思路五:
+    const flat = (arr) => {
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].children && Array.isArray(arr[i].children) && arr[i].children.length > 0) {
+                let children = arr[i].children;
+                delete arr[i].children;
+                newArr.push(arr[i]);
+                const next = flat(children);
+                newArr.push(...next);
+            } else {
+                newArr.push(arr[i]);
+            }
+        }
+        return newArr;
+    }
+
+    // 思路六:
+    const extractChildren = (arr) => {
+        let extracted = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].children) {
+                extracted = extracted.concat(arr[i].children);
+                delete arr[i].children;
+            }
+        }
+        return arr.concat(extracted);
+    }
+
+    // 思路七:
+    data.flatMap(({ children:c=[], ...r }) => [...c, r])
+
+
+
+</script>
+</body>
+</html>

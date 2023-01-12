@@ -53,8 +53,7 @@
   //   ]
   // }]
   let arr = list.map(({name: label, groupNo: value, type: children}) =>
-          ({label, value, children: children.map(({name: label, no: value}) =>
-                    ({label, value}))}))
+          ({label, value, children: children.map(({name: label, no: value}) => ({label, value}))}))
   console.log(arr)
 </script>
 </body>
