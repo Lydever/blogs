@@ -30,7 +30,7 @@ list: [
 
 const formatData = (arr) => {
   let result = arr.reduce((acc,item) => {
-    let find = acc.find((v) => v.title === title.title)
+    let find = acc.find((v) => v.title === item.title)
     item.isType = find ? false : true;
     return[...acc,item]
   },[])
