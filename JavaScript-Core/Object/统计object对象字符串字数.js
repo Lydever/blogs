@@ -4,7 +4,7 @@
  * @CreateDate:  2023/2/24 15:48
  */
 
-// 字符串字符统计
+// 字符串字符出现字数统计 返回 { a:2, b:2, c:1 }
 const getChartCount = (str) => {
     const obj = {}
     for (let k of str) {
