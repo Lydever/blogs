@@ -12,7 +12,7 @@ function create(obj) {
 // 1.首先获取类型的原型
 // 2. 然后获取对象的原型
 // 3. 然后一直循环判断对象的原型是否等于类型的原型，指导对象原型为null，
-因为，原型链最终为null
+// 因为，原型链最终为null
 
 function mInstanceof(left, right) {
   let proto = Object.getPrototypeOf(left) // 获取对象的原型

@@ -1,5 +1,5 @@
 /* 双重循环，外层循环元素，内层循环时比较值 
-如果有·相同的值则跳过，不相同则push进数组*/
+如果有相同的值则跳过，不相同则push进数组*/
 Array.prototype.distinct = function () {
   let arr = this;
   let result = [];

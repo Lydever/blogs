@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sheetjs案例测试</title>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/xlsx/0.18.2/xlsx.full.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+<input type="file" onchange="readFile(this)" />
+<button onclick="download()">导出</button>
+<textarea id="output" cols="150" rows="30" style="width: 100%;"></textarea>
+<div id="div"></div>
+<script>
+    // const columns = [
+    //     '序号',
+    //     '年度',
+    //     ['等级','5555','6787'],
+    //
+    // ];
+    // var wb; // 工作簿   workbook
+    // var ws; // sheet页  worksheet
+    //
+    // // 读取文件
+    // function readFile(obj) {
+    //     if (!obj.files) return;
+    //     var file = obj.files[0];
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var data = e.target.result;
+    //         // 解析文件
+    //         wb = XLSX.read(data, { type: 'binary' });
+    //         ws = wb.Sheets[wb.SheetNames[0]];
+    //         // 读取成 json
+    //         var json = XLSX.utils.sheet_to_json(ws);
+    //         document.getElementById("output").innerHTML = JSON.stringify(json, null, '\t');
+    //         // 读取成 html
+    //         div.innerHTML = XLSX.utils.sheet_to_html(ws);
+    //     };
+    //     // reader.readAsBinaryString(file);
+    //     reader.readAsArrayBuffer(file);
+    //
+    // }
+    //
+    // // 导出
+    // function download() {
+    //
+    //     // 创建空的工作簿（没有sheet页）
+    //     var wb = XLSX.utils.book_new();
+    //     // JSON to sheet
+    //     var ws1 = XLSX.utils.json_to_sheet([
+    //         // {s:1, t:2},
+    //         // {s:3, t:4},
+    //     ], {header: columns});
+    //     // 数组 to sheet
+    //     var ws2 = XLSX.utils.aoa_to_sheet([
+    //         ['我','去'],
+    //         [1,2]
+    //     ]);
+    //     // 添加到 wb 里
+    //     XLSX.utils.book_append_sheet(wb, ws1, "sheet1");
+    //     XLSX.utils.book_append_sheet(wb, ws2, "sheet22");
+    //
+    //     XLSX.writeFile(wb, 'out.xlsx');
+    // }
+
+
+    function download(){
+        // 数据示例
+        const data = [
+            ["Alice", "Math", 98],
+            ["Bob", "Math", 85],
+            ["Charlie", "Math", 75],
+            ["Alice", "Science", 92],
+            ["Bob", "Science", 88],
+            ["Charlie", "Science", 80]
+        ]
+
+        // 多级表头示例
+        const headers = [
+            ["", "", "Test Scores"],
+            ["Name", "Subject", "Score"]
+        ]
+
+        // 创建工作表
+        const ws = XLSX.utils.aoa_to_sheet([headers, ...data])
+        // ws['!rows'] = [{ hpx: 25 }, ...ws['!rows']] // 行高
+
+        // 设置多级表头
+        ws['!merges'] = [
+            // 第一行
+            { s: { r: 0, c: 2 }, e: { r: 0, c: 4 } },
+            // 第二行
+            { s: { r: 1, c: 0 }, e: { r: 2, c: 0 } },
+            { s: { r: 1, c: 1 }, e: { r: 2, c: 1 } },
+            { s: { r: 1, c: 2 }, e: { r: 1, c: 4 } }
+        ]
+
+        // 设置多级表头样式
+        ws['A1'].s = { font: { bold: true } } // 设置字体加粗
+        ws['C1'].s = { font: { bold: true } } // 设置字体加粗
+        ws['A2'].s = { font: { bold: true } } // 设置字体加粗
+        ws['B2'].s = { font: { bold: true } } // 设置字体加粗
+        ws['C2'].s = { font: { bold: true } } // 设置字体加粗
+
+        // 创建工作簿并添加工作表
+        const wb = XLSX.utils.book_new()
+        XLSX.utils.book_append_sheet(wb, ws, "Test Scores")
+
+        // 导出Excel文件
+        XLSX.writeFile(wb, "test-scores.xlsx")
+    }
+
+
+</script>
+</body>
+</html>

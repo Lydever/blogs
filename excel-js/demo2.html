@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+</head>
+<body>
+
+<script>
+    import XLSX from 'xlsx'
+
+    // 数据示例
+    const data = [
+        ["Alice", "Math", 98],
+        ["Bob", "Math", 85],
+        ["Charlie", "Math", 75],
+        ["Alice", "Science", 92],
+        ["Bob", "Science", 88],
+        ["Charlie", "Science", 80]
+    ]
+
+    // 多级表头示例
+    const headers = [
+        ["", "", "Test Scores"],
+        ["Name", "Subject", "Score"]
+    ]
+
+    // 创建工作表
+    const ws = XLSX.utils.aoa_to_sheet([headers, ...data])
+    ws['!rows'] = [{ hpx: 25 }, ...ws['!rows']] // 行高
+
+    // 设置多级表头
+    ws['!merges'] = [
+        // 第一行
+        { s: { r: 0, c: 2 }, e: { r: 0, c: 4 } },
+        // 第二行
+        { s: { r: 1, c: 0 }, e: { r: 2, c: 0 } },
+        { s: { r: 1, c: 1 }, e: { r: 2, c: 1 } },
+        { s: { r: 1, c: 2 }, e: { r: 1, c: 4 } }
+    ]
+
+    // 设置多级表头样式
+    ws['A1'].s = { font: { bold: true } } // 设置字体加粗
+    ws['C1'].s = { font: { bold: true } } // 设置字体加粗
+    ws['A2'].s = { font: { bold: true } } // 设置字体加粗
+    ws['B2'].s = { font: { bold: true } } // 设置字体加粗
+    ws['C2'].s = { font: { bold: true } } // 设置字体加粗
+
+    // 创建工作簿并添加工作表
+    const wb = XLSX.utils.book_new()
+    XLSX.utils.book_append_sheet(wb, ws, "Test Scores")
+
+    // 导出Excel文件
+    XLSX.writeFile(wb, "test-scores.xlsx")
+
+</script>
+
+</body>
+</html>

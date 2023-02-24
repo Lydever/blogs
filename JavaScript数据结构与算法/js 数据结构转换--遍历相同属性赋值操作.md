@@ -38,6 +38,7 @@ const formatData = (arr) => {
   return result
 }
 ```
+
 ### 思路二: 双层for循环
 ```javascript
 const formatData = (arr) => {

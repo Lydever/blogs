@@ -32,12 +32,12 @@ const objToArr = (obj, keyName, valName) => {
 }
 
 // 使用 Object.fromEntries + Array.prototype.map 数组转对象
-/*const arrToObj = (data, keyName, valName) => {
+const arrToObj = (data, keyName, valName) => {
   // data.map(item => ([item.typeName, item.valueName])) 先把数据转成 [[key, value], ...]
   // Object.fromEntries() 相当于 Object.entries() 逆方法
   // 然后返回 {typeName: valueName} 格式
   return Object.fromEntries(data.map(item => ({item[keyName], item[valName]})))
-}*/
+}
 
 //JS 一维数组转、树形结构数组相互转换
 /*
