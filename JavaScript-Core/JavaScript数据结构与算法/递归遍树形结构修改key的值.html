@@ -218,7 +218,23 @@
             }
         })
     }
-    console.log(899, a2b(aa))
+    console.log('转换前的格式', aa)
+    console.log('转换后的格式', a2b(aa))
+    const arrTransformFormate = (arr) => {
+        return arr.map(item => {
+            let result = { id: '', text: '' }
+            if (item.children && item.children.length >0) {
+                result.id = item.value
+                result.text = item.label
+                result.arr = arrTransformFormate(item.children)
+                return result
+            } else {
+                result.id = item.value
+                result.text = item.label
+                return result
+            }
+        })
+    }
 
 </script>
 </body>
