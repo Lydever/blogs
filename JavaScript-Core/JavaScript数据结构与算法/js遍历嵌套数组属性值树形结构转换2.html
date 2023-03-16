@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lodash.js"></script>
+</head>
+<body>
+<script>
+  let list = [
+    {
+      "name":"父类一",
+      "type":[
+        {
+          "no":"0201",
+          "name":"子类1"
+        },
+        {
+          "no":"0202",
+          "name":"子类2"
+        }
+      ],
+      "groupNo":"02"
+    },
+    {
+      "name":"父类二",
+      "type":[
+        {
+          "no":"0601",
+          "name":"子类1"
+        },
+        {
+          "no":"0602",
+          "name":"子类2"
+        }
+      ],
+      "groupNo":"06"
+    }
+  ]
+
+  // 目标结构
+  //         [{
+  //   value: 1,
+  //   label: '中国',
+  //   children: [
+  //     {
+  //       value: 2,
+  //       label: '广东'
+  //     },
+  //     {
+  //       value: 5,
+  //       label: '广西'
+  //     }
+  //   ]
+  // }]
+
+  let list2 = [
+        {
+            name: "教学机构",
+            value: [
+               {
+                   name: "专业资源库",
+                   value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 6}, {name: "2021-2022", value: 0}]
+               },
+               {
+                   name: "专业教学资源库",
+                   value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 6}, {name: "2021-2022", value: 0}]
+               }
+           ]
+        },
+        {
+            name: "教学机构2",
+            value: [
+                {
+                    name: "专业资源库",
+                    value: [{name: "2019-2020", value: 1}, {name: "2020-2021", value: 6}, {name: "2021-2022", value: 0}]
+                },
+                {
+                    name: "专业教学资源库",
+                    value: [{name: "2019-2020", value: 1}, {name: "2020-2021", value: 6}, {name: "2021-2022", value: 0}]
+                }
+            ]
+        },
+        {
+            name: "教学机构3",
+            value: [
+                {
+                    name: "专业资源库",
+                    value: [{name: "2019-2020", value: 5}, {name: "2020-2021", value: 34}, {name: "2021-2022", value: 67}]
+                },
+                {
+                    name: "专业教学资源库",
+                    value: [{name: "2019-2020", value: 1}, {name: "2020-2021", value: 23}, {name: "2021-2022", value: 100}]
+                }
+            ]
+        }
+    ]
+
+  let targetArr = [
+      {
+          name: "专业资源库",
+          value: [
+              {
+                  name: "教学机构1",
+                  value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 0}, {name: "2021-2022", value: 0}]
+              },
+              {
+                  name: "教学机构2",
+                  value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 1}, {name: "2021-2022", value: 0}]
+              },
+              {
+                  name: "教学机构3",
+                  value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 2}, {name: "2021-2022", value: 3}]
+              }
+          ]
+      },
+      {
+          name: "专业教学资源库",
+          value: [
+              {
+                  name: "教学机构1",
+                  value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 0}, {name: "2021-2022", value: 0}]
+              },
+              {
+                  name: "教学机构2",
+                  value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 1}, {name: "2021-2022", value: 0}]
+              },
+              {
+                  name: "教学机构3",
+                  value: [{name: "2019-2020", value: 0}, {name: "2020-2021", value: 1}, {name: "2021-2022", value: 10}]
+              }
+          ]
+      },
+  ]
+
+  let targetArr2 = [
+      {
+          name: "专业资源库",
+          value: [
+              {name: "2019-2020", value: 0},
+              {name: "2020-2021", value: 1},
+              {name: "2021-2022", value: 5}
+          ]
+      },
+      {
+          name: "专业教学资源库",
+          value: [
+              {name: "2019-2020", value: 0},
+              {name: "2020-2021", value: 2},
+              {name: "2021-2022", value: 10}
+          ]
+      },
+  ]
+
+  let arr = list.map(({name: label, groupNo: value, type: children}) =>
+          ({label, value, children: children.map(({name: label, no: value}) => ({label, value}))}))
+  // console.log(arr)
+
+    // list2.map((item) => {
+    //     if (item.value) {
+    //         value.map((it) => {
+    //             const { name: it.name,...it } = item
+    //         })
+    //     }
+    // })
+
+  const flatten4 = (arr) => {
+      return arr.reduce((prev,cur) => {
+          return prev.concat(Array.isArray(cur.value) ? flatten4(cur.value) : cur.value)
+      }, [])
+  }
+  // console.log(566, flatten4(targetArr))
+
+
+  function flattern(data) {
+      return data.reduce((iter, val) => {
+          let {name, value} = val;
+          let com_arr = [...iter, {name,value}];
+          return val.value ? [...com_arr, ...flattern(val.value)] : com_arr;
+      }, []);
+  }
+
+  // let result = flattern(list2);
+  // console.log(result);
+
+/*
+
+  const f1 = list2.reduce((cur, next) => {
+      const obj = cur.find(curItem => curItem.name === next.name)
+      if (obj) {
+          if (obj.children.indexOf(next.name) === -1) { //去重处理
+              obj.children.push({
+                  ...next,
+                  name: next.name
+              })
+          }
+      } else {
+          const newObj = {
+              name: next.name,
+              value: [{
+                  ...next,
+                  name: next.name
+              }]
+          }
+          cur.push(newObj)
+      }
+      return cur
+  }, [])
+console.log(f1)*/
+
+  // console.log(result);
+
+  // // 先展开成平面的（列表） _是引入lodash
+  // const flatTable = list2.flatMap(
+  //     org => org.value.flatMap(
+  //         lib => lib.value.map(
+  //             year => ({
+  //                 org: org.name,
+  //                 lib: lib.name,
+  //                 year: year.name,
+  //                 value: year.value
+  //             })
+  //         )
+  //     )
+  // );
+  //
+  // // 再按要求进行分组
+  // // 先按 lib 分，再按 org 分
+  // const r1 = _(flatTable)
+  //     .groupBy(it => it.lib)
+  //     .mapValues(orgs => _(orgs)
+  //         .groupBy(it => it.org)
+  //         .map((years, name) => ({
+  //             name,
+  //             value: years.map((it, value) => ({ name: it.year, value }))
+  //         }))
+  //         .value()
+  //     )
+  //     .value();
+  //
+  // // 先按 lib 分
+  // // 再按 year 分
+  // // 并对 year 分组之后的数据进行汇总
+  // const r2 = _(flatTable)
+  //     .groupBy(it => it.lib)
+  //     .mapValues(orgs => _(orgs)
+  //         .groupBy(it => it.year)
+  //         .map((its, name) => ({
+  //             name,
+  //             value: _.sumBy(its, it => it.value)
+  //         }))
+  //         .value()
+  //     )
+  //     .value();
+  //
+  // console.log(23, r1)
+  // console.log(24, r2)
+
+
+  // 树形结构对象属性值提取转换
+    const arrayTransform = (arr) => {
+      if(!Array.isArray(arr)){
+          return []
+      }
+      let group = arr.reduce((p,v)=>{
+          p[0].push(v.value.reduce((i,j)=>{
+              i.name = v.name;
+              i.value = j.value
+              if(p[1].every(t=>t.name != j.name)){
+                  p[1].push({
+                      name:j.name,
+                      value:[]
+                  })
+              }
+              return v
+          },{}))
+          return p
+      },[[],[]])
+
+
+      return group[1].reduce((p,i)=>{
+          i.value = group[0]
+          p.push(i)
+          return p
+      },[])
+  }
+
+  console.log(999999, arrayTransform(list2))
+
+
+</script>
+</body>
+</html>

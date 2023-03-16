@@ -56,6 +56,7 @@ function unique4(arr) {
   })
 }
 
+
 /* 5. 利用includes */
 function unique5(arr) {
   let res = [];
@@ -66,6 +67,7 @@ function unique5(arr) {
   }
   return res;
 }
+
 
 /* 数组递归去重 
 先排序，然后从最后开始比较，遇到相同，则删除

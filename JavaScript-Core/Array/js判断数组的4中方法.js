@@ -15,6 +15,7 @@ arr.constructor === Array; // true
 let arr3 = [4, 5, 6];
 Object.prototype.toString.call(arr3) === '[Object Array]'; // true
 
+
 /* 4. 通过Array.isArray判断 */
 /* Array.isArray()用于确定传递的值是否是一个数组，返回一个布尔值 */
 let arr4 = [7, 8, 9];
