@@ -1,0 +1,21 @@
+
+
+// 递归算法案例解套
+// 把树形结构中的
+const loop = data => {
+    return data.map((it) => {
+        const { id,name, ...rest } = it
+        const item = {
+            id: it.id,
+            name: it.name,
+            ...rest
+        }
+
+        if(it.subTask && it.subTask.length > 0) {
+            item.children = loop(it.subTask)
+        } else {
+            item.children = []
+        }
+
+    })
+}

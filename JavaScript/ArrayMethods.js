@@ -22,6 +22,8 @@ const flattenJoinSplit = (arr) => arr.join(',').split(',').map(item => parseInt(
  * @param arr
  * @returns {number[]} 使用Number转化为数值
  */
+
+
 const flattenToStringSplit = (arr) => arr.toString().split(',').map(item => Number(item));
 
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function unique4(arr) {
+        //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素
+        return arr.filter(function (item, index, arr) {
+            return arr.indexOf(item, 0) === index;
+        })
+    }
+    let a = [
+        { name: '李子', id: 1 },
+        { name: '李子2', id: 2 },
+        { name: '李子3', id: 3 },
+        { name: '李子', id: 1 },
+    ]
+    console.log(11, unique4(a))
+</script>
+</body>
+</html>

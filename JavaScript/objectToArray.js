@@ -22,7 +22,6 @@ const objToArray = (objData, keyName, valName) => {
 }
 
 // Object.keys + Array.prototype.map 对象转数组
-
 const objToArr = (obj, keyName, valName) => {
   // Object.keys(data) 先把数据转成 [key, key, key, ...]
   // .map(key => ({keyName: key, valName: obj[key]}))
@@ -63,7 +62,11 @@ let dataTree = [
 // 递归方法转树形结构数据
 // 计算量大
 // 不会改变原有数据
-
+/*
+* 一般 pid 就是 parentId，指的是父级 id，这里默认是 pid
+  一般 pidVal 的值为 0 时，默认是根节点
+  childName 在大多数表格，多级嵌套等组件里通常都是用 children 命名，这里默认是 children
+* */
 const arrToTreeData = (data, pid=0, pidName='父节点', childrenName='children') => {
   let result = [];
     data.forEach(item => {
@@ -74,11 +77,7 @@ const arrToTreeData = (data, pid=0, pidName='父节点', childrenName='children'
         })
       }
   })
-/*
-* 一般 pid 就是 parentId，指的是父级 id，这里默认是 pid
-  一般 pidVal 的值为 0 时，默认是根节点
-  childName 在大多数表格，多级嵌套等组件里通常都是用 children 命名，这里默认是 children
-* */
+
   return result
 }
 
